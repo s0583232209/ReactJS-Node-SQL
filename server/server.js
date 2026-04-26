@@ -22,11 +22,7 @@ app.use("/api/users", userRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
-<<<<<<< HEAD
-  res.status(500).json({ error: "Something went wrong!!!" });
-=======
   res.status(500).json({ error: "Something went wrong!!!!!!!!!" });
->>>>>>> a93b80105e7bfa60a89d4a33aae0ec7398200864
 });
 
 app.listen(PORT, HOST, () => {
