@@ -20,6 +20,7 @@
   "homepage": "https://github.com/s0583232209/React-Node-SQL#readme",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "nodemon": "^3.1.14"
