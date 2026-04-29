@@ -19,7 +19,7 @@ CREATE TABLE users (
     house_number INT
  
 );
-(1, 'Bret', 'Sincere@april.biz', '1770736803', 'Leanne Graham', 92998, 'Kulas Light', 'Gwenborough', 556),
+INSERT INTO users(username,email,phone,street,zipcode,city,house_number)VALUES(, 'Bret', 'Sincere@april.biz', '1770736803', 'Leanne Graham', 92998, 'Kulas Light', 'Gwenborough', 556),
 (2, 'Antonette', 'Shanna@melissa.tv', '0106926593', 'Ervin Howell', 90566, 'Victor Plains', 'Wisokyburgh', 879),
 (3, 'Samantha', 'Nathan@yesenia.net', '1463123444', 'Clementine Bauch', 59590, 'Douglas Extension', 'McKenziehaven', 847),
 (4, 'Karianne', 'Julianne.OConner@kory.org', '4931709623', 'Patricia Lebsack', 53919, 'Hoeger Mall', 'South Elvis', 692),
