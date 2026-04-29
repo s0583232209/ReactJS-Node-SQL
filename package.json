@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node  ./server/server.js",
+    "start-dev": "node --watch --inspect server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,7 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "fs": "^0.0.1-security",
     "mysql2": "^3.22.3",
     "nodemon": "^3.1.14"
   }
