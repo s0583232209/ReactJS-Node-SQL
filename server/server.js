@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import { configDotenv } from "dotenv";
 import userRouter from "./routes/users.routes.js";
-import { connect } from "./dal/OnlyConnectionInTheMeantime.js";
+import { connect, buildDataBase } from "./dal/OnlyConnectionInTheMeantime.js";
 import { Connection } from "mysql2";
 import router from "./controllers/users.controller.js";
 configDotenv();
@@ -26,7 +26,7 @@ app.use((err, req, res, next) => {
 });
 
 await connect();
-
+// await buildDataBase();
 app.listen(PORT, HOST, () => {
   console.log(`Server listening on http://${HOST}:${PORT}`);
 });

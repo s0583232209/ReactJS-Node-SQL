@@ -1,1 +1,1 @@
-CREATE SCHEMA `project-part-7`;
+CREATE SCHEMA `project_part_7`;

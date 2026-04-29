@@ -11,6 +11,7 @@ export async function getAll() {
   const [rows] = await connection.query("SELECT * FROM users;");
   return rows;
 }
+//VERY IMPORTANT - THIS DOES NOT TAKE CARE OF THE PASSWORD!!!!!!! AND THIS IS CRITICAL
 export async function addNewUser(details) {
   const connection = await getConnection();
   const [result] = await connection.query(
