@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node  ./server/server.js",
+    "start-dev": "node --watch --inspect server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
