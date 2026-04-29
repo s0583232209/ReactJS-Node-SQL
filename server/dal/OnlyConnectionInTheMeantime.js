@@ -19,12 +19,13 @@ export async function connect() {
         host: process.env.HOST,
         user: process.env.USER,
         password: process.env.PASSWORD,
+        
         // database: process.env.DATABASE,
       });
 
       console.log("Connected to MySQL");
       try {
-        connection.query("USE project_part_7");
+        connection.query(`USE ${process.env.DATABASE}`);
       } catch (e) {
         connectionPromise = connection;
         buildDataBase();
