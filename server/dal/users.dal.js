@@ -42,11 +42,4 @@ export async function addNewUser(details) {
   console.log({ id: result.insertId, ...details });
   return { id: result.insertId, ...details };
 }
-
-async function registerUser(plainPassword) {
-  // This automatically generates a salt and merges it with the hash
-  const hashedPassword = await bcrypt.hash(plainPassword, saltRounds);
-
-  // Save 'hashedPassword' in your MySQL database
-  return hashedPassword;
-}
+``

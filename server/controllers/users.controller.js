@@ -9,9 +9,14 @@ router.get("/:id", async (req, res) => {
   if (user) res.status(200).send(user);
   else res.status(404).send("user does not exist in database");
 });
-router.post("/", async (req, res) => {
+router.post("/signup", async (req, res) => {
   const user = await addNewUser(req.body);
   if (user) res.status(200).send(user);
   else res.status(404).send("could not add the user");
 });
 export default router;
+// router.post("/login", async (req, res) => {
+//   const user = await getUser(req.body);
+//   if (user) res.status(200).send(user);
+//   else res.status(404).send("this user does not exist");
+// });
