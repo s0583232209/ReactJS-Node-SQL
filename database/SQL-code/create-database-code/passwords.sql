@@ -1,6 +1,6 @@
 CREATE TABLE passwords (
     -- Links to the main ID in your users table
-      user_id INT AUTO_INCREMENT PRIMARY KEY,
+      user_id INT  PRIMARY KEY,
     
     -- Stores the full hash string (Salt + Hash + Metadata)
     hashed_password VARCHAR(255) NOT NULL,

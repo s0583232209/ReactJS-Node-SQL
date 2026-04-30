@@ -21,6 +21,7 @@
   "homepage": "https://github.com/s0583232209/React-Node-SQL#readme",
   "description": "",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",

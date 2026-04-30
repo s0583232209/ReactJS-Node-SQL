@@ -25,7 +25,7 @@ export async function connect() {
 
       console.log("Connected to MySQL");
       try {
-        connection.query(`USE ${process.env.DATABASE}`);
+        await connection.query(`USE ${process.env.DATABASE}`);
       } catch (e) {
         connectionPromise = connection;
         buildDataBase();
@@ -62,7 +62,7 @@ export async function buildDataBase() {
       "utf8",
     );
     const passwordTableSQL = await fs.readFile(
-      "./database/SQL-code/create-database-code/password.sql",
+      "./database/SQL-code/create-database-code/passwords.sql",
       "utf8",
     );
     const postsTableSQL = await fs.readFile(
@@ -79,7 +79,7 @@ export async function buildDataBase() {
     );
     const status = await connection.query(schemaSQL);
     if (!status) throw new Error("could not create the schema");
-    await connection.query("USE project_part_7;");
+    await connection.query(`USE ${process.env.DATABASE}`);
     createTable(usersTableSQL);
     createTable(passwordTableSQL);
     createTable(postsTableSQL);
