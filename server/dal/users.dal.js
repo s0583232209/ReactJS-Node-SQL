@@ -14,7 +14,22 @@ export async function getAll() {
   const [rows] = await connection.query("SELECT * FROM users;");
   return rows;
 }
-//VERY IMPORTANT - THIS DOES NOT TAKE CARE OF THE PASSWORD!!!!!!! AND THIS IS CRITICAL
+export async function getUserIdByUserName(username) {
+  const connection = await getConnection();
+  const [rows] = await connection.query(
+    `SELECT id FROM users WHERE username=?`,
+    [username],
+  );
+  return rows[0].id;
+}
+export async function getHashedPasswordById(id) {
+  const connection = await getConnection();
+  const [result] = await connection.query(
+    "SELECT hashed_password FROM passwords WHERE user_id=?;",
+    [id],
+  );
+  return result[0].hashed_password;
+}
 export async function addNewUser(details) {
   console.log("in add new user");
   const connection = await getConnection();
@@ -32,14 +47,12 @@ export async function addNewUser(details) {
       details.house_number,
     ],
   );
-  const hashedPassword = await bcrypt.hash(details.password, 12);
-  console.log("after hashing");
-  console.log(hashedPassword, result.insertId);
+
   const passwordResult = await connection.query(
     "INSERT INTO passwords (user_id,hashed_password) VALUES (?,?);",
-    [result.insertId, hashedPassword],
+    [result.insertId, details.password],
   );
   console.log({ id: result.insertId, ...details });
   return { id: result.insertId, ...details };
 }
-``
+export async function checkUsersDetails(user) {}
