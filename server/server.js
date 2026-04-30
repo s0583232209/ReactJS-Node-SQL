@@ -2,13 +2,16 @@ import express from "express";
 import cors from "cors";
 import { configDotenv } from "dotenv";
 import userRouter from "./routes/users.routes.js";
+import todosRouter from "./routes/todos.routes.js";
+import postsRouter from "./routes/posts.routes.js";
+import commentsRouter from "./routes/comments.routes.js";
 import { connect, buildDataBase } from "./dal/OnlyConnectionInTheMeantime.js";
 import { Connection } from "mysql2";
 import router from "./controllers/users.controller.js";
 configDotenv();
 
 const app = express();
-const PORT = process.env.PORT_SERVER || 3001;
+const PORT = process.env.PORT || 3001;
 const HOST = process.env.HOST || "localhost";
 app.use(cors());
 app.use(express.json());
@@ -19,6 +22,9 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/users", router);
+app.use("/api/todos", todosRouter);
+app.use("/api/posts", postsRouter);
+app.use("/api/comments", commentsRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
