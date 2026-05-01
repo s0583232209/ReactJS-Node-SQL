@@ -7,7 +7,7 @@ import postsRouter from "./routes/posts.routes.js";
 import commentsRouter from "./routes/comments.routes.js";
 import { connect, buildDataBase } from "./dal/OnlyConnectionInTheMeantime.js";
 import { Connection } from "mysql2";
-import router from "./controllers/users.controller.js";
+// import router from "./controllers/users.controller.js";
 configDotenv();
 
 const app = express();
@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Server is running" });
 });
 
-app.use("/api/users", router);
+app.use("/api/users", userRouter);
 app.use("/api/tasks", tasksRouter);
 app.use("/api/posts", postsRouter);
 app.use("/api/comments", commentsRouter);
