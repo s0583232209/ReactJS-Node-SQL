@@ -6,9 +6,8 @@ import tasksRouter from "./routes/tasks.routes.js";
 import postsRouter from "./routes/posts.routes.js";
 import commentsRouter from "./routes/comments.routes.js";
 import { connect } from "./dal/OnlyConnectionInTheMeantime.js";
-import { Connection } from "mysql2";
+// import { Connection } from "mysql2";
 import log from "./utils/logger.js";
-// import router from "./controllers/users.controller.js";
 configDotenv();
 
 const app = express();
@@ -34,7 +33,6 @@ app.use((err, req, res, next) => {
 
 await connect();
 log.info("Database connected successfully");
-// await buildDataBase();
 app.listen(PORT, HOST, () => {
   log.info(`Server started on http://${HOST}:${PORT}`);
   console.log(`Server listening on http://${HOST}:${PORT}`);
