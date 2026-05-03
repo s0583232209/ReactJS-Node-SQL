@@ -5,6 +5,7 @@ import {
   DAL_addNewUser,
   DAL_getHashedPasswordById,
   DAL_getUserIdByUserName,
+  DAL_loginDetails,
 } from "../dal/users.dal.js";
 import bcrypt from "bcrypt";
 
@@ -23,13 +24,13 @@ export async function BL_getById(req, res) {
 
 export async function BL_signup(req, res) {
   try {
-    log.info(`BL_signup called for username: ${req.body.username}`);
+    log.info(`BL_signup called for email: ${req.body.email}`);
     const body = req.body;
     body.password = await bcrypt.hash(body.password, 12);
     const user = await DAL_addNewUser(body);
     user.password = undefined;
     if (!user) throw new Error("could not add the user");
-    log.info(`BL_signup successful for username: ${req.body.username}`);
+    log.info(`BL_signup successful for email: ${req.body.email}`);
     res.status(200).send(user);
   } catch (err) {
     log.warn(`BL_signup error: ${err.message}`);
@@ -39,13 +40,10 @@ export async function BL_signup(req, res) {
 
 export async function BL_login(req, res) {
   try {
-    log.info(`BL_login called for username: ${req.body.username}`);
-    const userId = await DAL_getUserIdByUserName(req.body.username);
-    if (!userId) throw new Error("user not found");
-    const hashedPassword = await DAL_getHashedPasswordById(userId);
+    const hashedPassword = await DAL_loginDetails(req.body.email);
     const isMatch = await bcrypt.compare(req.body.password, hashedPassword);
     if (!isMatch) throw new Error("incorrect password");
-    log.info(`BL_login successful for username: ${req.body.username}`);
+    log.info(`BL_login successful for email: ${req.body.email}`);
     res.status(200).send("you are in");
   } catch (err) {
     log.warn(`BL_login error: ${err.message}`);
