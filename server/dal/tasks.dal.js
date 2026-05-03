@@ -1,37 +1,75 @@
 import { getConnection } from "./OnlyConnectionInTheMeantime.js";
+import log from "../utils/logger.js";
 
 export async function DAL_getById(id) {
-  const connection = await getConnection();
-  const [rows] = await connection.query("SELECT * FROM tasks WHERE id = ?;", [id]);
-  return rows[0] || null;
+  try {
+    log.info(`DAL_getById called with id: ${id}`);
+    const connection = await getConnection();
+    const [rows] = await connection.query("SELECT * FROM tasks WHERE id = ?;", [id]);
+    if (!rows[0]) throw new Error("Task not found");
+    log.info(`DAL_getById successful for id: ${id}`);
+    return rows[0];
+  } catch (err) {
+    log.error(`DAL_getById error: ${err.message}`);
+    throw err;
+  }
 }
 
 export async function DAL_getAll() {
-  const connection = await getConnection();
-  const [rows] = await connection.query("SELECT * FROM tasks;");
-  return rows;
+  try {
+    log.info("DAL_getAll called");
+    const connection = await getConnection();
+    const [rows] = await connection.query("SELECT * FROM tasks;");
+    log.info(`DAL_getAll successful, returned ${rows.length} tasks`);
+    return rows;
+  } catch (err) {
+    log.error(`DAL_getAll error: ${err.message}`);
+    throw err;
+  }
 }
 
 export async function DAL_addNewTask(details) {
-  const connection = await getConnection();
-  const [result] = await connection.query(
-    "INSERT INTO tasks (userId, title, completed) VALUES (?, ?, ?);",
-    [details.userId, details.title, details.completed ?? false]
-  );
-  return { id: result.insertId, ...details };
+  try {
+    log.info(`DAL_addNewTask called for userId: ${details.userId}`);
+    const connection = await getConnection();
+    const [result] = await connection.query(
+      "INSERT INTO tasks (userId, title, completed) VALUES (?, ?, ?);",
+      [details.userId, details.title, details.completed ?? false]
+    );
+    log.info(`DAL_addNewTask successful, task id: ${result.insertId}`);
+    return { id: result.insertId, ...details };
+  } catch (err) {
+    log.error(`DAL_addNewTask error: ${err.message}`);
+    throw err;
+  }
 }
 
 export async function DAL_updateTask(id, details) {
-  const connection = await getConnection();
-  await connection.query(
-    "UPDATE tasks SET title = ?, completed = ? WHERE id = ?;",
-    [details.title, details.completed, id]
-  );
-  return getById(id);
+  try {
+    log.info(`DAL_updateTask called for id: ${id}`);
+    const connection = await getConnection();
+    await connection.query(
+      "UPDATE tasks SET title = ?, completed = ? WHERE id = ?;",
+      [details.title, details.completed, id]
+    );
+    log.info(`DAL_updateTask successful for id: ${id}`);
+    return DAL_getById(id);
+  } catch (err) {
+    log.error(`DAL_updateTask error: ${err.message}`);
+    throw err;
+  }
 }
 
 export async function DAL_deleteTask(id) {
-  const connection = await getConnection();
-  const [result] = await connection.query("DELETE FROM tasks WHERE id = ?;", [id]);
-  return result.affectedRows > 0;
+  try {
+    log.info(`DAL_deleteTask called for id: ${id}`);
+    const connection = await getConnection();
+    const [result] = await connection.query("DELETE FROM tasks WHERE id = ?;", [id]);
+    const deleted = result.affectedRows > 0;
+    log.info(`DAL_deleteTask ${deleted ? 'successful' : 'failed'} for id: ${id}`);
+    return deleted;
+  } catch (err) {
+    log.error(`DAL_deleteTask error: ${err.message}`);
+    throw err;
+  }
 }
