@@ -1,6 +1,7 @@
 CREATE TABLE tasks (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    userId INT NOT NULL,
+    user_id INT NOT NULL,
     title VARCHAR (200) NOT NULL,
     completed BOOLEAN NOT NULL
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
