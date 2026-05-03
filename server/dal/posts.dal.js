@@ -1,6 +1,6 @@
 import { getConnection } from "./OnlyConnectionInTheMeantime.js";
 
-export async function getAll(userId) {
+export async function DAL_getAll(userId) {
   const connection = await getConnection();
   if (userId) {
     const [rows] = await connection.query("SELECT * FROM posts WHERE user_id = ?;", [userId]);
@@ -10,13 +10,13 @@ export async function getAll(userId) {
   return rows;
 }
 
-export async function getById(id) {
+export async function DAL_getById(id) {
   const connection = await getConnection();
   const [rows] = await connection.query("SELECT * FROM posts WHERE id = ?;", [id]);
   return rows[0] || null;
 }
 
-export async function addNewPost(details) {
+export async function DAL_addNewPost(details) {
   const connection = await getConnection();
   const [result] = await connection.query(
     "INSERT INTO posts (user_id, title, body) VALUES (?, ?, ?);",
@@ -25,7 +25,7 @@ export async function addNewPost(details) {
   return { id: result.insertId, ...details };
 }
 
-export async function updatePost(id, details) {
+export async function DAL_updatePost(id, details) {
   const connection = await getConnection();
   await connection.query(
     "UPDATE posts SET title = ?, body = ? WHERE id = ?;",
@@ -34,7 +34,7 @@ export async function updatePost(id, details) {
   return getById(id);
 }
 
-export async function deletePost(id) {
+export async function DAL_deletePost(id) {
   const connection = await getConnection();
   const [result] = await connection.query("DELETE FROM posts WHERE id = ?;", [id]);
   return result.affectedRows > 0;

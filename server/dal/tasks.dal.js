@@ -1,18 +1,18 @@
 import { getConnection } from "./OnlyConnectionInTheMeantime.js";
 
-export async function getById(id) {
+export async function DAL_getById(id) {
   const connection = await getConnection();
   const [rows] = await connection.query("SELECT * FROM tasks WHERE id = ?;", [id]);
   return rows[0] || null;
 }
 
-export async function getAll() {
+export async function DAL_getAll() {
   const connection = await getConnection();
   const [rows] = await connection.query("SELECT * FROM tasks;");
   return rows;
 }
 
-export async function addNewTask(details) {
+export async function DAL_addNewTask(details) {
   const connection = await getConnection();
   const [result] = await connection.query(
     "INSERT INTO tasks (userId, title, completed) VALUES (?, ?, ?);",
@@ -21,7 +21,7 @@ export async function addNewTask(details) {
   return { id: result.insertId, ...details };
 }
 
-export async function updateTask(id, details) {
+export async function DAL_updateTask(id, details) {
   const connection = await getConnection();
   await connection.query(
     "UPDATE tasks SET title = ?, completed = ? WHERE id = ?;",
@@ -30,7 +30,7 @@ export async function updateTask(id, details) {
   return getById(id);
 }
 
-export async function deleteTask(id) {
+export async function DAL_deleteTask(id) {
   const connection = await getConnection();
   const [result] = await connection.query("DELETE FROM tasks WHERE id = ?;", [id]);
   return result.affectedRows > 0;

@@ -1,9 +1,7 @@
-// Remove the problematic createConnection function as it's redundant
-// The connect() function already handles connection creation}
 import { configDotenv } from "dotenv";
 import mysql from "mysql2/promise";
 import fs from "fs/promises";
-import { loadavg } from "os";
+
 configDotenv();
 
 let connectionPromise = null;
@@ -19,8 +17,6 @@ export async function connect() {
         host: process.env.HOST,
         user: process.env.USER,
         password: process.env.PASSWORD,
-        
-        // database: process.env.DATABASE,
       });
 
       console.log("Connected to MySQL");
