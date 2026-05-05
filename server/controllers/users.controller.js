@@ -1,5 +1,5 @@
 import log from "../utils/logger.js";
-import jwt from 'jsonwebtoken'
+import jwt from "jsonwebtoken";
 import {
   DAL_getAll,
   DAL_getById,
@@ -32,7 +32,13 @@ export async function BL_signup(req, res) {
     user.password = undefined;
     if (!user) throw new Error("could not add the user");
     log.info(`BL_signup successful for email: ${req.body.email}`);
-    await handleResponse(res, user, 200, await tokenHandler(user));
+    await handleResponse(
+      res,
+      user,
+      200,
+      await tokenHandler(user, true),
+      await tokenHandler(user, false),
+    );
   } catch (err) {
     log.warn(`BL_signup error: ${err.message}`);
     res.status(404).send("could not add the user");
@@ -41,31 +47,49 @@ export async function BL_signup(req, res) {
 
 export async function BL_login(req, res) {
   try {
-    console.log('in bl log in')
-    const {hashedPassword,userId}= await DAL_loginDetails(req.body.email);
+    console.log("in bl log in");
+    const { hashedPassword, userId } = await DAL_loginDetails(req.body.email);
     const isMatch = await bcrypt.compare(req.body.password, hashedPassword);
     if (!isMatch) throw new Error("incorrect password");
     log.info(`BL_login successful for email: ${req.body.email}`);
-    await handleResponse(res, {email:req.body.email,userId:userId,msg: "success" }, 200, await tokenHandler({email:req.body.email,userId:userId,msg: "success" }));
-    
+    await handleResponse(
+      res,
+      { email: req.body.email, userId: userId, msg: "success" },
+      200,
+      await tokenHandler(
+        {
+          email: req.body.email,
+          userId: userId,
+          msg: "success",
+        },
+        true,
+      ),
+      await tokenHandler({ email: req.body.email, userId: userId }, false),
+    );
   } catch (err) {
     log.warn(`BL_login error: ${err.message}`);
     res.status(404).send("this user does not exist");
   }
 }
-async function tokenHandler(user) {
-  const secretKey = process.env.JWT_SECRET;
-  const token = jwt.sign(user, secretKey, { expiresIn: "60s" });
-
+async function tokenHandler(user, access) {
+  const secretKey = access ? process.env.JWT_SECRET : process.env.JWT_SECRET;
+  const token = jwt.sign(user, secretKey, { expiresIn: access ? "15m" : "7d" });
 
   return token;
 }
-async function handleResponse(res, body, status, token) {
+async function handleResponse(res, body, status, token, refreshToken) {
   res.cookie("access_token", token, {
     httpOnly: true,
     secure: false,
-    sameSite: "strict",
-    maxAge: 60*1000,
+    sameSite: "lax",
+    maxAge: 60 * 1000 * 5,
   });
+  if (refreshToken)
+    res.cookie("refresh_token", refreshToken, {
+      httpOnly: true,
+      secure: false,
+      sameSite: "lax",
+      maxAge: 60 * 1000 * 60 * 24 * 7,
+    });
   res.status(status).send(body);
 }
