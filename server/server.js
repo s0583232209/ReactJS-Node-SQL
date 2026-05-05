@@ -5,22 +5,35 @@ import userRouter from "./routes/users.routes.js";
 import tasksRouter from "./routes/tasks.routes.js";
 import postsRouter from "./routes/posts.routes.js";
 import commentsRouter from "./routes/comments.routes.js";
-import { connect, buildDataBase } from "./dal/OnlyConnectionInTheMeantime.js";
-import { Connection } from "mysql2";
-// import router from "./controllers/users.controller.js";
+import { connect } from "./dal/OnlyConnectionInTheMeantime.js";
+// import { Connection } from "mysql2";
+import token from "./middleware/auth.js";
+import log from "./utils/logger.js";
+import cookieParser from "cookie-parser";
+import MID_extractToken from "./middleware/ExtractToken.middleware.js";
 configDotenv();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 const HOST = process.env.HOST || "localhost";
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000', // your frontend URL
+  credentials: true
+}));
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   console.log("got in");
   res.json({ message: "Server is running" });
 });
+app.use(cors({
+  origin: 'http://localhost:3000', // your frontend URL
+  credentials: true
+}));
 
+app.use("/api",MID_extractToken)
+app.use("/api",token)
 app.use("/api/users", userRouter);
 app.use("/api/tasks", tasksRouter);
 app.use("/api/posts", postsRouter);
@@ -32,8 +45,9 @@ app.use((err, req, res, next) => {
 });
 
 await connect();
-// await buildDataBase();
+log.info("Database connected successfully");
 app.listen(PORT, HOST, () => {
+  log.info(`Server started on http://${HOST}:${PORT}`);
   console.log(`Server listening on http://${HOST}:${PORT}`);
 });
 
