@@ -7,19 +7,21 @@ import postsRouter from "./routes/posts.routes.js";
 import commentsRouter from "./routes/comments.routes.js";
 import { connect } from "./dal/OnlyConnectionInTheMeantime.js";
 // import { Connection } from "mysql2";
-import token from "./middleware/auth.js";
+import verifyToken from "./middleware/verifyToken.middleware.js";
 import log from "./utils/logger.js";
 import cookieParser from "cookie-parser";
-import MID_extractToken from "./middleware/ExtractToken.middleware.js";
+
 configDotenv();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 const HOST = process.env.HOST || "localhost";
-app.use(cors({
-  origin: 'http://localhost:3000', // your frontend URL
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: "http://localhost:3000", // your frontend URL
+    credentials: true,
+  }),
+);
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
@@ -27,13 +29,13 @@ app.get("/", (req, res) => {
   console.log("got in");
   res.json({ message: "Server is running" });
 });
-app.use(cors({
-  origin: 'http://localhost:3000', // your frontend URL
-  credentials: true
-}));
-
-app.use("/api",MID_extractToken)
-app.use("/api",token)
+app.use(
+  cors({
+    origin: "http://localhost:3000", // your frontend URL
+    credentials: true,
+  }),
+);
+app.use("/api", verifyToken);
 app.use("/api/users", userRouter);
 app.use("/api/tasks", tasksRouter);
 app.use("/api/posts", postsRouter);
