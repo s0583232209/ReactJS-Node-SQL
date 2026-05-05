@@ -95,3 +95,33 @@
 2026-05-05 13:28:56 INFO  init 
 2026-05-05 13:28:57 INFO  Database connected successfully 
 2026-05-05 13:28:57 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:46:14 INFO  init 
+2026-05-05 13:46:14 INFO  Database connected successfully 
+2026-05-05 13:46:14 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:46:38 INFO  BL_signup called for email: try@try.com 
+2026-05-05 13:46:38 INFO  DAL_addNewUser called for username: try 
+2026-05-05 13:46:38 INFO  DAL_addNewUser successful, user id: 11 
+2026-05-05 13:46:38 INFO  BL_signup successful for email: try@try.com 
+2026-05-05 13:46:48 INFO  BL_login successful for email: try@try.com 
+2026-05-05 13:47:24 INFO  BL_getById called for user id: 1 
+2026-05-05 13:47:24 INFO  DAL_getById called with id: 1 
+2026-05-05 13:47:24 INFO  DAL_getById successful for id: 1 
+2026-05-05 13:47:24 INFO  BL_getById successful, got user from database 
+2026-05-05 13:47:43 INFO  init 
+2026-05-05 13:47:43 INFO  Database connected successfully 
+2026-05-05 13:47:43 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:48:03 INFO  BL_signup called for email: try@try.com 
+2026-05-05 13:48:03 INFO  DAL_addNewUser called for username: try 
+2026-05-05 13:48:03 INFO  DAL_addNewUser successful, user id: 11 
+2026-05-05 13:48:03 INFO  BL_signup successful for email: try@try.com 
+2026-05-05 13:55:21 INFO  init 
+2026-05-05 13:55:21 INFO  Database connected successfully 
+2026-05-05 13:55:21 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:55:31 INFO  BL_signup called for email: try@try.com 
+2026-05-05 13:55:31 INFO  DAL_addNewUser called for username: try 
+2026-05-05 13:55:31 INFO  DAL_addNewUser successful, user id: 11 
+2026-05-05 13:55:31 INFO  BL_signup successful for email: try@try.com 
+2026-05-05 13:55:39 INFO  BL_getById called for user id: 1 
+2026-05-05 13:55:39 INFO  DAL_getById called with id: 1 
+2026-05-05 13:55:39 INFO  DAL_getById successful for id: 1 
+2026-05-05 13:55:39 INFO  BL_getById successful, got user from database 
