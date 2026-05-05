@@ -32,7 +32,7 @@ export async function BL_signup(req, res) {
     user.password = undefined;
     if (!user) throw new Error("could not add the user");
     log.info(`BL_signup successful for email: ${req.body.email}`);
-    res.status(200).send(user);
+    await handleResponse(res, user, 200, await tokenHandler(user));
   } catch (err) {
     log.warn(`BL_signup error: ${err.message}`);
     res.status(404).send("could not add the user");
