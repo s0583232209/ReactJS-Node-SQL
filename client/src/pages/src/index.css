@@ -1,0 +1,193 @@
+/* ================= General ================= */
+.errorLog {
+  color: red;
+  font-size: medium;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0f7fa; /* pastel light blue */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem;
+}
+
+/* Centered headings */
+h1,
+h2,
+h3 {
+  text-align: center;
+  margin: 0.5rem 0;
+  color: #064635; /* dark green */
+}
+
+/* ================= Buttons ================= */
+button {
+  background-color: #a8dadc; /* pastel green-blue */
+  color: #064635;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+  display: inline-block;
+  width: auto;
+}
+
+button:hover {
+  background-color: #90c9d0;
+}
+
+/* ================= Inputs ================= */
+input,
+select,
+textarea {
+  padding: 0.4rem;
+  margin: 0.3rem 0.5rem 0.5rem 0;
+  border-radius: 6px;
+  border: 1px solid #80cfa9;
+  width: 200px;
+}
+
+label {
+  margin-right: 0.5rem;
+}
+
+/* ================= Forms ================= */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: #d0f0e0; /* pastel green */
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= Posts & Comments ================= */
+.post,
+.comment {
+  background-color: #f0f8ff; /* pastel light blue */
+  border: 1px solid #80cfa9;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.comment {
+  margin-left: 2rem;
+}
+
+.expanded-floating {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 1000;
+  background-color: #d0f0e0; /* pastel green */
+  border: 2px solid #80cfa9;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.overlay {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 500;
+}
+
+/* ================= Navigation ================= */
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #064635;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+nav a.active {
+  border-bottom: 2px solid #064635;
+}
+
+/* ================= Albums & Photos ================= */
+.albumLink,
+.photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f8ff; /* pastel light blue */
+  border: 1px solid #80cfa9;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.photo img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+/* ================= Tasks ================= */
+.task {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.task input[type="checkbox"] {
+  transform: scale(1.3);
+  margin-right: 0.5rem;
+  width: 30px;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 600px) {
+  input,
+  select {
+    width: 100%;
+  }
+
+  .expanded-floating {
+    width: 95%;
+    padding: 1rem;
+  }
+}
+.blurred {
+  pointer-events: none; /* prevents clicking */
+  opacity: 0.5; /* makes it look dimmed */
+  user-select: none; /* optional, prevents text selection */
+  transition: opacity 0.2s;
+}

@@ -1,0 +1,194 @@
+/* Albums Page Styling */
+.albums-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.albums-header {
+  text-align: center;
+  color: #064635;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Filter Controls */
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 2rem;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-button {
+  padding: 12px 16px;
+  background: #a8dadc;
+  color: #064635;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-button:hover {
+  background: #90c9d0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.filter-button.add-btn {
+  background: #80cfa9;
+  font-weight: bold;
+}
+
+.filter-button.add-btn:hover {
+  background: #5fb3a3;
+}
+
+.filter-input {
+  padding: 10px 12px;
+  border: 2px solid #a8dadc;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #064635;
+  transition: border-color 0.2s ease;
+}
+
+.filter-input:focus {
+  outline: none;
+  border-color: #80cfa9;
+  box-shadow: 0 0 0 3px rgba(128, 207, 169, 0.2);
+}
+
+/* Albums List */
+.albums-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 2rem;
+}
+
+.album-item {
+  background: #f0f8ff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 2px solid #f1faee;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.album-item:hover {
+  border-color: #a8dadc;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.album-id {
+  background: #e9ecef;
+  color: #064635;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 40px;
+  text-align: center;
+}
+
+.album-title {
+  flex: 1;
+  margin: 0;
+  color: #064635;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.album-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.album-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.open-button {
+  background: #a8dadc;
+  color: #064635;
+}
+
+.open-button:hover {
+  background: #90c9d0;
+  transform: translateY(-1px);
+}
+
+.delete-button {
+  background: #ffb3ba;
+  color: #064635;
+}
+
+.delete-button:hover {
+  background: #ff9aa1;
+  transform: translateY(-1px);
+}
+
+/* No Albums Message */
+.no-albums {
+  text-align: center;
+  color: #6c757d;
+  font-size: 18px;
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 2px dashed #dee2e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .filter-input {
+    flex: 1;
+  }
+  
+  .album-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .album-actions {
+    align-self: flex-end;
+  }
+}
