@@ -85,8 +85,8 @@ export async function DAL_checkUsersDetails(user) {}
 export async function DAL_loginDetails(email) {
   const connection = await getConnection();
   const [rows] = await connection.query(
-    "SELECT passwords.hashed_password AS password FROM users JOIN passwords ON users.id=passwords.user_id WHERE email=?;",
+    "SELECT passwords.hashed_password AS hashedPassword,passwords.user_id AS userId FROM users JOIN passwords ON users.id=passwords.user_id WHERE email=?;",
     [email],
   );
-  return rows[0].password;
+  return rows[0];
 }
