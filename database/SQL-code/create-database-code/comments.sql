@@ -7,12 +7,12 @@ CREATE TABLE comments (
     
     -- Name or Subject of the comment
     name VARCHAR(255),
-    user_id INT;
+    user_id INT,
     
     -- The actual content of the comment
     body TEXT,
     
     -- Optional: Track when the comment was saved
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );

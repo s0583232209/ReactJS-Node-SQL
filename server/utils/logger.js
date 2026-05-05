@@ -1,13 +1,3 @@
-// import SimpleNodeLogger from 'simple-node-logger';
-
-// const log = SimpleNodeLogger.createSimpleLogger({
-//   logFilePath: './logs/app.log',
-//   timestampFormat: 'YYYY-MM-DD HH:mm:ss'
-// });
-
-// log.setLevel('info');
-// log.info('init log')
-// export default log;
 import util from 'util';
 import fs from 'fs';
 

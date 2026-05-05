@@ -1,5 +1,97 @@
-2026-05-03 18:36:16 [INFO] Database connected successfully
-2026-05-03 18:36:16 [INFO] Server started on http://127.0.0.1:3000
-2026-05-03 22:32:43 INFO  init 
-2026-05-03 22:32:43 INFO  Database connected successfully 
-2026-05-03 22:32:44 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 12:15:46 INFO  init 
+2026-05-05 12:44:11 INFO  init 
+2026-05-05 12:44:12 INFO  Database connected successfully 
+2026-05-05 12:44:12 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 12:45:02 INFO  init 
+2026-05-05 12:45:02 INFO  Database connected successfully 
+2026-05-05 12:45:02 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 12:49:19 INFO  init 
+2026-05-05 12:49:19 INFO  Database connected successfully 
+2026-05-05 12:49:19 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 12:51:50 INFO  init 
+2026-05-05 12:51:50 INFO  Database connected successfully 
+2026-05-05 12:51:50 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 12:51:53 INFO  BL_signup called for email: try@try.com 
+2026-05-05 12:51:53 INFO  DAL_addNewUser called for username: try 
+2026-05-05 12:51:53 ERROR DAL_addNewUser error: Table 'project_part_7.passwords' doesn't exist 
+2026-05-05 12:51:53 WARN  BL_signup error: Table 'project_part_7.passwords' doesn't exist 
+2026-05-05 12:55:11 INFO  BL_signup called for email: try@try.com 
+2026-05-05 12:55:11 INFO  DAL_addNewUser called for username: try 
+2026-05-05 12:55:11 ERROR DAL_addNewUser error: Duplicate entry 'try@try.com' for key 'users.email' 
+2026-05-05 12:55:11 WARN  BL_signup error: Duplicate entry 'try@try.com' for key 'users.email' 
+2026-05-05 12:55:32 INFO  init 
+2026-05-05 12:55:32 INFO  Database connected successfully 
+2026-05-05 12:55:32 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 12:55:36 INFO  BL_signup called for email: try@try.com 
+2026-05-05 12:55:37 INFO  DAL_addNewUser called for username: try 
+2026-05-05 12:55:37 ERROR DAL_addNewUser error: Duplicate entry 'try@try.com' for key 'users.email' 
+2026-05-05 12:55:37 WARN  BL_signup error: Duplicate entry 'try@try.com' for key 'users.email' 
+2026-05-05 13:02:35 INFO  init 
+2026-05-05 13:02:35 INFO  Database connected successfully 
+2026-05-05 13:02:36 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:02:41 INFO  BL_signup called for email: try@try.com 
+2026-05-05 13:02:41 INFO  DAL_addNewUser called for username: try 
+2026-05-05 13:02:41 ERROR DAL_addNewUser error: Duplicate entry 'try@try.com' for key 'users.email' 
+2026-05-05 13:02:41 WARN  BL_signup error: Duplicate entry 'try@try.com' for key 'users.email' 
+2026-05-05 13:03:51 INFO  init 
+2026-05-05 13:03:51 INFO  Database connected successfully 
+2026-05-05 13:03:51 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:04:51 INFO  init 
+2026-05-05 13:04:51 INFO  Database connected successfully 
+2026-05-05 13:04:51 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:05:34 INFO  init 
+2026-05-05 13:05:34 INFO  Database connected successfully 
+2026-05-05 13:05:34 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:05:56 INFO  init 
+2026-05-05 13:05:56 INFO  Database connected successfully 
+2026-05-05 13:05:56 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:10:07 INFO  init 
+2026-05-05 13:10:07 INFO  Database connected successfully 
+2026-05-05 13:10:07 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:10:25 INFO  init 
+2026-05-05 13:10:26 INFO  Database connected successfully 
+2026-05-05 13:10:26 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:14:39 INFO  init 
+2026-05-05 13:14:39 INFO  Database connected successfully 
+2026-05-05 13:14:39 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:22:08 INFO  init 
+2026-05-05 13:22:09 INFO  Database connected successfully 
+2026-05-05 13:22:09 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:22:19 INFO  init 
+2026-05-05 13:22:19 INFO  Database connected successfully 
+2026-05-05 13:22:19 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:22:25 INFO  BL_signup called for email: try@try.com 
+2026-05-05 13:22:25 INFO  DAL_addNewUser called for username: try 
+2026-05-05 13:22:25 INFO  DAL_addNewUser successful, user id: 11 
+2026-05-05 13:22:25 INFO  BL_signup successful for email: try@try.com 
+2026-05-05 13:23:48 INFO  BL_login successful for email: try@try.com 
+2026-05-05 13:24:30 INFO  BL_getById called for user id: 1 
+2026-05-05 13:24:30 INFO  DAL_getById called with id: 1 
+2026-05-05 13:24:30 INFO  DAL_getById successful for id: 1 
+2026-05-05 13:24:30 INFO  BL_getById successful, got user from database 
+2026-05-05 13:26:23 INFO  init 
+2026-05-05 13:26:23 INFO  Database connected successfully 
+2026-05-05 13:26:23 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:26:26 INFO  BL_signup called for email: try@try.com 
+2026-05-05 13:26:26 INFO  DAL_addNewUser called for username: try 
+2026-05-05 13:26:26 INFO  DAL_addNewUser successful, user id: 11 
+2026-05-05 13:26:26 INFO  BL_signup successful for email: try@try.com 
+2026-05-05 13:26:32 INFO  BL_signup called for email: try@try.com 
+2026-05-05 13:26:32 INFO  DAL_addNewUser called for username: try 
+2026-05-05 13:26:32 ERROR DAL_addNewUser error: Duplicate entry 'try@try.com' for key 'users.email' 
+2026-05-05 13:26:32 WARN  BL_signup error: Duplicate entry 'try@try.com' for key 'users.email' 
+2026-05-05 13:26:45 INFO  init 
+2026-05-05 13:26:45 INFO  Database connected successfully 
+2026-05-05 13:26:45 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 13:26:52 INFO  BL_signup called for email: try@try.com 
+2026-05-05 13:26:52 INFO  DAL_addNewUser called for username: try 
+2026-05-05 13:26:52 INFO  DAL_addNewUser successful, user id: 11 
+2026-05-05 13:26:52 INFO  BL_signup successful for email: try@try.com 
+2026-05-05 13:27:20 INFO  BL_login successful for email: try@try.com 
+2026-05-05 13:28:06 INFO  BL_getById called for user id: 11 
+2026-05-05 13:28:06 INFO  DAL_getById called with id: 11 
+2026-05-05 13:28:06 INFO  DAL_getById successful for id: 11 
+2026-05-05 13:28:06 INFO  BL_getById successful, got user from database 
+2026-05-05 13:28:56 INFO  init 
+2026-05-05 13:28:57 INFO  Database connected successfully 
+2026-05-05 13:28:57 INFO  Server started on http://127.0.0.1:3000 
