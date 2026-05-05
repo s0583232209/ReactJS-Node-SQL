@@ -1,4 +1,4 @@
-INSERT INTO tasks (userId ,title, completed) VALUES
+INSERT INTO tasks (user_id ,title, completed) VALUES
 (1, 'delectus aut autem', false),
 (1, 'quis ut nam facilis et officia qui', false),
 (1, 'fugiat veniam minus', false),
