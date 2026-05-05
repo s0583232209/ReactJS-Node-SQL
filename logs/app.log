@@ -125,3 +125,12 @@
 2026-05-05 13:55:39 INFO  DAL_getById called with id: 1 
 2026-05-05 13:55:39 INFO  DAL_getById successful for id: 1 
 2026-05-05 13:55:39 INFO  BL_getById successful, got user from database 
+2026-05-05 16:08:57 INFO  init 
+2026-05-05 16:08:57 INFO  Database connected successfully 
+2026-05-05 16:08:57 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 16:13:58 INFO  init 
+2026-05-05 16:13:58 INFO  Database connected successfully 
+2026-05-05 16:13:58 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 18:12:38 INFO  init 
+2026-05-05 18:12:38 INFO  Database connected successfully 
+2026-05-05 18:12:38 INFO  Server started on http://127.0.0.1:3000 

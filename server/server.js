@@ -52,5 +52,9 @@ app.listen(PORT, HOST, () => {
   log.info(`Server started on http://${HOST}:${PORT}`);
   console.log(`Server listening on http://${HOST}:${PORT}`);
 });
+import crypto from 'crypto';
 
+// We generate a 256-bit (32-byte) secret and convert it to a hex string
+const secret = crypto.randomBytes(32).toString('hex');
+console.log(secret);
 export default app;
