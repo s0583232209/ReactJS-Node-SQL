@@ -7,7 +7,7 @@ export default function Register() {
     sessionStorage.clear();
     localStorage.clear();
   }, []);
-  const { setUserID } = useContext(appContext);
+  const { setUserId } = useContext(appContext);
   const [error, setError] = useState();
   const { register, handleSubmit } = useForm();
   const [step, setStep] = useState(1);
@@ -20,7 +20,7 @@ export default function Register() {
     }
 
     try {
-      const response = await fetch(`http://127.0.0.1:3000/api/users/signup`, {
+      const response = await fetch(`http://localhost:3000/api/users/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -38,7 +38,7 @@ export default function Register() {
         throw new Error("This user name isn't valid, please try another one");
       }
       sessionStorage.setItem("current-user", JSON.stringify(user));
-      setUserID(user.userId);
+      setUserId(user.userId);
       navigate("/");
     } catch (error) {
       setError(String(error));

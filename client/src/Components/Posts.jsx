@@ -12,17 +12,16 @@ import { appContext } from "../App";
 export default function Posts() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { userID } = useContext(appContext);
+  const { userId } = useContext(appContext);
   const { id } = useParams();
+  console.log(userId);
   useEffect(() => {
-    if (!userID) {
+    console.log("userId", userId);
+    if (!userId) {
       navigate("/login");
       return;
     }
-    if (String(id) !== String(userID)) {
-      navigate("/access_denied");
-    }
-  }, [userID, id, navigate]);
+  }, [userId, id, navigate]);
 
   const LIMIT = 10;
 
@@ -34,7 +33,7 @@ export default function Posts() {
   const { register, handleSubmit, reset } = useForm();
   const [searchID, setSearchID] = useState(searchParams.get("id") || "");
   const [searchTitle, setSearchTitle] = useState(
-    searchParams.get("title") || ""
+    searchParams.get("title") || "",
   );
   const [titleInput, setTitleInput] = useState("");
   const [idInput, setIdInput] = useState("");
@@ -49,20 +48,33 @@ export default function Posts() {
 
   useEffect(() => {
     async function fetchPosts() {
+      console.log(userId, "userId");
+      console.log("fetch posts");
       if (loading || !hasMore || isFiltering) return;
       setLoading(true);
       try {
-        const res = await fetch(
-          `http://localhost:3000/posts?_limit=${LIMIT}&_start=${page * LIMIT}`
-        );
-        if (!res.ok)
-          throw new Error(
-            `status: ${res.status}\n Could not load posts, please try again later.`
-          );
+        // const res = await fetch(
+        //   `http://localhost:3000/api/posts?_limit=${LIMIT}&_start=${page * LIMIT}`,
+        //   {
+        //     method: "GET",
+        //     credentials: "include",
+        //   },
+        // );
+        const res = await fetch(`http://localhost:3000/api/posts`, {
+          method: "GET",
+          credentials: "include",
+        });
+        console.log(res);
+        if (!res.ok) {
+          if (res.status === 401) navigate("/login");
+          throw new Error(`status: ${res.status}\n {res.message}.`);
+        }
         const data = await res.json();
+
+        console.log(data);
         setPostsList((prev) => {
           const newPosts = data.filter(
-            (p) => !prev.some((p2) => p2.id === p.id)
+            (p) => !prev.some((p2) => p2.id === p.id),
           );
           return [...prev, ...newPosts];
         });
@@ -76,7 +88,7 @@ export default function Posts() {
       }
     }
     if (postsList.length === 0 || page > 0) fetchPosts();
-  }, [page, isFiltering]);
+  }, []);
 
   useEffect(() => {
     async function fetchFromURL() {
@@ -84,11 +96,15 @@ export default function Posts() {
         setLoading(true);
         try {
           const res = await fetch(
-            `http://localhost:3000/posts?title=${searchTitle}`
+            `http://localhost:3000/api/posts?title=${searchTitle}`,
+            {
+              method: "GET",
+              credentials: "include",
+            },
           );
           if (!res.ok)
             throw new Error(
-              `status: ${res.status}\n Could not load posts, please try again later.`
+              `status: ${res.status}\n Could not load posts, please try again later.`,
             );
           const data = await res.json();
           setPostsList(data);
@@ -103,10 +119,16 @@ export default function Posts() {
       if (searchID) {
         setLoading(true);
         try {
-          const res = await fetch(`http://localhost:3000/posts?id=${searchID}`);
+          const res = await fetch(
+            `http://localhost:3000/api/posts?id=${searchID}`,
+            {
+              method: "GET",
+              credentials: "include",
+            },
+          );
           if (!res.ok)
             throw new Error(
-              `status: ${res.status}\n Could not load tasks, please try again later.`
+              `status: ${res.status}\n Could not load tasks, please try again later.`,
             );
           const data = await res.json();
           setPostsList(data);
@@ -129,11 +151,12 @@ export default function Posts() {
       setLoading(true);
       try {
         const res = await fetch(
-          `http://localhost:3000/posts?title=${titleInput}`
+          `http://localhost:3000/api/posts?title=${titleInput}`,
+          { method: "GET", credentials: "include" },
         );
         if (!res.ok)
           throw new Error(
-            `status: ${res.status}\n Could not find post, please try again later.`
+            `status: ${res.status}\n Could not find post, please try again later.`,
           );
         const data = await res.json();
         if (data.length > 0) {
@@ -154,10 +177,16 @@ export default function Posts() {
     if (!localMatch) {
       setLoading(true);
       try {
-        const res = await fetch(`http://localhost:3000/posts?id=${idInput}`);
+        const res = await fetch(
+          `http://localhost:3000/api/posts?id=${idInput}`,
+          {
+            method: "GET",
+            credentials: "include",
+          },
+        );
         if (!res.ok)
           throw new Error(
-            `status: ${res.status}\n Could not find post, please try again later.`
+            `status: ${res.status}\n Could not find post, please try again later.`,
           );
         const data = await res.json();
         if (data.length > 0) {
@@ -185,12 +214,13 @@ export default function Posts() {
 
   async function deletePost(postId) {
     try {
-      const res = await fetch(`http://localhost:3000/posts/${postId}`, {
+      const res = await fetch(`http://localhost:3000/api/posts/${postId}`, {
         method: "DELETE",
+        credentials: "include",
       });
       if (!res.ok)
         throw new Error(
-          `status: ${res.status}\n Could not delete post, please try again later.`
+          `status: ${res.status}\n Could not delete post, please try again later.`,
         );
       setPostsList((prev) => prev.filter((p) => p.id !== postId));
       if (openPostId === postId) setOpenPostId(null);
@@ -202,18 +232,19 @@ export default function Posts() {
   async function addNewPost(data) {
     if (!data.title.trim()) return;
     try {
-      const res = await fetch(`http://localhost:3000/posts`, {
+      const res = await fetch(`http://localhost:3000/api/posts`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          userId: userID,
+          userId: userId,
           title: data.title,
           body: data.body,
         }),
+        credentials: "include",
       });
       if (!res.ok)
         throw new Error(
-          `status: ${res.status}\n Could not add post, please try again later.`
+          `status: ${res.status}\n Could not add post, please try again later.`,
         );
       const newPost = await res.json();
       setPostsList((prev) => [newPost, ...prev]);
@@ -228,18 +259,19 @@ export default function Posts() {
     const postToEdit = postsList.find((p) => p.id === postId);
     if (!postToEdit) return;
     try {
-      const res = await fetch(`http://localhost:3000/posts/${postId}`, {
+      const res = await fetch(`http://localhost:3000/api/posts/${postId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...postToEdit, ...updates }),
+        credentials: "include",
       });
       if (!res.ok)
         throw new Error(
-          `status: ${res.status}\n Could not load tasks, please try again later.`
+          `status: ${res.status}\n Could not load tasks, please try again later.`,
         );
       const updatedPost = await res.json();
       setPostsList((prev) =>
-        prev.map((p) => (p.id === postId ? updatedPost : p))
+        prev.map((p) => (p.id === postId ? updatedPost : p)),
       );
     } catch (error) {
       alert(error);
@@ -296,7 +328,7 @@ export default function Posts() {
               <Post
                 key={post.id}
                 {...post}
-                currentUser={post.userId === userID}
+                currentUser={post.userId === userId}
                 edit={updatePost}
                 onDelete={deletePost}
                 isExpanded={false}
@@ -317,7 +349,7 @@ export default function Posts() {
           key={`expanded-${openPostId}`}
           {...postsList.find((p) => p.id === openPostId)}
           currentUser={
-            postsList.find((p) => p.id === openPostId)?.userId === userID
+            postsList.find((p) => p.id === openPostId)?.userId === userId
           }
           edit={updatePost}
           onDelete={deletePost}

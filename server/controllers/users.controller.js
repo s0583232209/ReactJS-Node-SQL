@@ -36,8 +36,8 @@ export async function BL_signup(req, res) {
       res,
       user,
       200,
-      await tokenHandler(user, false),
       await tokenHandler(user, true),
+      await tokenHandler(user, false),
     );
   } catch (err) {
     log.warn(`BL_signup error: ${err.message}`);
@@ -62,9 +62,9 @@ export async function BL_login(req, res) {
           userId: userId,
           msg: "success",
         },
-        false,
+        true,
       ),
-      await tokenHandler({ email: req.body.email, userId: userId }, true),
+      await tokenHandler({ email: req.body.email, userId: userId }, false),
     );
   } catch (err) {
     log.warn(`BL_login error: ${err.message}`);
@@ -72,9 +72,7 @@ export async function BL_login(req, res) {
   }
 }
 async function tokenHandler(user, access) {
-  const secretKey = access
-    ? process.env.JWT_ACCESS_SECRET
-    : process.env.JWT_REFRESH_SECRET;
+  const secretKey = access ? process.env.JWT_SECRET : process.env.JWT_SECRET;
   const token = jwt.sign(user, secretKey, { expiresIn: access ? "15m" : "7d" });
 
   return token;
@@ -83,14 +81,14 @@ async function handleResponse(res, body, status, token, refreshToken) {
   res.cookie("access_token", token, {
     httpOnly: true,
     secure: false,
-    sameSite: "strict",
-    maxAge: 60 * 1000,
+    sameSite: "lax",
+    maxAge: 60 * 1000 * 5,
   });
   if (refreshToken)
     res.cookie("refresh_token", refreshToken, {
       httpOnly: true,
       secure: false,
-      sameSite: "strict",
+      sameSite: "lax",
       maxAge: 60 * 1000 * 60 * 24 * 7,
     });
   res.status(status).send(body);

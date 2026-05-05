@@ -20,11 +20,14 @@ import {
 } from "react-router-dom";
 export const appContext = createContext();
 function App() {
-  const [userID, setUserID] = useState(
-    JSON.parse(sessionStorage.getItem("current-user"))?.userId || null
+  const storedUser = JSON.parse(sessionStorage.getItem("current-user"));
+  console.log("App.jsx - stored user:", storedUser);
+  console.log("App.jsx - userId from stored user:", storedUser?.userId);
+  const [userId, setUserId] = useState(
+    storedUser?.userId || null
   );
   return (
-    <appContext.Provider value={{ userID, setUserID }}>
+    <appContext.Provider value={{ userId, setUserId }}>
       <Routes>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>

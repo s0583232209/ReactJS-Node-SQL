@@ -184,3 +184,219 @@
 2026-05-05 20:02:29 INFO  DAL_addNewUser called for username: try 
 2026-05-05 20:02:29 INFO  DAL_addNewUser successful, user id: 11 
 2026-05-05 20:02:29 INFO  BL_signup successful for email: try@try.com 
+2026-05-05 20:04:35 INFO  init 
+2026-05-05 20:04:35 INFO  Database connected successfully 
+2026-05-05 20:04:35 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 20:04:39 INFO  BL_login successful for email: try@try.com 
+2026-05-05 20:06:19 INFO  BL_login successful for email: try@try.com 
+2026-05-05 20:46:23 INFO  init 
+2026-05-05 20:46:23 INFO  Database connected successfully 
+2026-05-05 20:46:23 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 20:46:32 INFO  BL_signup called for email:  
+2026-05-05 20:46:33 INFO  DAL_addNewUser called for username:  
+2026-05-05 20:46:33 ERROR DAL_addNewUser error: Incorrect integer value: '' for column 'zipcode' at row 1 
+2026-05-05 20:46:33 WARN  BL_signup error: Incorrect integer value: '' for column 'zipcode' at row 1 
+2026-05-05 20:46:40 INFO  BL_login successful for email: try@try.com 
+2026-05-05 20:48:22 INFO  BL_login successful for email: try@try.com 
+2026-05-05 20:56:06 INFO  BL_login successful for email: try@try.com 
+2026-05-05 20:56:17 INFO  init 
+2026-05-05 20:56:18 INFO  Database connected successfully 
+2026-05-05 20:56:18 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 20:56:27 INFO  BL_login successful for email: try@try.com 
+2026-05-05 20:56:56 INFO  init 
+2026-05-05 20:56:56 INFO  Database connected successfully 
+2026-05-05 20:56:56 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 20:57:09 INFO  BL_login successful for email: try@try.com 
+2026-05-05 20:57:46 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:00:19 INFO  init 
+2026-05-05 21:00:19 INFO  Database connected successfully 
+2026-05-05 21:00:19 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:00:22 INFO  init 
+2026-05-05 21:00:23 INFO  Database connected successfully 
+2026-05-05 21:00:23 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:00:30 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:01:17 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:02:17 INFO  init 
+2026-05-05 21:02:17 INFO  Database connected successfully 
+2026-05-05 21:02:17 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:02:20 INFO  init 
+2026-05-05 21:02:20 INFO  Database connected successfully 
+2026-05-05 21:02:20 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:02:23 INFO  init 
+2026-05-05 21:02:23 INFO  Database connected successfully 
+2026-05-05 21:02:23 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:02:32 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:03:14 INFO  init 
+2026-05-05 21:03:15 INFO  Database connected successfully 
+2026-05-05 21:03:15 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:03:27 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:03:48 INFO  init 
+2026-05-05 21:03:48 INFO  Database connected successfully 
+2026-05-05 21:03:48 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:03:49 INFO  init 
+2026-05-05 21:03:49 INFO  Database connected successfully 
+2026-05-05 21:03:49 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:04:04 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:04:35 INFO  init 
+2026-05-05 21:04:35 INFO  Database connected successfully 
+2026-05-05 21:04:35 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:04:38 INFO  init 
+2026-05-05 21:04:38 INFO  Database connected successfully 
+2026-05-05 21:04:38 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:04:44 INFO  init 
+2026-05-05 21:04:44 INFO  Database connected successfully 
+2026-05-05 21:04:44 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:04:50 INFO  init 
+2026-05-05 21:04:51 INFO  Database connected successfully 
+2026-05-05 21:04:51 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:04:58 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:05:26 INFO  init 
+2026-05-05 21:05:27 INFO  Database connected successfully 
+2026-05-05 21:05:27 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:05:35 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:05:48 INFO  init 
+2026-05-05 21:05:48 INFO  Database connected successfully 
+2026-05-05 21:05:48 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:05:56 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:07:39 INFO  init 
+2026-05-05 21:07:39 INFO  Database connected successfully 
+2026-05-05 21:07:39 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:07:48 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:15:20 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:15:52 INFO  init 
+2026-05-05 21:15:53 INFO  Database connected successfully 
+2026-05-05 21:15:53 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:16:03 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:16:51 INFO  init 
+2026-05-05 21:16:51 INFO  Database connected successfully 
+2026-05-05 21:16:51 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:17:05 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:18:05 INFO  init 
+2026-05-05 21:18:05 INFO  Database connected successfully 
+2026-05-05 21:18:05 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:18:09 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:20:49 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:21:09 INFO  init 
+2026-05-05 21:21:10 INFO  Database connected successfully 
+2026-05-05 21:21:10 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:21:17 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:22:28 INFO  init 
+2026-05-05 21:22:29 INFO  Database connected successfully 
+2026-05-05 21:22:29 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:22:37 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:22:58 INFO  init 
+2026-05-05 21:22:59 INFO  Database connected successfully 
+2026-05-05 21:22:59 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:23:07 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:24:57 INFO  init 
+2026-05-05 21:24:57 INFO  Database connected successfully 
+2026-05-05 21:24:57 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:25:06 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:25:55 INFO  init 
+2026-05-05 21:25:55 INFO  Database connected successfully 
+2026-05-05 21:25:55 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:26:05 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:27:34 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:28:09 INFO  init 
+2026-05-05 21:28:09 INFO  Database connected successfully 
+2026-05-05 21:28:09 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:28:20 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:29:14 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:29:35 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:33:37 INFO  init 
+2026-05-05 21:33:37 INFO  Database connected successfully 
+2026-05-05 21:33:37 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:33:46 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:35:44 INFO  init 
+2026-05-05 21:35:45 INFO  Database connected successfully 
+2026-05-05 21:35:45 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:35:53 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:37:32 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:41:08 INFO  init 
+2026-05-05 21:41:08 INFO  Database connected successfully 
+2026-05-05 21:41:08 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:41:17 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:44:30 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:44:41 INFO  init 
+2026-05-05 21:44:41 INFO  Database connected successfully 
+2026-05-05 21:44:41 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:44:51 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:44:53 INFO  BL_getAllPosts called with userId: all 
+2026-05-05 21:44:53 INFO  DAL_getAll called with userId: all 
+2026-05-05 21:44:53 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-05 21:44:53 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-05 21:46:29 INFO  init 
+2026-05-05 21:46:29 INFO  Database connected successfully 
+2026-05-05 21:46:29 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:46:38 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:46:39 INFO  BL_getAllPosts called with userId: all 
+2026-05-05 21:46:39 INFO  DAL_getAll called with userId: all 
+2026-05-05 21:46:39 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-05 21:46:39 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-05 21:47:42 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:47:44 INFO  BL_getAllPosts called with userId: all 
+2026-05-05 21:47:44 INFO  DAL_getAll called with userId: all 
+2026-05-05 21:47:44 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-05 21:47:44 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-05 21:48:59 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:49:15 INFO  BL_getAllPosts called with userId: all 
+2026-05-05 21:49:15 INFO  DAL_getAll called with userId: all 
+2026-05-05 21:49:15 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-05 21:49:15 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-05 21:49:33 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:49:35 INFO  BL_getAllPosts called with userId: all 
+2026-05-05 21:49:35 INFO  DAL_getAll called with userId: all 
+2026-05-05 21:49:35 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-05 21:49:35 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-05 21:50:23 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:52:14 INFO  BL_getAllPosts called with userId: all 
+2026-05-05 21:52:14 INFO  DAL_getAll called with userId: all 
+2026-05-05 21:52:14 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-05 21:52:14 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-05 21:53:06 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:54:56 INFO  BL_getAllPosts called with userId: all 
+2026-05-05 21:54:56 INFO  DAL_getAll called with userId: all 
+2026-05-05 21:54:56 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-05 21:54:56 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-05 21:55:03 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:55:08 INFO  BL_getAllPosts called with userId: all 
+2026-05-05 21:55:08 INFO  DAL_getAll called with userId: all 
+2026-05-05 21:55:08 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-05 21:55:08 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-05 21:56:39 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:56:41 INFO  BL_getAllPosts called with userId: all 
+2026-05-05 21:56:41 INFO  DAL_getAll called with userId: all 
+2026-05-05 21:56:41 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-05 21:56:41 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-05 21:58:21 INFO  init 
+2026-05-05 21:58:22 INFO  Database connected successfully 
+2026-05-05 21:58:22 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 21:58:37 INFO  BL_login successful for email: try@try.com 
+2026-05-05 21:58:40 INFO  BL_getAllPosts called with userId: all 
+2026-05-05 21:58:40 INFO  DAL_getAll called with userId: all 
+2026-05-05 21:58:40 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-05 21:58:40 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-05 22:01:12 INFO  BL_login successful for email: try@try.com 
+2026-05-05 22:01:17 INFO  BL_getAllPosts called with userId: all 
+2026-05-05 22:01:17 INFO  DAL_getAll called with userId: all 
+2026-05-05 22:01:17 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-05 22:01:17 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-05 22:05:54 INFO  init 
+2026-05-05 22:05:54 INFO  Database connected successfully 
+2026-05-05 22:05:54 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 22:06:08 INFO  BL_login successful for email: try@try.com 
+2026-05-05 22:06:14 INFO  BL_getAllPosts called with userId: all 
+2026-05-05 22:06:14 INFO  DAL_getAll called with userId: all 
+2026-05-05 22:06:14 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-05 22:06:14 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-05 22:08:05 INFO  BL_login successful for email: try@try.com 
+2026-05-05 22:08:06 INFO  BL_getAllPosts called with userId: all 
+2026-05-05 22:08:06 INFO  DAL_getAll called with userId: all 
+2026-05-05 22:08:06 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-05 22:08:06 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-05 22:09:08 INFO  BL_login successful for email: try@try.com 
+2026-05-05 22:09:09 INFO  BL_getAllPosts called with userId: all 
+2026-05-05 22:09:09 INFO  DAL_getAll called with userId: all 
+2026-05-05 22:09:09 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-05 22:09:09 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-05 22:09:35 INFO  BL_login successful for email: try@try.com 

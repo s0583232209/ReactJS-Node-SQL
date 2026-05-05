@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
 import { appContext } from "../App";
 export default function Home() {
-  const {setUserID}=useContext(appContext)
+  const {setUserId}=useContext(appContext)
   const navigate = useNavigate();
   const currentUser =
     JSON.parse(sessionStorage.getItem("current-user")) || null;
@@ -11,10 +11,11 @@ export default function Home() {
   useEffect(() => {
     if (!currentUser) {
       navigate("/login");
+    } else {
+      setUserId(currentUser.userId);
     }
-  }, [currentUser, navigate]);
+  }, [currentUser, navigate, setUserId]);
   if (!currentUser) return null;
-  setUserID(JSON.parse(sessionStorage.getItem("current-user")).id || null);
   return (
     <>
       <NavBar></NavBar>
