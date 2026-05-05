@@ -150,3 +150,37 @@
 2026-05-05 18:02:51 INFO  Server started on http://127.0.0.1:3000 
 2026-05-05 18:03:18 INFO  BL_login successful for email: n@gmail.com 
 2026-05-05 18:06:29 INFO  BL_login successful for email: n@gmail.com 
+2026-05-05 19:27:59 INFO  init 
+2026-05-05 19:27:59 INFO  Database connected successfully 
+2026-05-05 19:27:59 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 19:53:23 INFO  init 
+2026-05-05 19:53:24 INFO  Database connected successfully 
+2026-05-05 19:53:24 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 19:55:29 INFO  init 
+2026-05-05 19:55:29 INFO  Database connected successfully 
+2026-05-05 19:55:29 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 19:55:43 INFO  init 
+2026-05-05 19:55:43 INFO  Database connected successfully 
+2026-05-05 19:55:43 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 19:56:57 INFO  init 
+2026-05-05 19:56:57 INFO  Database connected successfully 
+2026-05-05 19:56:57 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 19:58:24 INFO  init 
+2026-05-05 19:58:24 INFO  Database connected successfully 
+2026-05-05 19:58:24 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 19:58:27 INFO  init 
+2026-05-05 19:58:27 INFO  Database connected successfully 
+2026-05-05 19:58:27 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 19:58:28 INFO  init 
+2026-05-05 19:58:28 INFO  Database connected successfully 
+2026-05-05 19:58:28 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 20:01:08 INFO  init 
+2026-05-05 20:01:09 INFO  Database connected successfully 
+2026-05-05 20:01:09 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 20:02:25 INFO  init 
+2026-05-05 20:02:25 INFO  Database connected successfully 
+2026-05-05 20:02:25 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 20:02:29 INFO  BL_signup called for email: try@try.com 
+2026-05-05 20:02:29 INFO  DAL_addNewUser called for username: try 
+2026-05-05 20:02:29 INFO  DAL_addNewUser successful, user id: 11 
+2026-05-05 20:02:29 INFO  BL_signup successful for email: try@try.com 

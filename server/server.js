@@ -23,7 +23,7 @@ const HOST = process.env.HOST || "localhost";
 //   }),
 // );
 app.use(cors({
-  origin: "http://localhost:5177",  
+  origin: "http://localhost:5173",  
   credentials: true
 }));
 app.use(express.json());
@@ -50,7 +50,7 @@ await connect();
 log.info("Database connected successfully");
 app.listen(PORT, HOST, () => {
   log.info(`Server started on http://${HOST}:${PORT}`);
-  console.log(`Server listening on http://${HOST}:${PORT}`);
+  console.log(`Server listening on http://${HOST}:${PORT}.`);
 });
 import crypto from 'crypto';
 
