@@ -4,6 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start-autoupdate":"nodemon ./server/server.js",
     "start": "node  ./server/server.js",
     "start-dev": "node --watch --inspect server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,6 +31,7 @@
     "jsonwebtoken": "^9.0.3",
     "mysql2": "^3.22.3",
     "nodemon": "^3.1.14",
+    "react-router-dom": "^7.15.0",
     "simple-node-logger": "^21.8.12",
     "winston": "^3.19.0"
   }
