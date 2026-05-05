@@ -125,12 +125,28 @@
 2026-05-05 13:55:39 INFO  DAL_getById called with id: 1 
 2026-05-05 13:55:39 INFO  DAL_getById successful for id: 1 
 2026-05-05 13:55:39 INFO  BL_getById successful, got user from database 
-2026-05-05 16:08:57 INFO  init 
-2026-05-05 16:08:57 INFO  Database connected successfully 
-2026-05-05 16:08:57 INFO  Server started on http://127.0.0.1:3000 
-2026-05-05 16:13:58 INFO  init 
-2026-05-05 16:13:58 INFO  Database connected successfully 
-2026-05-05 16:13:58 INFO  Server started on http://127.0.0.1:3000 
-2026-05-05 18:12:38 INFO  init 
-2026-05-05 18:12:38 INFO  Database connected successfully 
-2026-05-05 18:12:38 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 16:48:37 INFO  init 
+2026-05-05 16:48:38 INFO  Database connected successfully 
+2026-05-05 16:48:38 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 16:49:29 INFO  BL_signup called for email: undefined 
+2026-05-05 16:49:29 WARN  BL_signup error: data and salt arguments required 
+2026-05-05 16:50:50 INFO  BL_signup called for email: n@gmail.com 
+2026-05-05 16:50:51 INFO  DAL_addNewUser called for username: nn 
+2026-05-05 16:50:51 INFO  DAL_addNewUser successful, user id: 11 
+2026-05-05 16:50:51 INFO  BL_signup successful for email: n@gmail.com 
+2026-05-05 16:51:13 INFO  BL_getById called for user id: 11 
+2026-05-05 16:51:13 INFO  DAL_getById called with id: 11 
+2026-05-05 16:51:13 INFO  DAL_getById successful for id: 11 
+2026-05-05 16:51:13 INFO  BL_getById successful, got user from database 
+2026-05-05 17:40:17 INFO  init 
+2026-05-05 17:40:18 INFO  Database connected successfully 
+2026-05-05 17:40:18 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 17:58:21 INFO  init 
+2026-05-05 17:58:22 INFO  Database connected successfully 
+2026-05-05 17:58:22 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 18:00:24 INFO  BL_login successful for email: n@gmail.com 
+2026-05-05 18:02:51 INFO  init 
+2026-05-05 18:02:51 INFO  Database connected successfully 
+2026-05-05 18:02:51 INFO  Server started on http://127.0.0.1:3000 
+2026-05-05 18:03:18 INFO  BL_login successful for email: n@gmail.com 
+2026-05-05 18:06:29 INFO  BL_login successful for email: n@gmail.com 
