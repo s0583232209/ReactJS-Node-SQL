@@ -6,10 +6,12 @@ import {
   getUserIdByUserName,
 } from "../dal/users.dal.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 import express from "express";
+import { verifyToken } from "../middleware/auth.middleware.js";
 const router = express.Router();
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", verifyToken, async (req, res) => {
   console.log("in users fetch");
   const user = await getById(req.params.id);
   console.log(user);
@@ -35,7 +37,9 @@ router.post("/login", async (req, res) => {
   console.log(req.body.password);
   const isMatch = await bcrypt.compare(req.body.password, hashedPassword);
   console.log(isMatch);
-  if (isMatch) res.status(200).send("you are in");
-  else res.status(404).send("this user does not exist");
+  if (isMatch) {
+    const token = jwt.sign({ userId }, process.env.JWT_SECRET, { expiresIn: "1h" });
+    res.status(200).json({ token });
+  } else res.status(404).send("this user does not exist");
 });
 export default router;
