@@ -5,7 +5,7 @@ export async function DAL_getAllByPostId(postId) {
   try {
     log.info(`DAL_getAllByPostId called with postId: ${postId}`);
     const connection = await getConnection();
-    const [rows] = await connection.query(
+    const [rows] = await connection.execute(
       "SELECT id,post_id AS postId, user_id AS userId,name, body FROM comments WHERE post_id = ?;",
       [postId],
     );
@@ -21,7 +21,7 @@ export async function DAL_getById(id) {
   try {
     log.info(`DAL_getById called with id: ${id}`);
     const connection = await getConnection();
-    const [rows] = await connection.query(
+    const [rows] = await connection.execute(
       "SELECT * FROM comments WHERE id = ?;",
       [id],
     );
@@ -39,7 +39,7 @@ export async function DAL_addNewComment(details, userId) {
     console.log(details, userId);
     log.info(`DAL_addNewComment called for post_id: ${details.postId}`);
     const connection = await getConnection();
-    const [result] = await connection.query(
+    const [result] = await connection.execute(
       "INSERT INTO comments (post_id, user_id, body) VALUES (?, ?, ?);",
       [details.postId, userId, details.body],
     );
@@ -56,7 +56,7 @@ export async function DAL_updateComment(id, details) {
   try {
     log.info(`DAL_updateComment called for id: ${id}`);
     const connection = await getConnection();
-    await connection.query(
+    await connection.execute(
       "UPDATE comments SET name = ?, body = ? WHERE id = ?;",
       [details.name, details.body, id],
     );
@@ -72,7 +72,7 @@ export async function DAL_deleteComment(id) {
   try {
     log.info(`DAL_deleteComment called for id: ${id}`);
     const connection = await getConnection();
-    const [result] = await connection.query(
+    const [result] = await connection.execute(
       "DELETE FROM comments WHERE id = ?;",
       [id],
     );
