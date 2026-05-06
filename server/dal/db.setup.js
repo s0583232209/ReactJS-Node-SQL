@@ -1,76 +1,6 @@
-// import { configDotenv } from "dotenv";
-// import mysql from "mysql2/promise";
-// import log from "../utils/logger.js";
-
-// configDotenv();
-
-// let connectionPromise = null;
-
-// export async function connect() {
-//   if (connectionPromise) {
-//     return connectionPromise;
-//   }
-
-//   connectionPromise = (async () => {
-//     const connection = await mysql.createConnection({
-//       host: process.env.HOST,
-//       user: process.env.USER,
-//       password: process.env.PASSWORD,
-//       database: process.env.DATABASE,
-//     });
-
-//     console.log("Connected to MySQL");
-//     return connection;
-//   })();
-
-//   return connectionPromise;
-// }
-
-import { configDotenv } from "dotenv";
-import mysql from "mysql2/promise";
 import fs from "fs/promises";
-import log from "../utils/logger.js";
-configDotenv();
-let connectionPromise = null;
-export async function connect() {
-  if (connectionPromise) {
-    return connectionPromise;
-  }
+import { getConnection } from "./db.connection.js";
 
-  connectionPromise = (async () => {
-    try {
-      const connection = await mysql.createConnection({
-        host: process.env.HOST,
-        user: process.env.USER,
-        password: process.env.PASSWORD,
-      });
-
-      console.log("Connected to MySQL");
-      try {
-        await connection.query(`USE ${process.env.DATABASE}`);
-      } catch (e) {
-        connectionPromise = connection;
-        buildDataBase();
-      }
-      return connection;
-    } catch (err) {
-      console.error("Connection failed:", err);
-      connectionPromise = null; // Reset on failure to allow retry
-      throw err;
-    }
-  })();
-
-  return connectionPromise;
-}
-export async function getConnection(createNow = false) {
-  if (connectionPromise) {
-    return connectionPromise;
-  } else if (createNow) {
-    return await connect();
-  } else {
-    return null;
-  }
-}
 export async function buildDataBase() {
   const connection = await getConnection();
   try {
@@ -116,15 +46,16 @@ export async function buildDataBase() {
     console.log(err);
   }
 }
+
 async function createTable(SQL) {
   const connection = await getConnection(false);
   const status = await connection.query(SQL);
   return status;
 }
-async function seeds() {np
+
+async function seeds() {
   const connection = await getConnection(false);
   try {
-    // Read all seed files from the seeds folder
     const usersSeedSQL = await fs.readFile(
       "./database/SQL-code/seeds/seedUsers.sql",
       "utf8",
@@ -146,7 +77,6 @@ async function seeds() {np
       "utf8",
     );
 
-    // Execute seed SQL files in order (users first due to foreign key dependencies)
     await connection.query(usersSeedSQL);
     await connection.query(passwordSeedSQL);
     await connection.query(postsSeedSQL);

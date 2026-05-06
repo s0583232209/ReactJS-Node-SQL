@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import Post from "./Post";
 import NavBar from "./NavBar";
 import { appContext } from "../App";
+import api from "../api";
 export default function Posts() {
   console.log("Posts rendered");
   const navigate = useNavigate();
@@ -54,23 +55,9 @@ export default function Posts() {
       if (loading || !hasMore || isFiltering) return;
       setLoading(true);
       try {
-        // const res = await fetch(
-        //   `http://localhost:3000/api/posts?_limit=${LIMIT}&_start=${page * LIMIT}`,
-        //   {
-        //     method: "GET",
-        //     credentials: "include",
-        //   },
-        // );
-        const res = await fetch(`http://localhost:3000/api/${userId}/posts`, {
-          method: "GET",
-          credentials: "include",
-        });
+        const res = await api.get(`/api/${userId}/posts`);
         console.log(res);
-        if (!res.ok) {
-          if (res.status === 401) navigate("/login");
-          throw new Error(`status: ${res.status}\n {res.message}.`);
-        }
-        const data = await res.json();
+        const data = res.data;
 
         console.log(data);
         setPostsList((prev) => {
@@ -82,6 +69,7 @@ export default function Posts() {
 
         setHasMore(data.length === LIMIT);
       } catch (error) {
+        if (error.response?.status === 401) navigate("/login");
         alert(error);
         navigate("/");
       } finally {
@@ -96,19 +84,8 @@ export default function Posts() {
       if (searchTitle) {
         setLoading(true);
         try {
-          const res = await fetch(
-            `http://localhost:3000/api/${userId}/posts?title=${searchTitle}`,
-            {
-              method: "GET",
-              credentials: "include",
-            },
-          );
-          if (!res.ok)
-            throw new Error(
-              `status: ${res.status}\n Could not load posts, please try again later.`,
-            );
-          const data = await res.json();
-          setPostsList(data);
+          const res = await api.get(`/api/${userId}/posts?title=${searchTitle}`);
+          setPostsList(res.data);
           setHasMore(false);
         } catch (error) {
           alert(error);
@@ -120,19 +97,8 @@ export default function Posts() {
       if (searchID) {
         setLoading(true);
         try {
-          const res = await fetch(
-            `http://localhost:3000/api/${userId}/posts?id=${searchID}`,
-            {
-              method: "GET",
-              credentials: "include",
-            },
-          );
-          if (!res.ok)
-            throw new Error(
-              `status: ${res.status}\n Could not load tasks, please try again later.`,
-            );
-          const data = await res.json();
-          setPostsList(data);
+          const res = await api.get(`/api/${userId}/posts?id=${searchID}`);
+          setPostsList(res.data);
           setHasMore(false);
         } catch (error) {
           alert(error);
@@ -151,17 +117,9 @@ export default function Posts() {
     if (!localMatch) {
       setLoading(true);
       try {
-        const res = await fetch(
-          `http://localhost:3000/api/${userId}/posts?title=${titleInput}`,
-          { method: "GET", credentials: "include" },
-        );
-        if (!res.ok)
-          throw new Error(
-            `status: ${res.status}\n Could not find post, please try again later.`,
-          );
-        const data = await res.json();
-        if (data.length > 0) {
-          setPostsList((prev) => [...prev, ...data]);
+        const res = await api.get(`/api/${userId}/posts?title=${titleInput}`);
+        if (res.data.length > 0) {
+          setPostsList((prev) => [...prev, ...res.data]);
         }
       } catch (error) {
         alert(error);
@@ -178,20 +136,9 @@ export default function Posts() {
     if (!localMatch) {
       setLoading(true);
       try {
-        const res = await fetch(
-          `http://localhost:3000/api/${userId}/posts?id=${idInput}`,
-          {
-            method: "GET",
-            credentials: "include",
-          },
-        );
-        if (!res.ok)
-          throw new Error(
-            `status: ${res.status}\n Could not find post, please try again later.`,
-          );
-        const data = await res.json();
-        if (data.length > 0) {
-          setPostsList((prev) => [...prev, ...data]);
+        const res = await api.get(`/api/${userId}/posts?id=${idInput}`);
+        if (res.data.length > 0) {
+          setPostsList((prev) => [...prev, ...res.data]);
         }
       } catch (error) {
         alert(error);
@@ -215,14 +162,7 @@ export default function Posts() {
 
   async function deletePost(postId) {
     try {
-      const res = await fetch(`http://localhost:3000/api/${userId}/posts/${postId}`, {
-        method: "DELETE",
-        credentials: "include",
-      });
-      if (!res.ok)
-        throw new Error(
-          `status: ${res.status}\n Could not delete post, please try again later.`,
-        );
+      await api.delete(`/api/${userId}/posts/${postId}`);
       setPostsList((prev) => prev.filter((p) => p.id !== postId));
       if (openPostId === postId) setOpenPostId(null);
     } catch (error) {
@@ -233,21 +173,12 @@ export default function Posts() {
   async function addNewPost(data) {
     if (!data.title.trim()) return;
     try {
-      const res = await fetch(`http://localhost:3000/api/${userId}/posts`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          userId: userId,
-          title: data.title,
-          body: data.body,
-        }),
-        credentials: "include",
+      const res = await api.post(`/api/${userId}/posts`, {
+        userId: userId,
+        title: data.title,
+        body: data.body,
       });
-      if (!res.ok)
-        throw new Error(
-          `status: ${res.status}\n Could not add post, please try again later.`,
-        );
-      const newPost = await res.json();
+      const newPost = res.data;
       setPostsList((prev) => [newPost, ...prev]);
       setNewPost(false);
       reset();
@@ -260,17 +191,8 @@ export default function Posts() {
     const postToEdit = postsList.find((p) => p.id === postId);
     if (!postToEdit) return;
     try {
-      const res = await fetch(`http://localhost:3000/api/${userId}/posts/${postId}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...postToEdit, ...updates }),
-        credentials: "include",
-      });
-      if (!res.ok)
-        throw new Error(
-          `status: ${res.status}\n Could not load tasks, please try again later.`,
-        );
-      const updatedPost = await res.json();
+      const res = await api.put(`/api/${userId}/posts/${postId}`, { ...postToEdit, ...updates });
+      const updatedPost = res.data;
       setPostsList((prev) =>
         prev.map((p) => (p.id === postId ? updatedPost : p)),
       );

@@ -23,12 +23,6 @@ export default function NavBar() {
       <div className="nav-links">
         <button
           className="nav-button"
-          onClick={() => navigate(`${userId}/Albums`)}
-        >
-          Albums
-        </button>
-        <button
-          className="nav-button"
           onClick={() => navigate(`/${userId}/posts`)}
         >
           Posts

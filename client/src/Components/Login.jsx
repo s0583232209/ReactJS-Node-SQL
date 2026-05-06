@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState, useContext, useEffect } from "react";
 import { appContext } from "../App";
+import api from "../api";
 export default function Login() {
   const { register, handleSubmit, reset } = useForm();
   const [error, setError] = useState(null);
@@ -9,16 +10,8 @@ export default function Login() {
   const { setUserId } = useContext(appContext);
   async function login(data) {
     try {
-      const response = await fetch(`http://localhost:3000/api/users/login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-        credentials: "include",
-      });
-      if (!response.ok) {
-        throw new Error("Invalid username or password");
-      }
-      const user = await response.json();
+      const response = await api.post("/api/users/login", data);
+      const user = response.data;
       console.log("Login response:", user);
       console.log("userId from response:", user.userId);
       sessionStorage.setItem("current-user", JSON.stringify(user));

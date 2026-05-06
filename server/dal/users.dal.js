@@ -1,4 +1,4 @@
-import { getConnection } from "./OnlyConnectionInTheMeantime.js";
+import { getConnection } from "./db.connection.js";
 import { configDotenv } from "dotenv";
 import bcrypt from "bcrypt";
 import log from "../utils/logger.js";

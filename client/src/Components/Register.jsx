@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { appContext } from "../App";
+import api from "../api";
 export default function Register() {
   useEffect(() => {
     sessionStorage.clear();
@@ -20,20 +21,10 @@ export default function Register() {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/api/users/signup`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-        credentials: "include",
-      });
+      const response = await api.post("/api/users/signup", data);
       console.log(response);
 
-      if (!response.ok)
-        throw new Error(
-          "Register faild, please re-check the details or try agian later.",
-        );
-
-      const user = await response.json();
+      const user = response.data;
       if (!user) {
         throw new Error("This user name isn't valid, please try another one");
       }

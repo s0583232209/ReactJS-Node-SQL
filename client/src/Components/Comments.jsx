@@ -3,6 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import { useForm } from "react-hook-form";
 import Comment from "./Comment";
 import { appContext } from "../App";
+import api from "../api";
 export default function Comments(props) {
   const { userId } = useContext(appContext);
   const [commentsList, setCommentsList] = useState([]);
@@ -16,82 +17,43 @@ export default function Comments(props) {
 
   useEffect(() => {
     async function getComments() {
-      const response = await fetch(
-        `http://localhost:3000/api/${userId}/comments?postId=${props.postId}`,
-        {
-          method: "GET",
-          credentials: "include",
-        },
-      );
-      if (!response.ok)
-        throw new Error(
-          "Error: response is not ok, status:  " + response.status,
-        );
-      const data = await response.json();
-      setCommentsList(data);
+      const response = await api.get(`/api/${userId}/comments?postId=${props.postId}`);
+      setCommentsList(response.data);
     }
     getComments();
   }, [props.postId]);
   async function deleteComment(id) {
-    const response = await fetch(
-      `http://localhost:3000/api/${userId}/comments/${id}`,
-      {
-        method: "DELETE",
-        credentials: "include",
-      },
-    );
-    if (response.ok) {
-      setCommentsList((prev) => prev.filter((comment) => comment.id !== id));
-    }
+    await api.delete(`/api/${userId}/comments/${id}`);
+    setCommentsList((prev) => prev.filter((comment) => comment.id !== id));
   }
   async function addNewComment(data) {
     if (data.name.trim() === "") {
       setNewComment(false);
       return;
     }
-    const response = await fetch(
-      `http://localhost:3000/api/${userId}/comments`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          postId: props.postId,
-          name: data.name,
-          email: userEmail,
-          body: data.body,
-        }),
-        credentials: "include",
-      },
-    );
-    if (response.ok) {
-      setNewComment(false);
-      const newCommentResponse = await response.json();
-      console.log(newCommentResponse);
-      console.log(commentsList[0]);
-      setCommentsList((prev) => [...prev, newCommentResponse]);
-      reset();
-    }
+    const response = await api.post(`/api/${userId}/comments`, {
+      postId: props.postId,
+      name: data.name,
+      email: userEmail,
+      body: data.body,
+    });
+    setNewComment(false);
+    const newCommentResponse = response.data;
+    console.log(newCommentResponse);
+    console.log(commentsList[0]);
+    setCommentsList((prev) => [...prev, newCommentResponse]);
+    reset();
   }
   async function updateComment(commentId, updates) {
     const commentToEdit = commentsList.find((p) => p.id === commentId);
     const editedComment = { ...commentToEdit, ...updates };
-    const response = await fetch(
-      `http://localhost:3000/api/${userId}/comments/${commentId}`,
-      {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(editedComment),
-        credentials: "include",
-      },
+    const response = await api.put(`/api/${userId}/comments/${commentId}`, editedComment);
+    const updatedComment = response.data;
+    setCommentsList((prev) =>
+      prev.map((comment) =>
+        comment.id === commentId ? updatedComment : comment,
+      ),
     );
-    if (response.ok) {
-      const updatedComment = await response.json();
-      setCommentsList((prev) =>
-        prev.map((comment) =>
-          comment.id === commentId ? updatedComment : comment,
-        ),
-      );
-    }
   }
   return (
     <>

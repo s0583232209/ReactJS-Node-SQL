@@ -1,5 +1,4 @@
 import log from "../utils/logger.js";
-import jwt from "jsonwebtoken";
 import {
   DAL_getAll,
   DAL_getById,
@@ -9,6 +8,7 @@ import {
   DAL_loginDetails,
 } from "../dal/users.dal.js";
 import bcrypt from "bcrypt";
+import { tokenHandler, handleResponse } from "./auth.helpers.js";
 
 export async function BL_getById(req, res) {
   try {
@@ -70,26 +70,4 @@ export async function BL_login(req, res) {
     log.warn(`BL_login error: ${err.message}`);
     res.status(404).send("this user does not exist");
   }
-}
-async function tokenHandler(user, access) {
-  const secretKey = access ? process.env.JWT_SECRET : process.env.JWT_SECRET;
-  const token = jwt.sign(user, secretKey, { expiresIn: access ? "15m" : "7d" });
-
-  return token;
-}
-async function handleResponse(res, body, status, token, refreshToken) {
-  res.cookie("access_token", token, {
-    httpOnly: true,
-    secure: false,
-    sameSite: "lax",
-    maxAge: 60 * 1000 * 5,
-  });
-  if (refreshToken)
-    res.cookie("refresh_token", refreshToken, {
-      httpOnly: true,
-      secure: false,
-      sameSite: "lax",
-      maxAge: 60 * 1000 * 60 * 24 * 7,
-    });
-  res.status(status).send(body);
 }
