@@ -26,7 +26,6 @@
 //   return connectionPromise;
 // }
 
-
 import { configDotenv } from "dotenv";
 import mysql from "mysql2/promise";
 import fs from "fs/promises";
@@ -60,7 +59,7 @@ export async function connect() {
       throw err;
     }
   })();
-  
+
   return connectionPromise;
 }
 export async function getConnection(createNow = false) {
@@ -99,6 +98,10 @@ export async function buildDataBase() {
       "./database/SQL-code/create-database-code/comments.sql",
       "utf8",
     );
+    const tokensTableSQL = await fs.readFile(
+      "./database/SQL-code/create-database-code/tokens.sql",
+      "utf8",
+    );
     const status = await connection.query(schemaSQL);
     if (!status) throw new Error("could not create the schema");
     await connection.query(`USE ${process.env.DATABASE}`);
@@ -107,6 +110,7 @@ export async function buildDataBase() {
     createTable(postsTableSQL);
     createTable(tasksTableSQL);
     createTable(commentsTableSQL);
+    createTable(tokensTableSQL);
     seeds();
   } catch (err) {
     console.log(err);
@@ -117,7 +121,7 @@ async function createTable(SQL) {
   const status = await connection.query(SQL);
   return status;
 }
-async function seeds() {
+async function seeds() {np
   const connection = await getConnection(false);
   try {
     // Read all seed files from the seeds folder

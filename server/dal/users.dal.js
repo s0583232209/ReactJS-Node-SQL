@@ -8,7 +8,7 @@ export async function DAL_getById(id) {
   try {
     log.info(`DAL_getById called with id: ${id}`);
     const connection = await getConnection();
-    const [rows] = await connection.query("SELECT * FROM users WHERE id= ?;", [
+    const [rows] = await connection.execute("SELECT * FROM users WHERE id= ?;", [
       id,
     ]);
     if (!rows[0]) throw new Error("User not found");
@@ -24,7 +24,7 @@ export async function DAL_getAll() {
   try {
     log.info("DAL_getAll called");
     const connection = await getConnection();
-    const [rows] = await connection.query("SELECT * FROM users;");
+    const [rows] = await connection.execute("SELECT * FROM users;");
     log.info(`DAL_getAll successful, returned ${rows.length} users`);
     return rows;
   } catch (err) {
@@ -37,7 +37,7 @@ export async function DAL_getUserIdByField(field,value) {
   try {
     log.info(`DAL_getUserIdByUserName called with  ${field}: ${value}`);
     const connection = await getConnection();
-    const [rows] = await connection.query(
+    const [rows] = await connection.execute(
       `SELECT id FROM users WHERE ?=?`,
       [field,value],
     );
@@ -54,8 +54,8 @@ export async function DAL_addNewUser(details) {
   try {
     log.info(`DAL_addNewUser called for username: ${details.username}`);
     const connection = await getConnection();
-    connection.query(`USE ${process.env.DATABASE}`);
-    const [result] = await connection.query(
+    connection.execute(`USE ${process.env.DATABASE}`);
+    const [result] = await connection.execute(
       "INSERT INTO users (username,email,phone,name,zipcode,street,city,house_number)VALUES(?,?,?,?,?,?,?,?);",
       [
         details.username,
@@ -69,7 +69,7 @@ export async function DAL_addNewUser(details) {
       ],
     );
 
-    const passwordResult = await connection.query(
+    const passwordResult = await connection.execute(
       "INSERT INTO passwords (user_id,hashed_password) VALUES (?,?);",
       [result.insertId, details.password],
     );
@@ -84,7 +84,7 @@ export async function DAL_addNewUser(details) {
 export async function DAL_checkUsersDetails(user) {}
 export async function DAL_loginDetails(email) {
   const connection = await getConnection();
-  const [rows] = await connection.query(
+  const [rows] = await connection.execute(
     "SELECT passwords.hashed_password AS hashedPassword,passwords.user_id AS userId FROM users JOIN passwords ON users.id=passwords.user_id WHERE email=?;",
     [email],
   );

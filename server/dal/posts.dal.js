@@ -6,7 +6,7 @@ export async function DAL_getAll() {
     log.info(`DAL_getAll called `);
     const connection = await getConnection();
 
-    const [rows] = await connection.query("SELECT * FROM posts;");
+    const [rows] = await connection.execute("SELECT * FROM posts;");
     log.info(`DAL_getAll successful, returned ${rows.length} posts`);
     return rows;
   } catch (err) {
@@ -19,7 +19,7 @@ export async function DAL_getById(id) {
   try {
     log.info(`DAL_getById called with id: ${id}`);
     const connection = await getConnection();
-    const [rows] = await connection.query("SELECT * FROM posts WHERE id = ?;", [
+    const [rows] = await connection.execute("SELECT * FROM posts WHERE id = ?;", [
       id,
     ]);
     if (!rows[0]) throw new Error("Post not found");
@@ -35,7 +35,7 @@ export async function DAL_addNewPost(details) {
   try {
     log.info(`DAL_addNewPost called for user_id: ${details.user_id}`);
     const connection = await getConnection();
-    const [result] = await connection.query(
+    const [result] = await connection.execute(
       "INSERT INTO posts (user_id, title, body) VALUES (?, ?, ?);",
       [details.user_id, details.title, details.body],
     );
@@ -51,7 +51,7 @@ export async function DAL_updatePost(id, details) {
   try {
     log.info(`DAL_updatePost called for id: ${id}`);
     const connection = await getConnection();
-    await connection.query(
+    await connection.execute(
       "UPDATE posts SET title = ?, body = ? WHERE id = ?;",
       [details.title, details.body, id],
     );
@@ -67,7 +67,7 @@ export async function DAL_deletePost(id) {
   try {
     log.info(`DAL_deletePost called for id: ${id}`);
     const connection = await getConnection();
-    const [result] = await connection.query("DELETE FROM posts WHERE id = ?;", [
+    const [result] = await connection.execute("DELETE FROM posts WHERE id = ?;", [
       id,
     ]);
     const deleted = result.affectedRows > 0;
