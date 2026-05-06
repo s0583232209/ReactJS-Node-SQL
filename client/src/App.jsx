@@ -13,19 +13,13 @@ import Register from "../src/Components/Register.jsx";
 import Task from "../src/Components/Task.jsx";
 import Tasks from "../src/Components/Tasks.jsx";
 import { AccessDenied } from "./Components/AccessDenied.jsx";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 export const appContext = createContext();
 function App() {
   const storedUser = JSON.parse(sessionStorage.getItem("current-user"));
   console.log("App.jsx - stored user:", storedUser);
   console.log("App.jsx - userId from stored user:", storedUser?.userId);
-  const [userId, setUserId] = useState(
-    storedUser?.userId || null
-  );
+  const [userId, setUserId] = useState(storedUser?.userId || null);
   return (
     <appContext.Provider value={{ userId, setUserId }}>
       <Routes>
@@ -34,10 +28,10 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/albums/:id/" element={<Albums />}></Route>
         <Route path="/albums/:id/:id" element={<Album />}></Route>
-        <Route path="/posts/:id/" element={<Posts />}>
+        <Route path=":userId/posts/:id?" element={<Posts />}>
           <Route path=":id" element={<Post />}></Route>
         </Route>
-        <Route path="/tasks/:id/" element={<Tasks />}>
+        <Route path=":userId/tasks/:id?" element={<Tasks />}>
           <Route path=":id" element={<Task />} />
         </Route>
         <Route path="/access_denied" element={<AccessDenied />}></Route>

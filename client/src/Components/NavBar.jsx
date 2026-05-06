@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
+import { appContext } from "../App.jsx";
 import "./NavBar.css";
 
 export default function NavBar() {
+  const { userId } = useContext(appContext);
   const navigate = useNavigate();
   const currentUser =
     JSON.parse(sessionStorage.getItem("current-user")) || null;
@@ -21,19 +23,19 @@ export default function NavBar() {
       <div className="nav-links">
         <button
           className="nav-button"
-          onClick={() => navigate(`/Albums/${currentUser.id}`)}
+          onClick={() => navigate(`${userId}/Albums`)}
         >
           Albums
         </button>
         <button
           className="nav-button"
-          onClick={() => navigate(`/Posts/${currentUser.id}`)}
+          onClick={() => navigate(`/${userId}/posts`)}
         >
           Posts
         </button>
         <button
           className="nav-button"
-          onClick={() => navigate(`/Tasks/${currentUser.id}`)}
+          onClick={() => navigate(`/${userId}/tasks`)}
         >
           Tasks
         </button>

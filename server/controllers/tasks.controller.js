@@ -10,7 +10,7 @@ import log from "../utils/logger.js";
 export async function BL_getAllTasks(req, res) {
   try {
     log.info("BL_getAllTasks called");
-    const tasks = await DAL_getAll();
+    const tasks = await DAL_getAll(req.user.userId);
     log.info(`BL_getAllTasks successful, returned ${tasks.length} tasks`);
     res.status(200).json(tasks);
   } catch (err) {

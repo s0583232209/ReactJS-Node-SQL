@@ -15,11 +15,11 @@ export async function DAL_getById(id) {
   }
 }
 
-export async function DAL_getAll() {
+export async function DAL_getAll(userId) {
   try {
-    log.info("DAL_getAll called");
+    log.info("DAL_getAll called with userId"+userId);
     const connection = await getConnection();
-    const [rows] = await connection.query("SELECT * FROM tasks;");
+    const [rows] = await connection.query("SELECT * FROM tasks WHERE user_id=?;",[userId]);
     log.info(`DAL_getAll successful, returned ${rows.length} tasks`);
     return rows;
   } catch (err) {
@@ -33,7 +33,7 @@ export async function DAL_addNewTask(details) {
     log.info(`DAL_addNewTask called for userId: ${details.userId}`);
     const connection = await getConnection();
     const [result] = await connection.query(
-      "INSERT INTO tasks (userId, title, completed) VALUES (?, ?, ?);",
+      "INSERT INTO tasks (user_id, title, completed) VALUES (?, ?, ?);",
       [details.userId, details.title, details.completed ?? false]
     );
     log.info(`DAL_addNewTask successful, task id: ${result.insertId}`);

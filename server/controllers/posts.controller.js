@@ -9,9 +9,9 @@ import log from "../utils/logger.js";
 
 export async function BL_getAllPosts(req, res) {
   try {
-    log.info(`BL_getAllPosts called with userId: ${req.query.userId || 'all'}`);
+    log.info(`BL_getAllPosts called `);
     const { userId } = req.query;
-    const posts = await DAL_getAll(userId);
+    const posts = await DAL_getAll();
     log.info(`BL_getAllPosts successful, returned ${posts.length} posts`);
     res.status(200).json(posts);
   } catch (err) {

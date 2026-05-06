@@ -1,4 +1,9 @@
-import { Outlet, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import {
+  Outlet,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { useForm } from "react-hook-form";
 import Task from "./Task";
@@ -10,8 +15,10 @@ export default function Tasks() {
   const [searchParams] = useSearchParams();
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const { id } = useParams();
-  const { userID } = useContext(appContext);
+  const params = useParams();
+  console.log(params.userId, "userId from params in tasks");
+  const { userId } = useContext(appContext);
+  console.log(userId == params.userId, "userId in tasks");
   const [sortConditionTasks, setSortConditonTasks] = useState(() => {
     return searchParams.get("sortBy") || null;
   });
@@ -42,34 +49,43 @@ export default function Tasks() {
     }
   }, [searchParams]);
   useEffect(() => {
-    if (!userID) navigate("/login", { state: "this should be the url" });
-    if (!(id == userID)) navigate("/access_denied");
-  }, []);
+    if (!userId) {
+      navigate("/login", { state: "this should be the url" });
+      return;
+    }
+    if (params.userId && params.userId != userId) {
+      navigate("/access_denied");
+    }
+  }, [userId, params.userId, navigate]);
   useEffect(() => {
     if (tasksList.length == 0) {
       async function getTasks() {
-        if (!userID) return;
+        if (!userId) return;
         setLoading(true);
         try {
           const response = await fetch(
-            `http://localhost:3000/tasks/?userId=${userID}`
+            `http://localhost:3000/api/${userId}/tasks`,
+            {
+              method: "GET",
+              credentials: "include",
+            },
           );
           if (!response.ok)
             throw new Error(
-              `status: ${response.status}\n Could not load tasks, please try again later.`
+              `status: ${response.status}\n Could not load tasks, please try again later.`,
             );
           const data = await response.json();
           setTasksList(data);
         } catch (error) {
           alert(error);
-          navigate('/');
+          navigate("/");
         } finally {
           setTimeout(() => setLoading(false), 1000);
         }
       }
       if (tasksList.length == 0) getTasks();
     }
-  }, [userID]);
+  }, [userId]);
 
   useEffect(() => {
     localStorage.setItem("tasksList", JSON.stringify(tasksList));
@@ -140,12 +156,16 @@ export default function Tasks() {
   async function deleteTask(id) {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:3000/tasks/${id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `http://localhost:3000/api/${userId}/tasks/${id}`,
+        {
+          method: "DELETE",
+          credentials: "include",
+        },
+      );
       if (!response.ok)
         throw new Error(
-          `status: ${response.status}\n Could not delete this task, please try again later/`
+          `status: ${response.status}\n Could not delete this task, please try again later/`,
         );
       setTasksList((prev) => prev.filter((task) => task.id !== id));
     } catch (error) {
@@ -161,18 +181,22 @@ export default function Tasks() {
     }
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:3000/tasks`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          userId: userID,
-          title: data.title,
-          completed: data.completed,
-        }),
-      });
+      const response = await fetch(
+        `http://localhost:3000/api/${userId}/tasks`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({
+            userId: userId,
+            title: data.title,
+            completed: data.completed,
+          }),
+        },
+      );
       if (!response.ok)
         throw new Error(
-          `status: ${response.status}\n Could not add the new task, please try again later.`
+          `status: ${response.status}\n Could not add the new task, please try again later.`,
         );
       setNewTask(false);
       const newTaskResponse = await response.json();
@@ -189,18 +213,22 @@ export default function Tasks() {
     const editedTask = { ...taskToEdit, ...edits };
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(editedTask),
-      });
+      const response = await fetch(
+        `http://localhost:3000/api/${userId}/tasks/${taskId}`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify(editedTask),
+        },
+      );
       if (!response.ok)
         throw new Error(
-          `status: ${response.status}\n The server could not upadate the task, try again later.`
+          `status: ${response.status}\n The server could not upadate the task, try again later.`,
         );
       const updatedTask = await response.json();
       setTasksList((prev) =>
-        prev.map((task) => (task.id == taskId ? updatedTask : task))
+        prev.map((task) => (task.id == taskId ? updatedTask : task)),
       );
     } catch (error) {
       alert(error);
@@ -217,7 +245,7 @@ export default function Tasks() {
     }
     if (sortBy == "id")
       tasksList.sort(
-        (a, b) => convertIdToInt(a[sortBy]) - convertIdToInt(b[sortBy])
+        (a, b) => convertIdToInt(a[sortBy]) - convertIdToInt(b[sortBy]),
       );
     else tasksList.sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
     setTasksList([...tasksList]);
@@ -242,7 +270,7 @@ export default function Tasks() {
       return true;
     });
     removeAllConditions();
-    navigate(`/tasks/${userID}`);
+    navigate(`/${userId}/tasks`);
   }
   function removeAllConditions() {
     setCondition(null);
@@ -296,7 +324,7 @@ export default function Tasks() {
             navigate(`?title=${title}`);
           }}
         >
-         Search By Title
+          Search By Title
         </button>
         <input
           type="text"
@@ -355,7 +383,7 @@ export default function Tasks() {
               title={task.title}
               completed={task.completed}
             ></Task>
-          ) : null
+          ) : null,
         )
       ) : (
         <p>No Tasks</p>
