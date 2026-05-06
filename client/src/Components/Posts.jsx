@@ -10,6 +10,7 @@ import Post from "./Post";
 import NavBar from "./NavBar";
 import { appContext } from "../App";
 export default function Posts() {
+  console.log("Posts rendered");
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { userId } = useContext(appContext);
@@ -60,7 +61,7 @@ export default function Posts() {
         //     credentials: "include",
         //   },
         // );
-        const res = await fetch(`http://localhost:3000/api/posts`, {
+        const res = await fetch(`http://localhost:3000/api/${userId}/posts`, {
           method: "GET",
           credentials: "include",
         });
@@ -96,7 +97,7 @@ export default function Posts() {
         setLoading(true);
         try {
           const res = await fetch(
-            `http://localhost:3000/api/posts?title=${searchTitle}`,
+            `http://localhost:3000/api/${userId}/posts?title=${searchTitle}`,
             {
               method: "GET",
               credentials: "include",
@@ -120,7 +121,7 @@ export default function Posts() {
         setLoading(true);
         try {
           const res = await fetch(
-            `http://localhost:3000/api/posts?id=${searchID}`,
+            `http://localhost:3000/api/${userId}/posts?id=${searchID}`,
             {
               method: "GET",
               credentials: "include",
@@ -151,7 +152,7 @@ export default function Posts() {
       setLoading(true);
       try {
         const res = await fetch(
-          `http://localhost:3000/api/posts?title=${titleInput}`,
+          `http://localhost:3000/api/${userId}/posts?title=${titleInput}`,
           { method: "GET", credentials: "include" },
         );
         if (!res.ok)
@@ -178,7 +179,7 @@ export default function Posts() {
       setLoading(true);
       try {
         const res = await fetch(
-          `http://localhost:3000/api/posts?id=${idInput}`,
+          `http://localhost:3000/api/${userId}/posts?id=${idInput}`,
           {
             method: "GET",
             credentials: "include",
@@ -214,7 +215,7 @@ export default function Posts() {
 
   async function deletePost(postId) {
     try {
-      const res = await fetch(`http://localhost:3000/api/posts/${postId}`, {
+      const res = await fetch(`http://localhost:3000/api/${userId}/posts/${postId}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -232,7 +233,7 @@ export default function Posts() {
   async function addNewPost(data) {
     if (!data.title.trim()) return;
     try {
-      const res = await fetch(`http://localhost:3000/api/posts`, {
+      const res = await fetch(`http://localhost:3000/api/${userId}/posts`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -259,7 +260,7 @@ export default function Posts() {
     const postToEdit = postsList.find((p) => p.id === postId);
     if (!postToEdit) return;
     try {
-      const res = await fetch(`http://localhost:3000/api/posts/${postId}`, {
+      const res = await fetch(`http://localhost:3000/api/${userId}/posts/${postId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...postToEdit, ...updates }),

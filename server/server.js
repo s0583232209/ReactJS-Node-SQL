@@ -22,10 +22,12 @@ const HOST = process.env.HOST || "localhost";
 //     credentials: true,
 //   }),
 // );
-app.use(cors({
-  origin: "http://localhost:5173",  
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  }),
+);
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
@@ -34,12 +36,11 @@ app.get("/", (req, res) => {
   res.json({ message: "Server is running" });
 });
 
- 
 app.use("/api", verifyToken);
 app.use("/api/users", userRouter);
-app.use("/api/tasks", tasksRouter);
-app.use("/api/posts", postsRouter);
-app.use("/api/comments", commentsRouter);
+app.use("/api/:userId/tasks", tasksRouter);
+app.use("/api/:userId/posts", postsRouter);
+app.use("/api/:userId/comments", commentsRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -52,9 +53,9 @@ app.listen(PORT, HOST, () => {
   log.info(`Server started on http://${HOST}:${PORT}`);
   console.log(`Server listening on http://${HOST}:${PORT}.`);
 });
-import crypto from 'crypto';
+import crypto from "crypto";
 
 // We generate a 256-bit (32-byte) secret and convert it to a hex string
-const secret = crypto.randomBytes(32).toString('hex');
+const secret = crypto.randomBytes(32).toString("hex");
 console.log(secret);
 export default app;
