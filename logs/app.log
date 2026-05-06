@@ -12145,3 +12145,10 @@
 2026-05-06 20:26:54 INFO  init 
 2026-05-06 20:26:54 INFO  Database connected successfully 
 2026-05-06 20:26:54 INFO  Server started on http://127.0.0.1:3000 
+2026-05-06 22:30:14 INFO  init 
+2026-05-06 22:30:15 INFO  Database connected successfully 
+2026-05-06 22:30:15 INFO  Server started on http://127.0.0.1:3000 
+2026-05-06 22:31:08 INFO  init 
+2026-05-06 22:31:08 INFO  Database connected successfully 
+2026-05-06 22:31:08 INFO  Server started on http://127.0.0.1:3000 
+2026-05-06 22:31:09 INFO  BL_login successful for email: try@try.com 

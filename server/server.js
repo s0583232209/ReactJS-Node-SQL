@@ -24,7 +24,7 @@ const HOST = process.env.HOST || "localhost";
 // );
 app.use(
   cors({
-    origin: "http://localhost:5174",
+    origin: "http://localhost:5173",
     credentials: true,
   }),
 );
@@ -41,7 +41,7 @@ app.use("/api/users", userRouter);
 app.use("/api/:userId/tasks", tasksRouter);
 app.use("/api/:userId/posts", postsRouter);
 app.use("/api/:userId/comments", commentsRouter);
-app.use("/api/:usesrId/auth",authRouter)
+// app.use("/api/:usesrId/auth",authRouter)
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: "Something went wrong!!!!!!!!!" });
