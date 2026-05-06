@@ -17,7 +17,9 @@ export async function BL_getCommentsByPost(req, res) {
         .json({ message: "postId query param is required" });
     }
     const comments = await DAL_getAllByPostId(postId);
-    log.info(`BL_getCommentsByPost successful, returned ${comments.length} comments`);
+    log.info(
+      `BL_getCommentsByPost successful, returned ${comments.length} comments`,
+    );
     res.status(200).json(comments);
   } catch (err) {
     log.error(`BL_getCommentsByPost error: ${err.message}`);
@@ -29,13 +31,19 @@ export async function BL_getCommentsByPost(req, res) {
 
 export async function BL_createComment(req, res) {
   try {
-    log.info(`BL_createComment called for post_id: ${req.body.post_id}`);
-    const { post_id, name, email, body } = req.body;
-    if (!post_id || !body) {
+    console.log(req.body);
+    log.info(`BL_createComment called for post_id: ${req.body.postId}`);
+
+    const { postId, name, email, body } = req.body;
+    if (!postId || !body) {
       log.warn("BL_createComment missing required fields");
       return res.status(400).json({ message: "post_id and body are required" });
     }
-    const newComment = await DAL_addNewComment({ post_id, name, email, body });
+    console.log(req.user.userId)
+    const newComment = await DAL_addNewComment(
+      { postId, name, email, body },
+      req.user.userId
+    );
     log.info(`BL_createComment successful, comment id: ${newComment.id}`);
     res.status(201).json(newComment);
   } catch (err) {
