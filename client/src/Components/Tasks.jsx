@@ -319,22 +319,30 @@ export default function Tasks() {
         </div>
       ) : null}
       <div className="posts-list">
-        {tasksList.length > 0 ? (
-          tasksList.map((task) =>
-            check(task) ? (
-              <Task
-                onDelete={deleteTask}
-                edit={updateTask}
-                id={task.id}
-                key={task.id}
-                title={task.title}
-                completed={task.completed}
-              ></Task>
-            ) : null,
-          )
-        ) : (
+        {tasksList.length === 0 ? (
           <p>No Tasks</p>
-        )}
+        ) : (() => {
+          const filtered = tasksList.filter(check);
+          if (filtered.length === 0 && condition) {
+            const msg =
+              condition === "byId"    ? `No task found with ID ${taskID}.` :
+              condition === "byTitle" ? `No task found with title "${title}".` :
+              condition === "completedOnly"   ? "No completed tasks." :
+              condition === "uncompletedOnly" ? "No uncompleted tasks." :
+              "No tasks found.";
+            return <p>{msg}</p>;
+          }
+          return filtered.map((task) => (
+            <Task
+              onDelete={deleteTask}
+              edit={updateTask}
+              id={task.id}
+              key={task.id}
+              title={task.title}
+              completed={task.completed}
+            />
+          ));
+        })()}
       </div>
 
       <Outlet></Outlet>

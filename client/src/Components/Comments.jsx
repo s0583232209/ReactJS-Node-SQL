@@ -57,16 +57,18 @@ export default function Comments(props) {
   }
   return (
     <>
-      <button
-        className="addNewComment"
-        onClick={() => setNewComment(!newComment)}
-      >
-        Add New Comment
-      </button>
+      {props.isExpanded && (
+        <button
+          className="addNewComment"
+          onClick={() => setNewComment(!newComment)}
+        >
+          Add New Comment
+        </button>
+      )}
       {newComment ? (
         <>
           <form onSubmit={handleSubmit(addNewComment)}>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Title</label>
             <input
               type="text"
               id="name"

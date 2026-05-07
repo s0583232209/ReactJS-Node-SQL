@@ -1,7 +1,7 @@
 /* ── Navbar (full-viewport-width) ── */
 .navbar {
   background: var(--surface);
-  border-bottom: 1px solid var(--border);
+  border-bottom: none;
   height: var(--nav-h);
   position: sticky;
   top: 0;
@@ -10,6 +10,15 @@
   /* Break out of the max-width #root container */
   width: 100vw;
   margin-left: calc(50% - 50vw);
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #52b788 0%, #74c69d 50%, #95d5b2 100%);
+  pointer-events: none;
 }
 
 .navbar-inner {
@@ -82,7 +91,7 @@
 .nav-info-btn {
   background: var(--primary-light);
   color: var(--primary);
-  border: 1px solid rgba(79,70,229,0.2);
+  border: 1px solid rgba(116,198,157,0.2);
   font-size: 0.8rem;
   font-weight: 600;
   padding: 0.36rem 0.9rem;
@@ -97,7 +106,7 @@
   background: var(--primary);
   color: #fff;
   border-color: var(--primary);
-  box-shadow: 0 2px 8px rgba(79,70,229,0.25);
+  box-shadow: 0 2px 8px rgba(116,198,157,0.25);
 }
 
 /* Avatar */
@@ -117,11 +126,11 @@
   border: 2px solid transparent;
   cursor: pointer;
   transition: box-shadow 0.13s, border-color 0.13s;
-  box-shadow: 0 2px 6px rgba(79,70,229,0.3);
+  box-shadow: 0 2px 6px rgba(116,198,157,0.3);
 }
 
 .nav-avatar:hover {
-  box-shadow: 0 3px 10px rgba(79,70,229,0.45);
+  box-shadow: 0 3px 10px rgba(116,198,157,0.45);
   background: var(--primary);
   border-color: rgba(255,255,255,0.5);
 }
@@ -151,7 +160,7 @@
   align-items: center;
   gap: 0.8rem;
   padding: 1rem 1.1rem;
-  background: linear-gradient(135deg, var(--primary-light) 0%, #f0f4ff 100%);
+  background: linear-gradient(135deg, var(--primary-light) 0%, #eaf7f0 100%);
   border-bottom: 1px solid var(--border);
 }
 

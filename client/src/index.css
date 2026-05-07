@@ -1,10 +1,10 @@
 /* ── Design Tokens ── */
 :root {
-  /* Primary — Indigo */
-  --primary:        #4f46e5;
-  --primary-hover:  #4338ca;
-  --primary-light:  #eef2ff;
-  --primary-ring:   rgba(79,70,229,0.14);
+  /* Primary — Pastel Green */
+  --primary:        #74c69d;
+  --primary-hover:  #52b788;
+  --primary-light:  #f0fdf7;
+  --primary-ring:   rgba(116,198,157,0.2);
 
   /* Danger */
   --red:            #ef4444;
@@ -61,6 +61,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
+
 
 #root {
   min-height: 100vh;
@@ -241,7 +242,10 @@ form button {
   font-size: 2.6rem;
   font-weight: 800;
   letter-spacing: -0.045em;
-  color: var(--text);
+  background: linear-gradient(135deg, var(--text) 30%, #74c69d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1.12;
   margin: 0 0 1rem;
 }
@@ -308,10 +312,16 @@ form button {
   transform: translateX(4px);
 }
 
+.home-card:first-child { border-top: 3px solid #74c69d; }
+.home-card:last-child  { border-top: 3px solid #52b788; }
+
 .home-card-label {
   font-size: 1.1rem;
   font-weight: 800;
-  color: var(--text);
+  background: linear-gradient(135deg, var(--text) 0%, #74c69d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   letter-spacing: -0.025em;
   position: relative;
 }
@@ -335,7 +345,10 @@ form button {
   font-size: 1.3rem;
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--text);
+  background: linear-gradient(135deg, var(--text) 40%, #74c69d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin: 0 0 1.5rem;
 }
 
@@ -363,6 +376,10 @@ form button {
   font-weight: 800;
   letter-spacing: 0.1em;
   color: var(--primary);
+  background: var(--primary-light);
+  padding: 0.18rem 0.55rem;
+  border-radius: var(--radius-sm);
+  display: inline-block;
   margin-bottom: 0.9rem;
 }
 
@@ -448,7 +465,7 @@ form button {
   width: 3px;
   background: var(--primary);
   border-radius: 0 3px 3px 0;
-  opacity: 0;
+  opacity: 0.2;
   transition: opacity 0.15s;
 }
 
@@ -494,6 +511,24 @@ form button {
   border-top: 1px solid var(--border);
 }
 
+.comments-container form {
+  margin: 0.5rem 0 0;
+  max-width: 100%;
+  padding: 0.9rem 1.1rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.comments-container form input {
+  width: 100%;
+  margin: 0 0 0.5rem;
+}
+
+.comments-container form button {
+  width: auto;
+  margin: 0.2rem 0.2rem 0 0;
+}
+
 .comment {
   background: var(--surface-2);
   border: 1px solid var(--border);
@@ -517,9 +552,25 @@ form button {
   align-items: center;
   gap: 0.65rem;
   transition: box-shadow 0.15s, border-color 0.15s;
+  position: relative;
+}
+
+.task::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 16%; bottom: 16%;
+  width: 3px;
+  background: var(--primary);
+  border-radius: 0 3px 3px 0;
+  opacity: 0.2;
+  transition: opacity 0.15s;
 }
 
 .task:hover { box-shadow: var(--shadow); border-color: var(--border-2); }
+.task:hover::before { opacity: 1; }
+
+.task-done::before { background: var(--green); opacity: 0.4; }
+.task-done:hover::before { opacity: 0.85; }
 .task h3 { font-size: 0.72rem; min-width: 44px; }
 
 .task-title {
@@ -566,7 +617,7 @@ form button {
 .auth-brand {
   width: 42%;
   min-width: 280px;
-  background: linear-gradient(145deg, #1e1b4b 0%, #312e81 30%, #4f46e5 70%, #6366f1 100%);
+  background: linear-gradient(145deg, #1a3d2b 0%, #2a5e42 30%, #4a9a72 70%, #74c69d 100%);
   color: #fff;
   padding: 3.5rem 3rem;
   display: flex;
