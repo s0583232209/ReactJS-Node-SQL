@@ -40,5 +40,4 @@ log.info("Database connected successfully");
 app.listen(PORT, HOST, () => {
   log.info(`Server started on http://${HOST}:${PORT}`);
 });
-
 export default app;
