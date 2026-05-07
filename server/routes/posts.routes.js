@@ -1,16 +1,11 @@
 import express from "express";
-import {
-  BL_getAllPosts,
-  BL_createPost,
-  BL_updatePostById,
-  BL_deletePostById,
-} from "../controllers/posts.controller.js";
+import { getAllPosts, createPost, updatePostById, deletePostById } from "../controllers/posts.controller.js";
 
-const router = express.Router();
+const router = express.Router({ mergeParams: true });
 
-router.get("/", BL_getAllPosts);
-router.post("/", BL_createPost);
-router.put("/:id", BL_updatePostById);
-router.delete("/:id", BL_deletePostById);
+router.get("/",     getAllPosts);
+router.post("/",    createPost);
+router.put("/:id",  updatePostById);
+router.delete("/:id", deletePostById);
 
 export default router;
