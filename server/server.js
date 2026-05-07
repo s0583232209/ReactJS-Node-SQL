@@ -1,18 +1,6 @@
 import express from "express";
 import cors from "cors";
 import { configDotenv } from "dotenv";
-<<<<<<< HEAD
-import userRouter from "./routes/users.routes.js";
-import tasksRouter from "./routes/tasks.routes.js";
-import postsRouter from "./routes/posts.routes.js";
-import commentsRouter from "./routes/comments.routes.js";
-import authRouter from "./routes/auth.routes.js";
-import { connect } from "./dal/db.connection.js";
-// import { Connection } from "mysql2";
-import verifyToken from "./middleware/verifyToken.middleware.js";
-import log from "./utils/logger.js";
-=======
->>>>>>> main
 import cookieParser from "cookie-parser";
 import authRouter     from "./routes/auth.routes.js";
 import userRouter     from "./routes/users.routes.js";
