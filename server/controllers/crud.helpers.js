@@ -1,5 +1,5 @@
 import log from "../utils/logger.js";
-import { sendServerError, sendNotFound, sendDeleteSuccess, sendBadRequest } from "./response.helpers.js";
+import { sendServerError, sendNotFound, sendDeleteSuccess, sendBadRequest } from "../utils/response.js";
 
 export function makeDeleteHandler(DAL_delete, entity) {
   return async function (req, res) {

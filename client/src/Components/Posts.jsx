@@ -129,6 +129,7 @@ export default function Posts() {
     }
     setHasMore(false);
     navigate(`?title=${titleInput}`);
+    setTitleInput("");
   }
   async function searchById() {
     if (!idInput) return;
@@ -148,16 +149,25 @@ export default function Posts() {
     }
     setHasMore(false);
     navigate(`?id=${idInput}`);
+    setIdInput("");
   }
-  function resetFilters() {
+  async function resetFilters() {
     setTitleInput("");
     setIdInput("");
     setSearchID("");
     setSearchTitle("");
-    setPostsList([]);
-    setPage(0);
-    setHasMore(true);
-    navigate(`/Posts/${id}`);
+    navigate(`/${userId}/posts`);
+    setLoading(true);
+    try {
+      const res = await api.get(`/api/${userId}/posts`);
+      setPostsList(res.data);
+      setHasMore(res.data.length === LIMIT);
+      setPage(0);
+    } catch (error) {
+      alert(error);
+    } finally {
+      setLoading(false);
+    }
   }
 
   async function deletePost(postId) {
@@ -207,19 +217,23 @@ export default function Posts() {
       <div className={`main-content ${isPostOpen ? "blurred" : ""}`}>
         <h1>Posts</h1>
         <div className="filters">
-          <button onClick={searchByTitle}>Search By Title</button>
-          <input
-            value={titleInput}
-            onChange={(e) => setTitleInput(e.target.value)}
-            placeholder="enter title"
-          />
-          <button onClick={searchById}> Search By ID </button>
-          <input
-            value={idInput}
-            onChange={(e) => setIdInput(e.target.value)}
-            placeholder="enter ID"
-          />
-          <button onClick={resetFilters}>Back To All Posts</button>
+          <div className="search-group">
+            <input
+              value={titleInput}
+              onChange={(e) => setTitleInput(e.target.value)}
+              placeholder="Search by title"
+            />
+            <button onClick={searchByTitle}>Search</button>
+          </div>
+          <div className="search-group">
+            <input
+              value={idInput}
+              onChange={(e) => setIdInput(e.target.value)}
+              placeholder="Search by ID"
+            />
+            <button onClick={searchById}>Search</button>
+          </div>
+          <button onClick={resetFilters}>All Posts</button>
         </div>
 
         <div className="add-new-post">

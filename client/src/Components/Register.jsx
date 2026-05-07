@@ -35,7 +35,7 @@ export default function Register() {
       return;
     }
     try {
-      const response = await api.post("/api/users/signup", data);
+      const response = await api.post("/api/auth/signup", data);
       const user = response.data;
       if (!user) throw new Error("This user name isn't valid, please try another one");
       const userId = user.userId || user.id;

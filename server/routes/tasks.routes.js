@@ -1,16 +1,11 @@
 import express from "express";
-import {
-  BL_getAllTasks,
-  BL_createTask,
-  BL_updateTask,
-  BL_deleteTask,
-} from "../controllers/tasks.controller.js";
+import { getAllTasks, createTask, updateTask, deleteTask } from "../controllers/tasks.controller.js";
 
-const router = express.Router();
+const router = express.Router({ mergeParams: true });
 
-router.get("/", BL_getAllTasks);
-router.post("/", BL_createTask);
-router.put("/:id", BL_updateTask);
-router.delete("/:id", BL_deleteTask);
+router.get("/",     getAllTasks);
+router.post("/",    createTask);
+router.put("/:id",  updateTask);
+router.delete("/:id", deleteTask);
 
 export default router;
