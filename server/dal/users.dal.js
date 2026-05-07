@@ -54,7 +54,7 @@ export async function DAL_addNewUser(details) {
   try {
     log.info(`DAL_addNewUser called for username: ${details.username}`);
     const connection = await getConnection();
-    connection.execute(`USE ${process.env.DATABASE}`);
+    await connection.query(`USE ${process.env.DATABASE};`);
     const [result] = await connection.execute(
       "INSERT INTO users (username,email,phone,name,zipcode,street,city,house_number)VALUES(?,?,?,?,?,?,?,?);",
       [

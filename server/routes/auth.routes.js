@@ -1,6 +1,7 @@
 import express from "express";
-import { BL_refresh } from "../controllers/auth.controller.js";
+import { BL_refreshToken } from "../controllers/auth.controller.js";
 
 const router = express.Router();
-router.post("/refresh", BL_refresh);
+console.log("in refresh router");
+router.post("/refresh", BL_refreshToken);
 export default router;

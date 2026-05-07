@@ -7,7 +7,9 @@ export async function tokenHandler(user, access) {
     : process.env.JWT_REFRESH_SECRET;
   const token = jwt.sign(user, secretKey, { expiresIn: access ? "15m" : "7d" });
   if (access) return token;
-  if (await addTokenToDd(await bcrypt.hash(token, 12), user.id)) return token;
+  console.log(user);
+  if (await addTokenToDd(await bcrypt.hash(token, 12), user.userId || user.id))
+    return token;
   throw "error adding refresh token to the data base";
 }
 

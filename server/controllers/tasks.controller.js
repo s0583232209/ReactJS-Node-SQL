@@ -11,6 +11,7 @@ import { makeDeleteHandler, makeUpdateHandler, makeCreateHandler } from "./crud.
 export async function BL_getAllTasks(req, res) {
   try {
     log.info("BL_getAllTasks called");
+    console.log(req.user)
     const tasks = await DAL_getAll(req.user.userId);
     log.info(`BL_getAllTasks successful, returned ${tasks.length} tasks`);
     res.status(200).json(tasks);
