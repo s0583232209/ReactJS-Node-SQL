@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 import { getConnection } from "./db.connection.js";
-
+import log from "../utils/logger.js";
 export async function buildDataBase() {
   const connection = await getConnection();
   try {
@@ -35,14 +35,16 @@ export async function buildDataBase() {
     const status = await connection.query(schemaSQL);
     if (!status) throw new Error("could not create the schema");
     await connection.query(`USE ${process.env.DATABASE}`);
-    createTable(usersTableSQL);
-    createTable(passwordTableSQL);
-    createTable(postsTableSQL);
-    createTable(tasksTableSQL);
-    createTable(commentsTableSQL);
-    createTable(tokensTableSQL);
-    seeds();
+    await createTable(usersTableSQL);
+    await createTable(passwordTableSQL);
+    await createTable(postsTableSQL);
+    await createTable(tasksTableSQL);
+    await createTable(commentsTableSQL);
+    await createTable(tokensTableSQL);
+    await seeds();
   } catch (err) {
+    connection.execute(`DROP DATABASE IF EXISTS ${process.env.DATABASE};`);
+    log.error(`DB setup failed: ${err.message}`);
     console.log(err);
   }
 }

@@ -21,11 +21,11 @@ export async function DAL_getAll() {
 
 export async function DAL_addNewPost(details) {
   try {
-    log.info(`DAL_addNewPost called for user_id: ${details.user_id}`);
+    log.info(`DAL_addNewPost called for user_id: ${details.userId}`);
     const connection = await getConnection();
     const [result] = await connection.execute(
       "INSERT INTO posts (user_id, title, body) VALUES (?, ?, ?);",
-      [details.user_id, details.title, details.body],
+      [details.userId, details.title, details.body],
     );
     log.info(`DAL_addNewPost successful, post id: ${result.insertId}`);
     return { id: result.insertId, ...details };

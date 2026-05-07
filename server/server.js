@@ -5,6 +5,7 @@ import userRouter from "./routes/users.routes.js";
 import tasksRouter from "./routes/tasks.routes.js";
 import postsRouter from "./routes/posts.routes.js";
 import commentsRouter from "./routes/comments.routes.js";
+import authRouter from "./routes/auth.routes.js";
 import { connect } from "./dal/db.connection.js";
 // import { Connection } from "mysql2";
 import verifyToken from "./middleware/verifyToken.middleware.js";
@@ -41,7 +42,7 @@ app.use("/api/users", userRouter);
 app.use("/api/:userId/tasks", tasksRouter);
 app.use("/api/:userId/posts", postsRouter);
 app.use("/api/:userId/comments", commentsRouter);
-// app.use("/api/:usesrId/auth",authRouter)
+app.use("/api/:usesrId/refresh", authRouter);
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: "Something went wrong!!!!!!!!!" });
@@ -56,6 +57,6 @@ app.listen(PORT, HOST, () => {
 import crypto from "crypto";
 
 // We generate a 256-bit (32-byte) secret and convert it to a hex string
-const secret = crypto.randomBytes(32).toString("hex");
-console.log(secret);
+// const secret = crypto.randomBytes(32).toString("hex");
+// console.log(secret);
 export default app;

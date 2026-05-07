@@ -22,9 +22,9 @@ export async function BL_getAllPosts(req, res) {
 }
 
 export const BL_createPost = makeCreateHandler(
-  (req) => DAL_addNewPost({ user_id: req.body.user_id, title: req.body.title, body: req.body.body }),
+  (req) => DAL_addNewPost({ userId: req.body.userId, title: req.body.title, body: req.body.body }),
   "Post",
-  (body) => (!body.user_id || !body.title) ? "user_id and title are required" : null,
+  (body) => (!body.userId || !body.title) ? "user_id and title are required" : null,
 );
 
 export const BL_updatePostById = makeUpdateHandler(

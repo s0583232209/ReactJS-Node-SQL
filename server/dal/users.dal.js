@@ -33,22 +33,22 @@ export async function DAL_getAll() {
   }
 }
 
-export async function DAL_getUserIdByField(field,value) {
-  try {
-    log.info(`DAL_getUserIdByUserName called with  ${field}: ${value}`);
-    const connection = await getConnection();
-    const [rows] = await connection.execute(
-      `SELECT id FROM users WHERE ?=?`,
-      [field,value],
-    );
-    if (!rows[0]) throw new Error("User not found");
-    log.info(`DAL_getUserIdByUserName successful for ${field}: ${value}`);
-    return rows[0].id;
-  } catch (err) {
-    log.error(`DAL_getUserIdByUserName error: ${err.message}`);
-    throw err;
-  }
-}//this doesnt make so much sense, for it can be many rows
+// export async function DAL_getUserIdByField(field,value) {
+//   try {
+//     log.info(`DAL_getUserIdByUserName called with  ${field}: ${value}`);
+//     const connection = await getConnection();
+//     const [rows] = await connection.execute(
+//       `SELECT id FROM users WHERE ?=?`,
+//       [field,value],
+//     );
+//     if (!rows[0]) throw new Error("User not found");
+//     log.info(`DAL_getUserIdByUserName successful for ${field}: ${value}`);
+//     return rows[0].id;
+//   } catch (err) {
+//     log.error(`DAL_getUserIdByUserName error: ${err.message}`);
+//     throw err;
+//   }
+// }//this doesnt make so much sense, for it can be many rows
 
 export async function DAL_addNewUser(details) {
   try {
@@ -60,12 +60,12 @@ export async function DAL_addNewUser(details) {
       [
         details.username,
         details.email,
-        details.phone,
+        details.phoneNumber,
         details.name,
         details.zipcode,
         details.street,
         details.city,
-        details.house_number,
+        details.houseNumber,
       ],
     );
 
