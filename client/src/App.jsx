@@ -1,17 +1,16 @@
 import { useState, createContext } from "react";
 import "./App.css";
-import { createRoot } from "react-dom/client";
 import "./index.css";
-import ErrorPage from "../src/Components/ErrorPage.jsx";
-import Home from "../src/Components/Home.jsx";
-import Login from "../src/Components/Login.jsx";
-import Post from "../src/Components/Post.jsx";
-import Posts from "../src/Components/Posts.jsx";
-import Register from "../src/Components/Register.jsx";
-import Task from "../src/Components/Task.jsx";
-import Tasks from "../src/Components/Tasks.jsx";
+import ErrorPage from "./Components/ErrorPage.jsx";
+import Home from "./Components/Home.jsx";
+import Login from "./Components/Login.jsx";
+import Post from "./Components/Post.jsx";
+import Posts from "./Components/Posts.jsx";
+import Register from "./Components/Register.jsx";
+import Task from "./Components/Task.jsx";
+import Tasks from "./Components/Tasks.jsx";
 import { AccessDenied } from "./Components/AccessDenied.jsx";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 export const appContext = createContext();
 function App() {
   const storedUser = JSON.parse(sessionStorage.getItem("current-user"));
@@ -24,10 +23,10 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/" element={<Home />}></Route>
-        <Route path=":userId/posts/:id?" element={<Posts />}>
+        <Route path="/:userId/posts" element={<Posts />}>
           <Route path=":id" element={<Post />}></Route>
         </Route>
-        <Route path=":userId/tasks/:id?" element={<Tasks />}>
+        <Route path="/:userId/tasks" element={<Tasks />}>
           <Route path=":id" element={<Task />} />
         </Route>
         <Route path="/access_denied" element={<AccessDenied />}></Route>
