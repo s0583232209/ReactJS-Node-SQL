@@ -37,10 +37,11 @@ export async function addUser(details) {
 
 export async function updateProfile(id, details) {
   try {
+    console.log("updateProfile called, details:", JSON.stringify(details));
     const connection = await getConnection();
     const [result] = await connection.execute(
-      `UPDATE users SET name=?, email=?, phone=?, street=?, city=?, zipcode=?, house_number=? WHERE id=?`,
-      [details.name, details.email, details.phoneNumber, details.street, details.city, details.zipcode, details.houseNumber || null, id],
+      `UPDATE users SET name=?, username=?, phone=?, street=?, city=?, zipcode=?, house_number=? WHERE id=?`,
+      [details.name, details.username, details.phoneNumber, details.street, details.city, details.zipcode, details.house_number ?? null, id],
     );
     log.info(`updateProfile successful for id: ${id}`);
     return result.affectedRows > 0;

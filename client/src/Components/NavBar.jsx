@@ -46,8 +46,8 @@ export default function NavBar() {
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="logo-grad" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#6366f1" />
-                  <stop offset="1" stopColor="#3730a3" />
+                  <stop stopColor="#95d5b2" />
+                  <stop offset="1" stopColor="#52b788" />
                 </linearGradient>
               </defs>
               <rect width="30" height="30" rx="8" fill="url(#logo-grad)" />

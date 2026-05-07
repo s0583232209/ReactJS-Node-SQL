@@ -84,6 +84,7 @@ export default function Post(props) {
               postId={props.id}
               showComments={showComments}
               setShowComments={setShowComments}
+              isExpanded={props.isExpanded}
             />
           </div>
         </>
