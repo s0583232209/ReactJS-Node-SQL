@@ -6,7 +6,7 @@ import {
 } from "../dal/comments.dal.js";
 import log from "../utils/logger.js";
 import { sendServerError, sendBadRequest } from "./response.helpers.js";
-import { makeDeleteHandler, makeUpdateHandler, makeCreateHandler } from "./crud.controller.js";
+import { makeDeleteHandler, makeUpdateHandler, makeCreateHandler } from "./crud.helpers.js";
 
 export async function BL_getCommentsByPost(req, res) {
   try {

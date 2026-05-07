@@ -237,47 +237,40 @@ export default function Tasks() {
       {loading ? <Loading message={"loading Tasks..."}></Loading> : null}
       <NavBar></NavBar>
       <h1>Tasks</h1>
-      <select onChange={(e) => sortList(e.target.value)}>
-        <option value="sort">Sort By</option>
-        <option value="title">Title</option>
-        <option value="id">ID</option>
-        <option value="true">Completed First</option>
-        <option value="false">Uncompleted First</option>
-      </select>
+      <div className="filters">
+        <select onChange={(e) => sortList(e.target.value)}>
+          <option value="sort">Sort By</option>
+          <option value="title">Title</option>
+          <option value="id">ID</option>
+          <option value="true">Completed First</option>
+          <option value="false">Uncompleted First</option>
+        </select>
 
-      <button
-        onClick={() => {
-          setCondition("completedOnly");
-          setCheck(() => (task) => {
-            return task.completed;
-          });
-          navigate(`?completed=true`);
-        }}
-      >
-        only completed
-      </button>
-      <button
-        onClick={() => {
-          setCondition("uncompletedOnly");
-          setCheck(() => (task) => {
-            return !task.completed;
-          });
-          navigate(`?completed=false`);
-        }}
-      >
-        Uncompleted only
-      </button>
+        <button
+          onClick={() => {
+            setCondition("completedOnly");
+            setCheck(() => (task) => task.completed);
+            navigate(`?completed=true`);
+          }}
+        >
+          Completed
+        </button>
+        <button
+          onClick={() => {
+            setCondition("uncompletedOnly");
+            setCheck(() => (task) => !task.completed);
+            navigate(`?completed=false`);
+          }}
+        >
+          Uncompleted
+        </button>
+        <button onClick={back}>All Tasks</button>
+        <button onClick={() => setNewTask(!newTask)}>Add New Task</button>
 
-      <button onClick={back}>Back To All Tasks</button>
-
-      <button onClick={() => setNewTask(!newTask)}>Add New Task</button>
-      <div>
         <button
           onClick={() => {
             setCondition("byTitle");
-            setCheck(() => (task) => {
-              return task.title == title;
-            });
+            setCheck(() => (task) => task.title == title);
             navigate(`?title=${title}`);
           }}
         >
@@ -293,9 +286,7 @@ export default function Tasks() {
         <button
           onClick={() => {
             setCondition("byId");
-            setCheck(() => (task) => {
-              return Number(task.id) === Number(taskID);
-            });
+            setCheck(() => (task) => Number(task.id) === Number(taskID));
             navigate(`?id=${taskID}`);
           }}
         >
@@ -309,42 +300,34 @@ export default function Tasks() {
         />
       </div>
       {newTask ? (
-        <>
+        <div className="add-new-post">
           <form onSubmit={handleSubmit(addNewTask)}>
             <label htmlFor="title">Title</label>
-            <input
-              type="text"
-              id="title"
-              name="title"
-              {...register("title")}
-            ></input>
-            <input
-              type="checkbox"
-              id="completed"
-              name="completed"
-              {...register("completed")}
-            ></input>
-            <label htmlFor="completed">Completed?</label>
+            <input type="text" id="title" name="title" {...register("title")} />
+            <input type="checkbox" id="completed" name="completed" {...register("completed")} />
+            <label htmlFor="completed">Mark as completed</label>
             <button>Add</button>
           </form>
-        </>
+        </div>
       ) : null}
-      {tasksList.length > 0 ? (
-        tasksList.map((task) =>
-          check(task) ? (
-            <Task
-              onDelete={deleteTask}
-              edit={updateTask}
-              id={task.id}
-              key={task.id}
-              title={task.title}
-              completed={task.completed}
-            ></Task>
-          ) : null,
-        )
-      ) : (
-        <p>No Tasks</p>
-      )}
+      <div className="posts-list">
+        {tasksList.length > 0 ? (
+          tasksList.map((task) =>
+            check(task) ? (
+              <Task
+                onDelete={deleteTask}
+                edit={updateTask}
+                id={task.id}
+                key={task.id}
+                title={task.title}
+                completed={task.completed}
+              ></Task>
+            ) : null,
+          )
+        ) : (
+          <p>No Tasks</p>
+        )}
+      </div>
 
       <Outlet></Outlet>
     </>

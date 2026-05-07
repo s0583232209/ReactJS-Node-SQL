@@ -1,62 +1,81 @@
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 import { appContext } from "../App";
 import api from "../api";
+
+const Logo = () => (
+  <svg width="32" height="32" viewBox="0 0 30 30" fill="none">
+    <defs>
+      <linearGradient id="ll" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#818cf8" /><stop offset="1" stopColor="#6366f1" />
+      </linearGradient>
+    </defs>
+    <rect width="30" height="30" rx="8" fill="url(#ll)" />
+    <path d="M8 8v14l14-14v14" stroke="white" strokeWidth="2.4"
+      strokeLinecap="round" strokeLinejoin="round" fill="none" />
+  </svg>
+);
+
 export default function Login() {
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit } = useForm();
   const [error, setError] = useState(null);
-  const navigation = useNavigate();
+  const navigate = useNavigate();
   const { setUserId } = useContext(appContext);
+
   async function login(data) {
     try {
       const response = await api.post("/api/users/login", data);
-      const user = response.data;
-      console.log("Login response:", user);
-      console.log("userId from response:", user.userId);
-      sessionStorage.setItem("current-user", JSON.stringify(user));
-      setUserId(user.userId);
-      console.log("sessionStorage after setItem:", sessionStorage.getItem("current-user"));
-
-      navigation("/");
-    } catch (error) {
-      setError(String(error));
+      const { userId, email } = response.data;
+      const profileResponse = await api.get(`/api/users/${userId}`);
+      const { name } = profileResponse.data;
+      sessionStorage.setItem("current-user", JSON.stringify({ userId, email, name }));
+      setUserId(userId);
+      navigate("/");
+    } catch {
+      setError("Invalid email or password.");
     }
   }
-  // useEffect(() => {
-  //   sessionStorage.clear();
-  //   localStorage.clear();
-  // }, []);
 
   return (
-    <>
-      <form onSubmit={handleSubmit(login)}>
-        <label htmlFor="email">Email</label>
-        <input type="email" name="email" id="email" {...register("email")} />
-        {/* <label htmlFor="userName">User Name</label>
-      <input
-        type="text"
-        name="userName"
-        id="userName"
-        {...register("userName")}
-      /> */}
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          {...register("password")}
-        />
-        <p className="errorLog">{error}</p>
-        <button>Log In</button>
-      </form>
-      <button
-        onClick={() => {
-          navigation("/register");
-        }}
-      >
-        Register
-      </button>
-    </>
+    <div className="auth-page">
+      {/* Left brand panel */}
+      <div className="auth-brand">
+        <div className="auth-brand-logo-wrap">
+          <Logo />
+          <span className="auth-brand-logo-name">Nexus</span>
+        </div>
+        <h2 className="auth-brand-headline">Your personal<br />workspace.</h2>
+        <p className="auth-brand-sub">
+          Posts, tasks, and collaboration — all in one clean, fast place.
+        </p>
+        <div className="auth-features">
+          {["Create and manage posts", "Track tasks and progress", "Collaborate with comments", "Edit your profile anytime"].map(f => (
+            <div className="auth-feature" key={f}>
+              <span className="auth-feature-dot" />
+              {f}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Right form panel */}
+      <div className="auth-form-panel">
+        <p className="auth-form-heading">Welcome back</p>
+        <p className="auth-form-sub">Sign in to continue to Nexus</p>
+        <form onSubmit={handleSubmit(login)}>
+          <label htmlFor="email">Email address</label>
+          <input type="email" id="email" autoComplete="email" {...register("email")} />
+          <label htmlFor="password">Password</label>
+          <input type="password" id="password" autoComplete="current-password" {...register("password")} />
+          <p className="errorLog">{error}</p>
+          <button type="submit">Sign In</button>
+        </form>
+        <p className="auth-alt-link">
+          Don't have an account?
+          <button type="button" onClick={() => navigate("/register")}>Create one</button>
+        </p>
+      </div>
+    </div>
   );
 }

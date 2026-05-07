@@ -1,108 +1,119 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { appContext } from "../App";
 import api from "../api";
+import { useState } from "react";
+
+const Logo = () => (
+  <svg width="32" height="32" viewBox="0 0 30 30" fill="none">
+    <defs>
+      <linearGradient id="rl" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#818cf8" /><stop offset="1" stopColor="#6366f1" />
+      </linearGradient>
+    </defs>
+    <rect width="30" height="30" rx="8" fill="url(#rl)" />
+    <path d="M8 8v14l14-14v14" stroke="white" strokeWidth="2.4"
+      strokeLinecap="round" strokeLinejoin="round" fill="none" />
+  </svg>
+);
+
 export default function Register() {
   useEffect(() => {
     sessionStorage.clear();
     localStorage.clear();
   }, []);
+
   const { setUserId } = useContext(appContext);
   const [error, setError] = useState();
   const { register, handleSubmit } = useForm();
-  const [step, setStep] = useState(1);
   const navigate = useNavigate();
-  const [newUser, setNewUser] = useState(null);
+
   async function submitStep1(data) {
-    console.log(data);
     if (data.password !== data.verifyPassword) {
+      setError("Passwords do not match.");
       return;
     }
-
     try {
       const response = await api.post("/api/users/signup", data);
-      console.log(response);
-
       const user = response.data;
-      if (!user) {
-        throw new Error("This user name isn't valid, please try another one");
-      }
-      sessionStorage.setItem("current-user", JSON.stringify(user));
-      setUserId(user.userId);
+      if (!user) throw new Error("This user name isn't valid, please try another one");
+      const userId = user.userId || user.id;
+      sessionStorage.setItem("current-user", JSON.stringify({ userId, email: user.email, name: user.name }));
+      setUserId(userId);
       navigate("/");
-    } catch (error) {
-      setError(String(error));
+    } catch (err) {
+      setError(String(err));
     }
   }
+
   return (
-    <>
-      <form onSubmit={handleSubmit(submitStep1)}>
-        <label htmlFor="username">User Name</label>
-        <input
-          type="text"
-          name="username"
-          id="username"
-          {...register("username")}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          {...register("password")}
-        />
-        <label htmlFor="verifyPassword">Verify Password</label>
-        <input
-          type="password"
-          name="verifyPassword"
-          id="verifyPassword"
-          {...register("verifyPassword")}
-        />
-        <p className="errorLog">{error}</p>
+    <div className="auth-page">
+      {/* Left brand panel */}
+      <div className="auth-brand">
+        <div className="auth-brand-logo-wrap">
+          <Logo />
+          <span className="auth-brand-logo-name">Nexus</span>
+        </div>
+        <h2 className="auth-brand-headline">Join Nexus<br />today.</h2>
+        <p className="auth-brand-sub">
+          Create your account and start managing your work in one clean, powerful place.
+        </p>
+        <div className="auth-features">
+          {["Personal workspace", "Manage posts & tasks", "Track your progress", "Edit your profile anytime"].map(f => (
+            <div className="auth-feature" key={f}>
+              <span className="auth-feature-dot" />
+              {f}
+            </div>
+          ))}
+        </div>
+      </div>
 
-        {/* <button>Next</button> */}
+      {/* Right form panel */}
+      <div className="auth-form-panel auth-form-panel--scroll">
+        <p className="auth-form-heading">Create account</p>
+        <p className="auth-form-sub">Fill in your details below to get started</p>
+        <form onSubmit={handleSubmit(submitStep1)}>
+          <label htmlFor="username">Username</label>
+          <input type="text" id="username" autoComplete="username" {...register("username")} />
 
-        <label htmlFor="name">Name</label>
-        <input type="text" name="name" id="name" {...register("name")} />
-        <label htmlFor="email">Email</label>
-        <input type="email" name="email" id="email" {...register("email")} />
-        <label htmlFor="street">Street</label>
-        <input type="text" name="street" id="street" {...register("street")} />
-        <label htmlFor="city">City</label>
-        <input type="text" name="city" id="city" {...register("city")} />
-        <label htmlFor="zipcode">Zip code</label>
-        <input
-          type="number"
-          name="zipcode"
-          id="zipcode"
-          {...register("zipcode")}
-        />
-        <label htmlFor="houseNumber">House Number</label>
-        <input
-          type="number"
-          name="houseNumber"
-          id="houseNumber"
-          {...register("houseNumber")}
-        />
-        <label htmlFor="phoneNumber">Phone Number</label>
-        <input
-          type="text"
-          name="phoneNumber"
-          id="phoneNumber"
-          {...register("phoneNumber")}
-        />
-        <button onClick={handleSubmit(submitStep1)}>Register</button>
-        {/* </form> */}
-        {/* )} */}
-        <button
-          onClick={() => {
-            navigate("/login");
-          }}
-        >
-          Login
-        </button>
-      </form>
-    </>
+          <label htmlFor="password">Password</label>
+          <input type="password" id="password" autoComplete="new-password" {...register("password")} />
+
+          <label htmlFor="verifyPassword">Confirm Password</label>
+          <input type="password" id="verifyPassword" autoComplete="new-password" {...register("verifyPassword")} />
+
+          <div className="auth-form-divider" />
+
+          <label htmlFor="name">Full Name</label>
+          <input type="text" id="name" autoComplete="name" {...register("name")} />
+
+          <label htmlFor="email">Email Address</label>
+          <input type="email" id="email" autoComplete="email" {...register("email")} />
+
+          <label htmlFor="phoneNumber">Phone Number</label>
+          <input type="text" id="phoneNumber" autoComplete="tel" {...register("phoneNumber")} />
+
+          <label htmlFor="street">Street</label>
+          <input type="text" id="street" autoComplete="street-address" {...register("street")} />
+
+          <label htmlFor="city">City</label>
+          <input type="text" id="city" autoComplete="address-level2" {...register("city")} />
+
+          <label htmlFor="zipcode">Zip Code</label>
+          <input type="number" id="zipcode" autoComplete="postal-code" {...register("zipcode")} />
+
+          <label htmlFor="houseNumber">House Number</label>
+          <input type="number" id="houseNumber" {...register("houseNumber")} />
+
+          <p className="errorLog">{error}</p>
+          <button type="submit">Create Account</button>
+        </form>
+        <p className="auth-alt-link">
+          Already have an account?
+          <button type="button" onClick={() => navigate("/login")}>Sign in</button>
+        </p>
+      </div>
+    </div>
   );
 }

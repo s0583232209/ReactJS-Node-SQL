@@ -3,9 +3,11 @@ import {
   DAL_getAll,
   DAL_getById,
   DAL_addNewUser,
-
-  // DAL_getUserIdByUserName,
   DAL_loginDetails,
+  DAL_updateProfile,
+  DAL_getPasswordByUserId,
+  DAL_updateUsername,
+  DAL_updatePassword,
 } from "../dal/users.dal.js";
 import bcrypt from "bcrypt";
 import { tokenHandler, handleResponse } from "./auth.helpers.js";
@@ -42,6 +44,47 @@ export async function BL_signup(req, res) {
   } catch (err) {
     log.warn(`BL_signup error: ${err.message}`);
     res.status(404).send("could not add the user");
+  }
+}
+
+export async function BL_updateProfile(req, res) {
+  try {
+    const { id } = req.params;
+    log.info(`BL_updateProfile called for user id: ${id}`);
+    await DAL_updateProfile(id, req.body);
+    const user = await DAL_getById(id);
+    user.password = undefined;
+    log.info(`BL_updateProfile successful for user id: ${id}`);
+    return res.status(200).json(user);
+  } catch (err) {
+    log.warn(`BL_updateProfile error: ${err.message}`);
+    return res.status(500).json({ message: "Failed to update profile", error: err.message });
+  }
+}
+
+export async function BL_updateCredentials(req, res) {
+  try {
+    const { id } = req.params;
+    const { currentPassword, newUsername, newPassword } = req.body;
+    log.info(`BL_updateCredentials called for user id: ${id}`);
+    const { hashedPassword } = await DAL_getPasswordByUserId(id);
+    const isMatch = await bcrypt.compare(currentPassword, hashedPassword);
+    if (!isMatch) {
+      log.warn(`BL_updateCredentials: incorrect password for user id: ${id}`);
+      return res.status(400).json({ message: "Incorrect current password" });
+    }
+    if (newUsername) await DAL_updateUsername(id, newUsername);
+    if (newPassword) {
+      const hashed = await bcrypt.hash(newPassword, 12);
+      await DAL_updatePassword(id, hashed);
+    }
+    const user = await DAL_getById(id);
+    user.password = undefined;
+    log.info(`BL_updateCredentials successful for user id: ${id}`);
+    return res.status(200).json(user);
+  } catch (err) {
+    log.warn(`BL_updateCredentials error: ${err.message}`);
+    return res.status(500).json({ message: "Failed to update credentials", error: err.message });
   }
 }
 

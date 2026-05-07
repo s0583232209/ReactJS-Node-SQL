@@ -81,6 +81,64 @@ export async function DAL_addNewUser(details) {
   }
 }
 
+export async function DAL_updateProfile(id, details) {
+  try {
+    const connection = await getConnection();
+    const [result] = await connection.execute(
+      `UPDATE users SET name=?, email=?, phone=?, street=?, city=?, zipcode=?, house_number=? WHERE id=?`,
+      [details.name, details.email, details.phone, details.street, details.city, details.zipcode, details.house_number || null, id],
+    );
+    log.info(`DAL_updateProfile successful for id: ${id}`);
+    return result.affectedRows > 0;
+  } catch (err) {
+    log.error(`DAL_updateProfile error: ${err.message}`);
+    throw err;
+  }
+}
+
+export async function DAL_getPasswordByUserId(userId) {
+  try {
+    const connection = await getConnection();
+    const [rows] = await connection.execute(
+      `SELECT hashed_password AS hashedPassword FROM passwords WHERE user_id=?`,
+      [userId],
+    );
+    if (!rows[0]) throw new Error("Password not found");
+    return rows[0];
+  } catch (err) {
+    log.error(`DAL_getPasswordByUserId error: ${err.message}`);
+    throw err;
+  }
+}
+
+export async function DAL_updateUsername(id, username) {
+  try {
+    const connection = await getConnection();
+    const [result] = await connection.execute(
+      `UPDATE users SET username=? WHERE id=?`,
+      [username, id],
+    );
+    return result.affectedRows > 0;
+  } catch (err) {
+    log.error(`DAL_updateUsername error: ${err.message}`);
+    throw err;
+  }
+}
+
+export async function DAL_updatePassword(userId, hashedPassword) {
+  try {
+    const connection = await getConnection();
+    const [result] = await connection.execute(
+      `UPDATE passwords SET hashed_password=? WHERE user_id=?`,
+      [hashedPassword, userId],
+    );
+    return result.affectedRows > 0;
+  } catch (err) {
+    log.error(`DAL_updatePassword error: ${err.message}`);
+    throw err;
+  }
+}
+
 export async function DAL_checkUsersDetails(user) {}
 export async function DAL_loginDetails(email) {
   const connection = await getConnection();
