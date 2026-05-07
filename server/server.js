@@ -17,7 +17,7 @@ const app  = express();
 const PORT = process.env.PORT || 3001;
 const HOST = process.env.HOST || "localhost";
 
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: "http://localhost:5174", credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
@@ -30,7 +30,6 @@ app.use("/api/users",            userRouter);
 app.use("/api/:userId/tasks",    tasksRouter);
 app.use("/api/:userId/posts",    postsRouter);
 app.use("/api/:userId/comments", commentsRouter);
-
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: "Something went wrong" });
@@ -42,4 +41,7 @@ app.listen(PORT, HOST, () => {
   log.info(`Server started on http://${HOST}:${PORT}`);
 });
 
+// We generate a 256-bit (32-byte) secret and convert it to a hex string
+// const secret = crypto.randomBytes(32).toString("hex");
+// console.log(secret);
 export default app;
