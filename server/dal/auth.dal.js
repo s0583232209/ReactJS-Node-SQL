@@ -1,4 +1,4 @@
-import { getConnection } from "./db.connection.js";
+import { getConnection } from "../db/connection.js";
 import log from "../utils/logger.js";
 
 export async function DAL_refreshToken(userId) {

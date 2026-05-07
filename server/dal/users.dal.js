@@ -86,7 +86,7 @@ export async function DAL_updateProfile(id, details) {
     const connection = await getConnection();
     const [result] = await connection.execute(
       `UPDATE users SET name=?, email=?, phone=?, street=?, city=?, zipcode=?, house_number=? WHERE id=?`,
-      [details.name, details.email, details.phone, details.street, details.city, details.zipcode, details.house_number || null, id],
+      [details.name, details.email, details.phoneNumber, details.street, details.city, details.zipcode, details.houseNumber || null, id],
     );
     log.info(`DAL_updateProfile successful for id: ${id}`);
     return result.affectedRows > 0;

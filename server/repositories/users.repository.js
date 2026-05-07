@@ -21,7 +21,7 @@ export async function addUser(details) {
     const connection = await getConnection();
     const [result] = await connection.execute(
       "INSERT INTO users (username, email, phone, name, zipcode, street, city, house_number) VALUES (?,?,?,?,?,?,?,?);",
-      [details.username, details.email, details.phone, details.name, details.zipcode, details.street, details.city, details.house_number],
+      [details.username, details.email, details.phoneNumber, details.name, details.zipcode, details.street, details.city, details.houseNumber],
     );
     await connection.execute(
       "INSERT INTO passwords (user_id, hashed_password, is_active) VALUES (?, ?, TRUE);",
@@ -40,7 +40,7 @@ export async function updateProfile(id, details) {
     const connection = await getConnection();
     const [result] = await connection.execute(
       `UPDATE users SET name=?, email=?, phone=?, street=?, city=?, zipcode=?, house_number=? WHERE id=?`,
-      [details.name, details.email, details.phone, details.street, details.city, details.zipcode, details.house_number || null, id],
+      [details.name, details.email, details.phoneNumber, details.street, details.city, details.zipcode, details.houseNumber || null, id],
     );
     log.info(`updateProfile successful for id: ${id}`);
     return result.affectedRows > 0;

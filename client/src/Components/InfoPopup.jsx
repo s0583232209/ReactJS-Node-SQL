@@ -24,7 +24,7 @@ function normalize(u) {
   return {
     name:         u.name         || "",
     email:        u.email        || "",
-    phone:        u.phone        || u.phoneNumber   || "",
+    phoneNumber:        u.phoneNumber        || u.phoneNumber   || "",
     street:       u.street       || u.address?.street || "",
     city:         u.city         || u.address?.city   || "",
     zipcode:      u.zipcode      || "",
@@ -153,7 +153,7 @@ export default function InfoPopup({ onClose }) {
             </div>
             <Row label="Full Name"  fieldKey="name"         editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
             <Row label="Email"      fieldKey="email"        editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
-            <Row label="Phone"      fieldKey="phone"        editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
+            <Row label="PhoneNumber"      fieldKey="phoneNumber"        editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
             <Row label="Street"     fieldKey="street"       editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
             <Row label="City"       fieldKey="city"         editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
             <Row label="Zip Code"   fieldKey="zipcode"      editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
