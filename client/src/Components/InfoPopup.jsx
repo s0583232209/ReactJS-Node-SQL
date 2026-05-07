@@ -102,11 +102,7 @@ export default function InfoPopup({ onClose }) {
       setCredOpen(false);
       setCred({ currentPassword: "", newUsername: "", newPassword: "", confirmPassword: "" });
     } catch (err) {
-      setCredError(
-        err.response?.status === 400
-          ? "Incorrect current password."
-          : err.response?.data?.message || "Failed to update. Try again.",
-      );
+      setCredError(err.response?.data?.message || "Failed to update. Try again.");
     } finally {
       setCredSaving(false);
     }

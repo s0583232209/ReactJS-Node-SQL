@@ -70,7 +70,7 @@ export async function DAL_addNewUser(details) {
     );
 
     const passwordResult = await connection.execute(
-      "INSERT INTO passwords (user_id,hashed_password) VALUES (?,?);",
+      "INSERT INTO passwords (user_id, hashed_password, is_active) VALUES (?, ?, TRUE);",
       [result.insertId, details.password],
     );
     log.info(`DAL_addNewUser successful, user id: ${result.insertId}`);
@@ -100,13 +100,27 @@ export async function DAL_getPasswordByUserId(userId) {
   try {
     const connection = await getConnection();
     const [rows] = await connection.execute(
-      `SELECT hashed_password AS hashedPassword FROM passwords WHERE user_id=?`,
+      `SELECT hashed_password AS hashedPassword FROM passwords WHERE user_id=? AND is_active=TRUE`,
       [userId],
     );
     if (!rows[0]) throw new Error("Password not found");
     return rows[0];
   } catch (err) {
     log.error(`DAL_getPasswordByUserId error: ${err.message}`);
+    throw err;
+  }
+}
+
+export async function DAL_getAllPasswordsByUserId(userId) {
+  try {
+    const connection = await getConnection();
+    const [rows] = await connection.execute(
+      `SELECT hashed_password AS hashedPassword FROM passwords WHERE user_id=?`,
+      [userId],
+    );
+    return rows;
+  } catch (err) {
+    log.error(`DAL_getAllPasswordsByUserId error: ${err.message}`);
     throw err;
   }
 }
@@ -128,9 +142,13 @@ export async function DAL_updateUsername(id, username) {
 export async function DAL_updatePassword(userId, hashedPassword) {
   try {
     const connection = await getConnection();
+    await connection.execute(
+      `UPDATE passwords SET is_active=FALSE WHERE user_id=?`,
+      [userId],
+    );
     const [result] = await connection.execute(
-      `UPDATE passwords SET hashed_password=? WHERE user_id=?`,
-      [hashedPassword, userId],
+      `INSERT INTO passwords (user_id, hashed_password, is_active) VALUES (?, ?, TRUE)`,
+      [userId, hashedPassword],
     );
     return result.affectedRows > 0;
   } catch (err) {
@@ -143,7 +161,7 @@ export async function DAL_checkUsersDetails(user) {}
 export async function DAL_loginDetails(email) {
   const connection = await getConnection();
   const [rows] = await connection.execute(
-    "SELECT passwords.hashed_password AS hashedPassword,passwords.user_id AS userId FROM users JOIN passwords ON users.id=passwords.user_id WHERE email=?;",
+    "SELECT passwords.hashed_password AS hashedPassword, passwords.user_id AS userId FROM users JOIN passwords ON users.id=passwords.user_id WHERE email=? AND passwords.is_active=TRUE;",
     [email],
   );
   return rows[0];

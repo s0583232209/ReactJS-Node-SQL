@@ -6,6 +6,7 @@ import {
   DAL_loginDetails,
   DAL_updateProfile,
   DAL_getPasswordByUserId,
+  DAL_getAllPasswordsByUserId,
   DAL_updateUsername,
   DAL_updatePassword,
 } from "../dal/users.dal.js";
@@ -75,6 +76,15 @@ export async function BL_updateCredentials(req, res) {
     }
     if (newUsername) await DAL_updateUsername(id, newUsername);
     if (newPassword) {
+      const allPasswords = await DAL_getAllPasswordsByUserId(id);
+      const comparisons = await Promise.all(
+        allPasswords.map(({ hashedPassword }) => bcrypt.compare(newPassword, hashedPassword))
+      );
+      const isReused = comparisons.some(match => match === true);
+      if (isReused) {
+        log.warn(`BL_updateCredentials: reused password attempt for user id: ${id}`);
+        return res.status(400).json({ message: "New password cannot be a previously used password" });
+      }
       const hashed = await bcrypt.hash(newPassword, 12);
       await DAL_updatePassword(id, hashed);
     }

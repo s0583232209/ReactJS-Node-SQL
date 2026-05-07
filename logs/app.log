@@ -21483,3 +21483,515 @@
 2026-05-07 14:39:00 INFO  DAL_getById called with id: 25 
 2026-05-07 14:39:00 INFO  DAL_getById successful for id: 25 
 2026-05-07 14:39:00 INFO  BL_getById successful, got user from database 
+2026-05-07 14:40:34 INFO  init 
+2026-05-07 14:40:34 INFO  Database connected successfully 
+2026-05-07 14:40:34 INFO  Server started on http://127.0.0.1:3000 
+2026-05-07 14:41:07 INFO  BL_login successful for email: naama@gmail.com 
+2026-05-07 14:41:08 INFO  BL_getById called for user id: 25 
+2026-05-07 14:41:08 INFO  DAL_getById called with id: 25 
+2026-05-07 14:41:08 INFO  DAL_getById successful for id: 25 
+2026-05-07 14:41:08 INFO  BL_getById successful, got user from database 
+2026-05-07 14:41:10 INFO  BL_getAllPosts called  
+2026-05-07 14:41:10 INFO  DAL_getAll called  
+2026-05-07 14:41:10 INFO  DAL_getAll successful, returned 98 posts 
+2026-05-07 14:41:10 INFO  BL_getAllPosts successful, returned 98 posts 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 1 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 1 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 3 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 3 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 8 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 8 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 4 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 4 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 5 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 5 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 6 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 6 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 7 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 7 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 8 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 8 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 9 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 9 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 2 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 2 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 10 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 10 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 11 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 11 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 12 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 12 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 13 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 13 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 14 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 14 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 15 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 15 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 16 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 16 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 17 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 17 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 18 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 18 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 19 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 19 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 20 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 20 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 5 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 21 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 21 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 22 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 22 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 23 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 23 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 24 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 24 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 25 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 25 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 29 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 29 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 26 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 26 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 27 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 27 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 28 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 28 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 30 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 30 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 31 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 31 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 32 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 32 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 33 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 33 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 34 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 34 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 35 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 35 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 36 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 36 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 37 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 37 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 38 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 38 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 39 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 39 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 40 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 40 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 41 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 41 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 42 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 42 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 43 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 43 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 44 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 44 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 45 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 45 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 46 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 46 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 47 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 47 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost called for postId: 48 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId called with postId: 48 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:10 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 49 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 49 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 50 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 50 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 51 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 51 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 52 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 52 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 53 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 53 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 54 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 54 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 55 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 55 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 56 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 56 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 57 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 57 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 58 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 58 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 59 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 59 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 60 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 60 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 61 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 61 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 62 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 62 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 63 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 63 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 64 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 64 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 65 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 65 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 66 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 66 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 67 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 67 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 68 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 68 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 69 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 69 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 70 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 70 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 71 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 71 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 73 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 73 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 74 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 74 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 72 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 72 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 75 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 75 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 76 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 76 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 77 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 77 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 78 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 78 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 79 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 79 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 80 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 80 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 81 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 81 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 82 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 82 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 83 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 83 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 84 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 84 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 85 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 85 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 86 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 86 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 87 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 87 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 88 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 88 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 89 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 89 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 90 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 90 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 91 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 91 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 92 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 92 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 93 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 93 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 94 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 94 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 95 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 95 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 96 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 96 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 97 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 97 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost called for postId: 98 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId called with postId: 98 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  DAL_getAllByPostId successful, returned 0 comments 
+2026-05-07 14:41:11 INFO  BL_getCommentsByPost successful, returned 0 comments 
+2026-05-07 14:41:26 INFO  Comment create called 
+2026-05-07 14:41:26 INFO  DAL_addNewComment called for post_id: 1 
+2026-05-07 14:41:26 INFO  DAL_addNewComment successful, comment id: 104 
+2026-05-07 14:41:26 INFO  Comment create successful, id: 104 
+2026-05-07 14:41:28 INFO  BL_getAllTasks called 
+2026-05-07 14:41:28 INFO  DAL_getAll called with userId25 
+2026-05-07 14:41:28 INFO  DAL_getAll successful, returned 1 tasks 
+2026-05-07 14:41:28 INFO  BL_getAllTasks successful, returned 1 tasks 
+2026-05-07 14:41:31 INFO  Task update called for id: 201 
+2026-05-07 14:41:31 INFO  DAL_update tasks called for id: 201 
+2026-05-07 14:41:31 INFO  DAL_update tasks successful for id: 201 
+2026-05-07 14:41:31 INFO  DAL_getById tasks called with id: 201 
+2026-05-07 14:41:31 INFO  DAL_getById tasks successful for id: 201 
+2026-05-07 14:41:31 INFO  Task update successful for id: 201 
+2026-05-07 14:41:39 INFO  BL_getById called for user id: 25 
+2026-05-07 14:41:39 INFO  DAL_getById called with id: 25 
+2026-05-07 14:41:39 INFO  DAL_getById successful for id: 25 
+2026-05-07 14:41:39 INFO  BL_getById successful, got user from database 
+2026-05-07 14:41:56 INFO  BL_updateProfile called for user id: 25 
+2026-05-07 14:41:56 INFO  DAL_updateProfile successful for id: 25 
+2026-05-07 14:41:56 INFO  DAL_getById called with id: 25 
+2026-05-07 14:41:56 INFO  DAL_getById successful for id: 25 
+2026-05-07 14:41:56 INFO  BL_updateProfile successful for user id: 25 
+2026-05-07 14:42:06 INFO  BL_updateCredentials called for user id: 25 
+2026-05-07 14:42:07 INFO  DAL_getById called with id: 25 
+2026-05-07 14:42:07 INFO  DAL_getById successful for id: 25 
+2026-05-07 14:42:07 INFO  BL_updateCredentials successful for user id: 25 
+2026-05-07 15:20:15 INFO  init 
+2026-05-07 15:20:15 INFO  Database connected successfully 
+2026-05-07 15:20:15 INFO  Server started on http://127.0.0.1:3000 
+2026-05-07 15:25:48 WARN  BL_login error: Unknown column 'passwords.is_active' in 'where clause' 
+2026-05-07 15:25:52 WARN  BL_login error: Unknown column 'passwords.is_active' in 'where clause' 
+2026-05-07 15:25:54 WARN  BL_login error: Unknown column 'passwords.is_active' in 'where clause' 
+2026-05-07 15:25:55 WARN  BL_login error: Unknown column 'passwords.is_active' in 'where clause' 
+2026-05-07 15:25:55 WARN  BL_login error: Unknown column 'passwords.is_active' in 'where clause' 
+2026-05-07 15:25:55 WARN  BL_login error: Unknown column 'passwords.is_active' in 'where clause' 
+2026-05-07 15:25:55 WARN  BL_login error: Unknown column 'passwords.is_active' in 'where clause' 
+2026-05-07 15:25:56 WARN  BL_login error: Unknown column 'passwords.is_active' in 'where clause' 
+2026-05-07 15:25:56 WARN  BL_login error: Unknown column 'passwords.is_active' in 'where clause' 
+2026-05-07 15:26:37 INFO  BL_signup called for email: naama4212@gmail.com 
+2026-05-07 15:26:37 INFO  DAL_addNewUser called for username: naama4 
+2026-05-07 15:26:56 INFO  init 
+2026-05-07 15:26:56 INFO  Database connected successfully 
+2026-05-07 15:26:56 INFO  Server started on http://127.0.0.1:3000 
+2026-05-07 15:27:39 WARN  BL_login error: Unknown column 'passwords.is_active' in 'where clause' 
+2026-05-07 15:27:43 WARN  BL_login error: Unknown column 'passwords.is_active' in 'where clause' 
+2026-05-07 16:08:52 WARN  BL_login error: Unknown column 'passwords.is_active' in 'where clause' 
+2026-05-07 16:08:56 WARN  BL_login error: Unknown column 'passwords.is_active' in 'where clause' 
+2026-05-07 16:09:47 INFO  BL_signup called for email: naama4212@gmail.com 
+2026-05-07 16:09:48 INFO  DAL_addNewUser called for username: נ 
+2026-05-07 16:15:34 INFO  init 
+2026-05-07 16:15:34 INFO  Database connected successfully 
+2026-05-07 16:15:34 INFO  Server started on http://127.0.0.1:3000 
+2026-05-07 16:15:54 INFO  BL_login successful for email: naama@gmail.com 
+2026-05-07 16:15:54 INFO  BL_getById called for user id: 25 
+2026-05-07 16:15:54 INFO  DAL_getById called with id: 25 
+2026-05-07 16:15:54 INFO  DAL_getById successful for id: 25 
+2026-05-07 16:15:54 INFO  BL_getById successful, got user from database 
+2026-05-07 16:15:59 INFO  BL_getById called for user id: 25 
+2026-05-07 16:15:59 INFO  DAL_getById called with id: 25 
+2026-05-07 16:15:59 INFO  DAL_getById successful for id: 25 
+2026-05-07 16:15:59 INFO  BL_getById successful, got user from database 
+2026-05-07 16:16:12 INFO  BL_updateCredentials called for user id: 25 
+2026-05-07 16:16:14 WARN  BL_updateCredentials: reused password attempt for user id: 25 
+2026-05-07 16:16:22 INFO  BL_updateCredentials called for user id: 25 
+2026-05-07 16:16:22 WARN  BL_updateCredentials: incorrect password for user id: 25 
+2026-05-07 16:16:42 INFO  BL_login successful for email: naama@gmail.com 
+2026-05-07 16:16:42 INFO  BL_getById called for user id: 25 
+2026-05-07 16:16:42 INFO  DAL_getById called with id: 25 
+2026-05-07 16:16:42 INFO  DAL_getById successful for id: 25 
+2026-05-07 16:16:42 INFO  BL_getById successful, got user from database 
+2026-05-07 16:16:44 INFO  BL_getById called for user id: 25 
+2026-05-07 16:16:44 INFO  DAL_getById called with id: 25 
+2026-05-07 16:16:44 INFO  DAL_getById successful for id: 25 
+2026-05-07 16:16:44 INFO  BL_getById successful, got user from database 
+2026-05-07 16:16:55 INFO  BL_updateCredentials called for user id: 25 
+2026-05-07 16:16:57 INFO  DAL_getById called with id: 25 
+2026-05-07 16:16:57 INFO  DAL_getById successful for id: 25 
+2026-05-07 16:16:57 INFO  BL_updateCredentials successful for user id: 25 
+2026-05-07 16:17:07 INFO  BL_updateCredentials called for user id: 25 
+2026-05-07 16:17:09 INFO  DAL_getById called with id: 25 
+2026-05-07 16:17:09 INFO  DAL_getById successful for id: 25 
+2026-05-07 16:17:09 INFO  BL_updateCredentials successful for user id: 25 
+2026-05-07 16:23:37 INFO  init 
+2026-05-07 16:23:38 INFO  Database connected successfully 
+2026-05-07 16:23:38 INFO  Server started on http://127.0.0.1:3000 
+2026-05-07 16:23:55 INFO  BL_login successful for email: naama@gmail.com 
+2026-05-07 16:23:55 INFO  BL_getById called for user id: 25 
+2026-05-07 16:23:55 INFO  DAL_getById called with id: 25 
+2026-05-07 16:23:55 INFO  DAL_getById successful for id: 25 
+2026-05-07 16:23:55 INFO  BL_getById successful, got user from database 
+2026-05-07 16:23:58 INFO  BL_getById called for user id: 25 
+2026-05-07 16:23:58 INFO  DAL_getById called with id: 25 
+2026-05-07 16:23:58 INFO  DAL_getById successful for id: 25 
+2026-05-07 16:23:58 INFO  BL_getById successful, got user from database 
+2026-05-07 16:24:08 INFO  BL_updateCredentials called for user id: 25 
+2026-05-07 16:24:10 WARN  BL_updateCredentials: reused password attempt for user id: 25 
+2026-05-07 16:24:36 INFO  BL_login successful for email: naama@gmail.com 
+2026-05-07 16:24:36 INFO  BL_getById called for user id: 25 
+2026-05-07 16:24:36 INFO  DAL_getById called with id: 25 
+2026-05-07 16:24:36 INFO  DAL_getById successful for id: 25 
+2026-05-07 16:24:36 INFO  BL_getById successful, got user from database 
+2026-05-07 16:24:38 INFO  BL_getById called for user id: 25 
+2026-05-07 16:24:38 INFO  DAL_getById called with id: 25 
+2026-05-07 16:24:38 INFO  DAL_getById successful for id: 25 
+2026-05-07 16:24:38 INFO  BL_getById successful, got user from database 
+2026-05-07 16:24:50 INFO  BL_updateCredentials called for user id: 25 
+2026-05-07 16:24:51 WARN  BL_updateCredentials: reused password attempt for user id: 25 
