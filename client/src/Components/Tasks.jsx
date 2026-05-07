@@ -11,6 +11,7 @@ import NavBar from "./NavBar";
 import { appContext } from "../App";
 import Loading from "./Loading";
 import "./Tasks.css";
+import api from "../api";
 export default function Tasks() {
   const [searchParams] = useSearchParams();
   const [loading, setLoading] = useState(false);
@@ -63,18 +64,8 @@ export default function Tasks() {
         if (!userId) return;
         setLoading(true);
         try {
-          const response = await fetch(
-            `http://localhost:3000/api/${userId}/tasks`,
-            {
-              method: "GET",
-              credentials: "include",
-            },
-          );
-          if (!response.ok)
-            throw new Error(
-              `status: ${response.status}\n Could not load tasks, please try again later.`,
-            );
-          const data = await response.json();
+          const response = await api.get(`/api/${userId}/tasks`);
+          const data = response.data;
           setTasksList(data);
         } catch (error) {
           alert(error);
@@ -156,17 +147,7 @@ export default function Tasks() {
   async function deleteTask(id) {
     try {
       setLoading(true);
-      const response = await fetch(
-        `http://localhost:3000/api/${userId}/tasks/${id}`,
-        {
-          method: "DELETE",
-          credentials: "include",
-        },
-      );
-      if (!response.ok)
-        throw new Error(
-          `status: ${response.status}\n Could not delete this task, please try again later/`,
-        );
+      await api.delete(`/api/${userId}/tasks/${id}`);
       setTasksList((prev) => prev.filter((task) => task.id !== id));
     } catch (error) {
       alert(error);
@@ -181,25 +162,13 @@ export default function Tasks() {
     }
     try {
       setLoading(true);
-      const response = await fetch(
-        `http://localhost:3000/api/${userId}/tasks`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          credentials: "include",
-          body: JSON.stringify({
-            userId: userId,
-            title: data.title,
-            completed: data.completed,
-          }),
-        },
-      );
-      if (!response.ok)
-        throw new Error(
-          `status: ${response.status}\n Could not add the new task, please try again later.`,
-        );
+      const response = await api.post(`/api/${userId}/tasks`, {
+        userId: userId,
+        title: data.title,
+        completed: data.completed,
+      });
       setNewTask(false);
-      const newTaskResponse = await response.json();
+      const newTaskResponse = response.data;
       setTasksList((prev) => [...prev, newTaskResponse]);
       reset();
     } catch (error) {
@@ -213,20 +182,8 @@ export default function Tasks() {
     const editedTask = { ...taskToEdit, ...edits };
     try {
       setLoading(true);
-      const response = await fetch(
-        `http://localhost:3000/api/${userId}/tasks/${taskId}`,
-        {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          credentials: "include",
-          body: JSON.stringify(editedTask),
-        },
-      );
-      if (!response.ok)
-        throw new Error(
-          `status: ${response.status}\n The server could not upadate the task, try again later.`,
-        );
-      const updatedTask = await response.json();
+      const response = await api.put(`/api/${userId}/tasks/${taskId}`, editedTask);
+      const updatedTask = response.data;
       setTasksList((prev) =>
         prev.map((task) => (task.id == taskId ? updatedTask : task)),
       );
@@ -280,47 +237,40 @@ export default function Tasks() {
       {loading ? <Loading message={"loading Tasks..."}></Loading> : null}
       <NavBar></NavBar>
       <h1>Tasks</h1>
-      <select onChange={(e) => sortList(e.target.value)}>
-        <option value="sort">Sort By</option>
-        <option value="title">Title</option>
-        <option value="id">ID</option>
-        <option value="true">Completed First</option>
-        <option value="false">Uncompleted First</option>
-      </select>
+      <div className="filters">
+        <select onChange={(e) => sortList(e.target.value)}>
+          <option value="sort">Sort By</option>
+          <option value="title">Title</option>
+          <option value="id">ID</option>
+          <option value="true">Completed First</option>
+          <option value="false">Uncompleted First</option>
+        </select>
 
-      <button
-        onClick={() => {
-          setCondition("completedOnly");
-          setCheck(() => (task) => {
-            return task.completed;
-          });
-          navigate(`?completed=true`);
-        }}
-      >
-        only completed
-      </button>
-      <button
-        onClick={() => {
-          setCondition("uncompletedOnly");
-          setCheck(() => (task) => {
-            return !task.completed;
-          });
-          navigate(`?completed=false`);
-        }}
-      >
-        Uncompleted only
-      </button>
+        <button
+          onClick={() => {
+            setCondition("completedOnly");
+            setCheck(() => (task) => task.completed);
+            navigate(`?completed=true`);
+          }}
+        >
+          Completed
+        </button>
+        <button
+          onClick={() => {
+            setCondition("uncompletedOnly");
+            setCheck(() => (task) => !task.completed);
+            navigate(`?completed=false`);
+          }}
+        >
+          Uncompleted
+        </button>
+        <button onClick={back}>All Tasks</button>
+        <button onClick={() => setNewTask(!newTask)}>Add New Task</button>
 
-      <button onClick={back}>Back To All Tasks</button>
-
-      <button onClick={() => setNewTask(!newTask)}>Add New Task</button>
-      <div>
         <button
           onClick={() => {
             setCondition("byTitle");
-            setCheck(() => (task) => {
-              return task.title == title;
-            });
+            setCheck(() => (task) => task.title == title);
             navigate(`?title=${title}`);
           }}
         >
@@ -336,9 +286,7 @@ export default function Tasks() {
         <button
           onClick={() => {
             setCondition("byId");
-            setCheck(() => (task) => {
-              return Number(task.id) === Number(taskID);
-            });
+            setCheck(() => (task) => Number(task.id) === Number(taskID));
             navigate(`?id=${taskID}`);
           }}
         >
@@ -352,42 +300,34 @@ export default function Tasks() {
         />
       </div>
       {newTask ? (
-        <>
+        <div className="add-new-post">
           <form onSubmit={handleSubmit(addNewTask)}>
             <label htmlFor="title">Title</label>
-            <input
-              type="text"
-              id="title"
-              name="title"
-              {...register("title")}
-            ></input>
-            <input
-              type="checkbox"
-              id="completed"
-              name="completed"
-              {...register("completed")}
-            ></input>
-            <label htmlFor="completed">Completed?</label>
+            <input type="text" id="title" name="title" {...register("title")} />
+            <input type="checkbox" id="completed" name="completed" {...register("completed")} />
+            <label htmlFor="completed">Mark as completed</label>
             <button>Add</button>
           </form>
-        </>
+        </div>
       ) : null}
-      {tasksList.length > 0 ? (
-        tasksList.map((task) =>
-          check(task) ? (
-            <Task
-              onDelete={deleteTask}
-              edit={updateTask}
-              id={task.id}
-              key={task.id}
-              title={task.title}
-              completed={task.completed}
-            ></Task>
-          ) : null,
-        )
-      ) : (
-        <p>No Tasks</p>
-      )}
+      <div className="posts-list">
+        {tasksList.length > 0 ? (
+          tasksList.map((task) =>
+            check(task) ? (
+              <Task
+                onDelete={deleteTask}
+                edit={updateTask}
+                id={task.id}
+                key={task.id}
+                title={task.title}
+                completed={task.completed}
+              ></Task>
+            ) : null,
+          )
+        ) : (
+          <p>No Tasks</p>
+        )}
+      </div>
 
       <Outlet></Outlet>
     </>

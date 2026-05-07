@@ -3,8 +3,6 @@ import "./App.css";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import ErrorPage from "../src/Components/ErrorPage.jsx";
-import Album from "../src/Components/Album.jsx";
-import Albums from "../src/Components/Albums.jsx";
 import Home from "../src/Components/Home.jsx";
 import Login from "../src/Components/Login.jsx";
 import Post from "../src/Components/Post.jsx";
@@ -26,8 +24,6 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/albums/:id/" element={<Albums />}></Route>
-        <Route path="/albums/:id/:id" element={<Album />}></Route>
         <Route path=":userId/posts/:id?" element={<Posts />}>
           <Route path=":id" element={<Post />}></Route>
         </Route>

@@ -7,35 +7,22 @@ export default function Post(props) {
   const [newBody, setNewBody] = useState(props.body);
   const [showComments, setShowComments] = useState(false);
   const postRef = useRef(null);
+
   useEffect(() => {
     setNewTitle(props.title);
     setNewBody(props.body);
-    setShowComments(false); 
+    setShowComments(false);
   }, [props.title, props.body, props.id]);
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (
-        props.isExpanded &&
-        postRef.current &&
-        !postRef.current.contains(event.target)
-      ) {
+      if (props.isExpanded && postRef.current && !postRef.current.contains(event.target)) {
         props.onCollapse && props.onCollapse();
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [props.isExpanded, props.onCollapse]);
-
-  function startEdit() {
-    setEditing(true);
-  }
-
-  function cancelEdit() {
-    setEditing(false);
-  }
 
   function saveEdit() {
     if (newTitle.trim() === "") return;
@@ -43,58 +30,54 @@ export default function Post(props) {
     setEditing(false);
   }
 
-  function toggleComments() {
-    setShowComments((prev) => !prev);
-  }
-
   return (
-    <div
-      ref={postRef}
-      className={`post ${props.isExpanded ? "expanded-floating" : ""}`}
-    >
+    <div ref={postRef} className={`post ${props.isExpanded ? "expanded-floating" : ""}`}>
       {editing ? (
         <>
           <input
             type="text"
             value={newTitle}
-            onChange={(e) => setNewTitle(e.target.value)}
+            onChange={e => setNewTitle(e.target.value)}
             autoFocus
           />
           <input
             type="text"
             value={newBody}
-            onChange={(e) => setNewBody(e.target.value)}
+            onChange={e => setNewBody(e.target.value)}
           />
-          <button onClick={saveEdit}>Save</button>
-          <button onClick={cancelEdit}>Cancel</button>
+          <div className="post-actions">
+            <button onClick={saveEdit}>Save</button>
+            <button className="btn-ghost btn-sm" onClick={() => setEditing(false)}>Cancel</button>
+          </div>
         </>
       ) : (
         <>
-          <h3>ID: {props.id}</h3>
+          <div className="post-meta">
+            <span className="post-id-badge">#{props.id}</span>
+          </div>
           <h2>{props.title}</h2>
-
           {props.isExpanded && <p>{props.body}</p>}
 
-          {!props.isExpanded && props.onExpand && (
-            <button onClick={props.onExpand}>Open Full Post</button>
-          )}
-          {props.isExpanded && props.onCollapse && (
-            <button onClick={props.onCollapse}>Close Full Post</button>
-          )}
-
-          {props.currentUser && (
-            <>
-              <button onClick={() => props.onDelete(props.id)}>Delete</button>
-              <button onClick={startEdit}>Edit</button>
-            </>
-          )}
-          {props.isExpanded && (
-            <>
-              <button onClick={toggleComments}>
-                {showComments ? "Hide Comments" : "Show Comments"}
+          <div className="post-actions">
+            {!props.isExpanded && props.onExpand && (
+              <button className="btn-ghost btn-sm" onClick={props.onExpand}>Open Post</button>
+            )}
+            {props.isExpanded && props.onCollapse && (
+              <button className="btn-ghost btn-sm" onClick={props.onCollapse}>Close</button>
+            )}
+            {props.currentUser && (
+              <>
+                <button className="btn-danger btn-sm" onClick={() => props.onDelete(props.id)}>Delete</button>
+                <button className="btn-ghost btn-sm" onClick={() => setEditing(true)}>Edit</button>
+              </>
+            )}
+            {props.isExpanded && (
+              <button className="btn-ghost btn-sm" onClick={() => setShowComments(p => !p)}>
+                {showComments ? "Hide Comments" : "Comments"}
               </button>
-            </>
-          )}
+            )}
+          </div>
+
           <div className="comments-container">
             <Comments
               key={props.id}
