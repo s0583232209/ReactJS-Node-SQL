@@ -1,36 +1,30 @@
-import {
-  DAL_getAll,
-  DAL_addNewPost,
-  DAL_updatePost,
-  DAL_deletePost,
-} from "../dal/posts.dal.js";
+import * as postsService from "../services/posts.service.js";
 import log from "../utils/logger.js";
-import { sendServerError } from "./response.helpers.js";
+import { sendServerError } from "../utils/response.js";
 import { makeDeleteHandler, makeUpdateHandler, makeCreateHandler } from "./crud.helpers.js";
 
-export async function BL_getAllPosts(req, res) {
+export async function getAllPosts(req, res) {
   try {
-    log.info(`BL_getAllPosts called `);
-    const { userId } = req.query;
-    const posts = await DAL_getAll();
-    log.info(`BL_getAllPosts successful, returned ${posts.length} posts`);
+    log.info("getAllPosts called");
+    const posts = await postsService.getAll();
+    log.info(`getAllPosts successful, returned ${posts.length} posts`);
     res.status(200).json(posts);
   } catch (err) {
-    log.error(`BL_getAllPosts error: ${err.message}`);
+    log.error(`getAllPosts error: ${err.message}`);
     sendServerError(res, "Failed to fetch posts", err);
   }
 }
 
-export const BL_createPost = makeCreateHandler(
-  (req) => DAL_addNewPost({ userId: req.body.userId, title: req.body.title, body: req.body.body }),
+export const createPost = makeCreateHandler(
+  (req) => postsService.addPost({ user_id: req.params.userId, title: req.body.title, body: req.body.body }),
   "Post",
-  (body) => (!body.userId || !body.title) ? "user_id and title are required" : null,
+  (body) => !body.title ? "title is required" : null,
 );
 
-export const BL_updatePostById = makeUpdateHandler(
-  DAL_updatePost,
+export const updatePostById = makeUpdateHandler(
+  postsService.updatePost,
   "Post",
   ({ title, body }) => ({ title, body }),
 );
 
-export const BL_deletePostById = makeDeleteHandler(DAL_deletePost, "Post");
+export const deletePostById = makeDeleteHandler(postsService.deletePost, "Post");

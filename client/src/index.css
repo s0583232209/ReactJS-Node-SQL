@@ -403,6 +403,13 @@ form button {
 
 .filters button { margin: 0; }
 
+.search-group {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-wrap: nowrap;
+}
+
 /* ── Add new post area ── */
 .add-new-post { margin-bottom: 0.9rem; }
 

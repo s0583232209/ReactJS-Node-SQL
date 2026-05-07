@@ -25,7 +25,7 @@ export default function Login() {
 
   async function login(data) {
     try {
-      const response = await api.post("/api/users/login", data);
+      const response = await api.post("/api/auth/login", data);
       const { userId, email } = response.data;
       const profileResponse = await api.get(`/api/users/${userId}`);
       const { name } = profileResponse.data;

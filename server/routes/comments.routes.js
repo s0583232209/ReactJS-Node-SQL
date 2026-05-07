@@ -1,16 +1,11 @@
 import express from "express";
-import {
-  BL_getCommentsByPost,
-  BL_createComment,
-  BL_updateCommentById,
-  BL_deleteCommentById,
-} from "../controllers/comments.controller.js";
+import { getCommentsByPost, createComment, updateCommentById, deleteCommentById } from "../controllers/comments.controller.js";
 
-const router = express.Router();
+const router = express.Router({ mergeParams: true });
 
-router.get("/", BL_getCommentsByPost);
-router.post("/", BL_createComment);
-router.put("/:id", BL_updateCommentById);
-router.delete("/:id", BL_deleteCommentById);
+router.get("/",     getCommentsByPost);
+router.post("/",    createComment);
+router.put("/:id",  updateCommentById);
+router.delete("/:id", deleteCommentById);
 
 export default router;

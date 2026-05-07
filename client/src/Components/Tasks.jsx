@@ -28,7 +28,9 @@ export default function Tasks() {
   });
   const [newTask, setNewTask] = useState(false);
   const { register, handleSubmit, reset } = useForm();
+  const [titleInput, setTitleInput] = useState("");
   const [title, setTitle] = useState(searchParams.get("title") || "");
+  const [idInput, setIdInput] = useState("");
   const [taskID, setTaskID] = useState(searchParams.get("id") || "");
   const [check, setCheck] = useState(() => () => {
     return true;
@@ -267,37 +269,43 @@ export default function Tasks() {
         <button onClick={back}>All Tasks</button>
         <button onClick={() => setNewTask(!newTask)}>Add New Task</button>
 
-        <button
-          onClick={() => {
-            setCondition("byTitle");
-            setCheck(() => (task) => task.title == title);
-            navigate(`?title=${title}`);
-          }}
-        >
-          Search By Title
-        </button>
-        <input
-          type="text"
-          placeholder="Enter title"
-          onChange={(e) => setTitle(e.target.value)}
-          value={title}
-        />
+        <div className="search-group">
+          <input
+            type="text"
+            placeholder="Search by title"
+            onChange={(e) => setTitleInput(e.target.value)}
+            value={titleInput}
+          />
+          <button
+            onClick={() => {
+              setTitle(titleInput);
+              setCondition("byTitle");
+              navigate(`?title=${titleInput}`);
+              setTitleInput("");
+            }}
+          >
+            Search
+          </button>
+        </div>
 
-        <button
-          onClick={() => {
-            setCondition("byId");
-            setCheck(() => (task) => Number(task.id) === Number(taskID));
-            navigate(`?id=${taskID}`);
-          }}
-        >
-          Search By ID
-        </button>
-        <input
-          type="text"
-          placeholder="Enter ID"
-          value={taskID}
-          onChange={(e) => setTaskID(e.target.value)}
-        />
+        <div className="search-group">
+          <input
+            type="text"
+            placeholder="Search by ID"
+            value={idInput}
+            onChange={(e) => setIdInput(e.target.value)}
+          />
+          <button
+            onClick={() => {
+              setTaskID(idInput);
+              setCondition("byId");
+              navigate(`?id=${idInput}`);
+              setIdInput("");
+            }}
+          >
+            Search
+          </button>
+        </div>
       </div>
       {newTask ? (
         <div className="add-new-post">

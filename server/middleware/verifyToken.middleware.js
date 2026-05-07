@@ -1,12 +1,7 @@
 import jwt from "jsonwebtoken";
 export default async function verifyToken(req, res, next) {
   console.log("in token middleware");
-  if (
-    req.url.endsWith("/signup") ||
-    req.url.endsWith("/login") ||
-    req.url.endsWith("/refresh")
-  )
-    return next();
+  if (req.path.startsWith("/auth/")) return next();
   console.log("second token middleware console");
   const token = req.cookies.access_token;
   console.log("req", req.cookies);
