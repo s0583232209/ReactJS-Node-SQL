@@ -5,7 +5,7 @@ import userRouter from "./routes/users.routes.js";
 import tasksRouter from "./routes/tasks.routes.js";
 import postsRouter from "./routes/posts.routes.js";
 import commentsRouter from "./routes/comments.routes.js";
-import { connect } from "./dal/OnlyConnectionInTheMeantime.js";
+import { connect } from "./dal/db.connection.js";
 // import { Connection } from "mysql2";
 import verifyToken from "./middleware/verifyToken.middleware.js";
 import log from "./utils/logger.js";

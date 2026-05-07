@@ -1,4 +1,5 @@
-import { n as __commonJSMin, t as require_react } from "./react-DTjSBzeh.js";
+import { t as __commonJSMin } from "./chunk-CYJPkc-J.js";
+import { t as require_react } from "./react.js";
 //#region node_modules/react-dom/cjs/react-dom.development.js
 /**
 * @license React

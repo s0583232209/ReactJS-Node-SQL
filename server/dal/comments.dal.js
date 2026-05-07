@@ -1,5 +1,10 @@
-import { getConnection } from "./OnlyConnectionInTheMeantime.js";
+import { getConnection } from "./db.connection.js";
+import { makeGetById, makeDelete, makeUpdate } from "./dal.helpers.js";
 import log from "../utils/logger.js";
+
+export const DAL_getById = makeGetById("comments", "Comment");
+export const DAL_deleteComment = makeDelete("comments");
+export const DAL_updateComment = makeUpdate("comments", ["name", "body"], DAL_getById);
 
 export async function DAL_getAllByPostId(postId) {
   try {
@@ -17,23 +22,6 @@ export async function DAL_getAllByPostId(postId) {
   }
 }
 
-export async function DAL_getById(id) {
-  try {
-    log.info(`DAL_getById called with id: ${id}`);
-    const connection = await getConnection();
-    const [rows] = await connection.execute(
-      "SELECT * FROM comments WHERE id = ?;",
-      [id],
-    );
-    if (!rows[0]) throw new Error("Comment not found");
-    log.info(`DAL_getById successful for id: ${id}`);
-    return rows[0];
-  } catch (err) {
-    log.error(`DAL_getById error: ${err.message}`);
-    throw err;
-  }
-}
-
 export async function DAL_addNewComment(details, userId) {
   try {
     console.log(details, userId);
@@ -45,44 +33,9 @@ export async function DAL_addNewComment(details, userId) {
     );
     log.info(`DAL_addNewComment successful, comment id: ${result.insertId}`);
     console.log({ ...details });
-    return { id: result.insertId, ...details,userId:userId };
+    return { id: result.insertId, ...details, userId: userId };
   } catch (err) {
     log.error(`DAL_addNewComment error: ${err.message}`);
-    throw err;
-  }
-}
-
-export async function DAL_updateComment(id, details) {
-  try {
-    log.info(`DAL_updateComment called for id: ${id}`);
-    const connection = await getConnection();
-    await connection.execute(
-      "UPDATE comments SET name = ?, body = ? WHERE id = ?;",
-      [details.name, details.body, id],
-    );
-    log.info(`DAL_updateComment successful for id: ${id}`);
-    return DAL_getById(id);
-  } catch (err) {
-    log.error(`DAL_updateComment error: ${err.message}`);
-    throw err;
-  }
-}
-
-export async function DAL_deleteComment(id) {
-  try {
-    log.info(`DAL_deleteComment called for id: ${id}`);
-    const connection = await getConnection();
-    const [result] = await connection.execute(
-      "DELETE FROM comments WHERE id = ?;",
-      [id],
-    );
-    const deleted = result.affectedRows > 0;
-    log.info(
-      `DAL_deleteComment ${deleted ? "successful" : "failed"} for id: ${id}`,
-    );
-    return deleted;
-  } catch (err) {
-    log.error(`DAL_deleteComment error: ${err.message}`);
     throw err;
   }
 }
