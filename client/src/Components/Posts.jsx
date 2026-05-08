@@ -258,14 +258,20 @@ export default function Posts() {
               });
 
             if (isFiltering && filtered.length === 0 && !loading) {
-              return <p>No matches found</p>;
+              return (
+                <p>
+                  {searchID
+                    ? `No post found with ID ${searchID}.`
+                    : `No post found with title "${searchTitle}".`}
+                </p>
+              );
             }
 
             return filtered.map((post) => (
               <Post
                 key={post.id}
                 {...post}
-                currentUser={post.userId === userId}
+                currentUser={String(post.user_id) === String(userId)}
                 edit={updatePost}
                 onDelete={deletePost}
                 isExpanded={false}
@@ -286,7 +292,7 @@ export default function Posts() {
           key={`expanded-${openPostId}`}
           {...postsList.find((p) => p.id === openPostId)}
           currentUser={
-            postsList.find((p) => p.id === openPostId)?.userId === userId
+            String(postsList.find((p) => p.id === openPostId)?.user_id) === String(userId)
           }
           edit={updatePost}
           onDelete={deletePost}

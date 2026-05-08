@@ -8,7 +8,7 @@ const Logo = () => (
   <svg width="32" height="32" viewBox="0 0 30 30" fill="none">
     <defs>
       <linearGradient id="ll" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#818cf8" /><stop offset="1" stopColor="#6366f1" />
+        <stop stopColor="#95d5b2" /><stop offset="1" stopColor="#52b788" />
       </linearGradient>
     </defs>
     <rect width="30" height="30" rx="8" fill="url(#ll)" />
