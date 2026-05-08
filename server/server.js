@@ -10,6 +10,7 @@ import commentsRouter from "./routes/comments.routes.js";
 import { connect } from "./db/connection.js";
 import verifyToken from "./middleware/verifyToken.middleware.js";
 import log from "./utils/logger.js";
+import checkAccessPermissions from "./middleware/auth.middleware.js";
 
 configDotenv();
 
@@ -25,8 +26,9 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => res.json({ message: "Server is running" }));
 
 app.use("/api", verifyToken);
+app.use("/api/:userId", checkAccessPermissions);
 app.use("/api/auth", authRouter);
-app.use("/api/users", userRouter);
+app.use("/api/:userId/users", userRouter);
 app.use("/api/:userId/tasks", tasksRouter);
 app.use("/api/:userId/posts", postsRouter);
 app.use("/api/:userId/comments", commentsRouter);

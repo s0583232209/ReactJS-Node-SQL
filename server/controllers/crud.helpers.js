@@ -1,12 +1,17 @@
 import log from "../utils/logger.js";
-import { sendServerError, sendNotFound, sendDeleteSuccess, sendBadRequest } from "../utils/response.js";
+import {
+  sendServerError,
+  sendNotFound,
+  sendDeleteSuccess,
+  sendBadRequest,
+} from "../utils/response.js";
 
 export function makeDeleteHandler(DAL_delete, entity) {
   return async function (req, res) {
     try {
       log.info(`${entity} delete called for id: ${req.params.id}`);
       const { id } = req.params;
-      const deleted = await DAL_delete(id);
+      const deleted = await DAL_delete(id,req.user.userId);
       if (!deleted) {
         log.warn(`${entity} delete - not found: ${id}`);
         return sendNotFound(res, `${entity} not found`);
@@ -25,7 +30,7 @@ export function makeUpdateHandler(DAL_update, entity, extractBody) {
     try {
       log.info(`${entity} update called for id: ${req.params.id}`);
       const { id } = req.params;
-      const updated = await DAL_update(id, extractBody(req.body));
+      const updated = await DAL_update(id, extractBody(req.body),req.user.userId);
       if (!updated) {
         log.warn(`${entity} update - not found: ${id}`);
         return sendNotFound(res, `${entity} not found`);

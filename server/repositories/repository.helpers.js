@@ -3,14 +3,20 @@ import log from "../utils/logger.js";
 
 export async function queryById(table, id, entity) {
   const connection = await getConnection();
-  const [rows] = await connection.execute(`SELECT * FROM ${table} WHERE id = ?;`, [id]);
+  const [rows] = await connection.execute(
+    `SELECT * FROM ${table} WHERE id = ?;`,
+    [id],
+  );
   if (!rows[0]) throw new Error(`${entity} not found`);
   return rows[0];
 }
 
-export async function executeDelete(table, id) {
+export async function executeDelete(table, id, userId) {
   const connection = await getConnection();
-  const [result] = await connection.execute(`DELETE FROM ${table} WHERE id = ?;`, [id]);
+  const [result] = await connection.execute(
+    `DELETE FROM ${table} WHERE id = ? AND user_id =?;`,
+    [id, userId],
+  );
   return result.affectedRows > 0;
 }
 
@@ -29,11 +35,13 @@ export function makeGetById(table, entity) {
 }
 
 export function makeDelete(table) {
-  return async function (id) {
+  return async function (id, userId) {
     try {
       log.info(`delete ${table} called for id: ${id}`);
-      const deleted = await executeDelete(table, id);
-      log.info(`delete ${table} ${deleted ? "successful" : "failed"} for id: ${id}`);
+      const deleted = await executeDelete(table, id, userId);
+      log.info(
+        `delete ${table} ${deleted ? "successful" : "failed"} for id: ${id}`,
+      );
       return deleted;
     } catch (err) {
       log.error(`delete ${table} error: ${err.message}`);
@@ -43,15 +51,16 @@ export function makeDelete(table) {
 }
 
 export function makeUpdate(table, columns, getById) {
+  return async function (id, details, userId) {
   const setClauses = columns.map((col) => `${col} = ?`).join(", ");
-  const sql = `UPDATE ${table} SET ${setClauses} WHERE id = ?;`;
+  const sql = `UPDATE ${table} SET ${setClauses} WHERE id = ? AND user_id = ?;`;
 
-  return async function (id, details) {
+ 
     try {
       log.info(`update ${table} called for id: ${id}`);
       const connection = await getConnection();
       const params = columns.map((col) => details[col]);
-      await connection.execute(sql, [...params, id]);
+      await connection.execute(sql, [...params, id, userId]);
       log.info(`update ${table} successful for id: ${id}`);
       return getById(id);
     } catch (err) {
