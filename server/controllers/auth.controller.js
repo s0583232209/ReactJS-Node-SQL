@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import * as authService from "../services/auth.service.js"
+import * as authService from "../services/auth.service.js";
 import { DAL_refreshToken } from "../dal/auth.dal.js";
 import { tokenHandler, handleResponse } from "./auth.helpers.js";
 import log from "../utils/logger.js";
@@ -9,7 +9,7 @@ export async function BL_refreshToken(req, res) {
   if (!token)
     return res.status(401).send("No refresh token provided, log in again");
   try {
-    console.log(req.user);
+    log.info(`BL_refreshToken called for user: ${req.user?.email}`);
     const dataBaseResponse = await DAL_refreshToken(req.params.userId);
     if (dataBaseResponse.revoked) {
       log.warn(`refresh token revoked for user id: ${req.params.userId}`);

@@ -23,6 +23,12 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
+// Request logging middleware
+app.use((req, res, next) => {
+  log.info(`${req.method} ${req.path} - IP: ${req.ip}`);
+  next();
+});
+
 app.get("/", (req, res) => res.json({ message: "Server is running" }));
 
 app.use("/api", verifyToken);
@@ -33,7 +39,7 @@ app.use("/api/:userId/tasks", tasksRouter);
 app.use("/api/:userId/posts", postsRouter);
 app.use("/api/:userId/comments", commentsRouter);
 app.use((err, req, res, next) => {
-  console.error(err.stack);
+  log.error(`Unhandled error: ${err.message}, stack: ${err.stack}`);
   res.status(500).json({ error: "Something went wrong" });
 });
 

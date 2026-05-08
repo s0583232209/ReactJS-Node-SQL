@@ -13,11 +13,16 @@ export async function queryById(table, id, entity) {
 
 export async function executeDelete(table, id, userId) {
   const connection = await getConnection();
+  log.info(`executeDelete - table: ${table}, id: ${id}, userId: ${userId}`);
   const [result] = await connection.execute(
     `DELETE FROM ${table} WHERE id = ? AND user_id =?;`,
     [id, userId],
   );
-  return result.affectedRows > 0;
+  const success = result.affectedRows > 0;
+  log.info(
+    `executeDelete - ${success ? "successful" : "failed - row not found or unauthorized"}, affectedRows: ${result.affectedRows}`,
+  );
+  return success;
 }
 
 export function makeGetById(table, entity) {
@@ -52,16 +57,21 @@ export function makeDelete(table) {
 
 export function makeUpdate(table, columns, getById) {
   return async function (id, details, userId) {
-  const setClauses = columns.map((col) => `${col} = ?`).join(", ");
-  const sql = `UPDATE ${table} SET ${setClauses} WHERE id = ? AND user_id = ?;`;
+    const setClauses = columns.map((col) => `${col} = ?`).join(", ");
+    const sql = `UPDATE ${table} SET ${setClauses} WHERE id = ? AND user_id = ?;`;
 
- 
     try {
-      log.info(`update ${table} called for id: ${id}`);
+      log.info(`update ${table} called for id: ${id}, userId: ${userId}`);
       const connection = await getConnection();
       const params = columns.map((col) => details[col]);
-      await connection.execute(sql, [...params, id, userId]);
-      log.info(`update ${table} successful for id: ${id}`);
+      const result = await connection.execute(sql, [...params, id, userId]);
+      if (result[0].affectedRows === 0) {
+        log.warn(
+          `update ${table} - no rows affected (not found or unauthorized) for id: ${id}, userId: ${userId}`,
+        );
+        throw new Error(`${table} not found or unauthorized`);
+      }
+      log.info(`update ${table} successful for id: ${id}, userId: ${userId}`);
       return getById(id);
     } catch (err) {
       log.error(`update ${table} error: ${err.message}`);

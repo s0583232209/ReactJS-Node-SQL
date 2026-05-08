@@ -11,7 +11,7 @@ export async function DAL_refreshToken(userId) {
     );
     return rows[0];
   } catch (error) {
-    console.error("Error in DAL_refreshToken:", error);
+    log.error(`DAL_refreshToken error: ${error.message}`);
     throw error;
   }
 }
