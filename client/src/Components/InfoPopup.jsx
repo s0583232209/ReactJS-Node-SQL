@@ -14,7 +14,9 @@ function Row({ label, fieldKey, editing, draft, view, onDraftChange }) {
           onChange={e => onDraftChange(fieldKey, e.target.value)}
         />
       ) : (
-        <span className="ip-value">{view[fieldKey] || <span className="ip-empty">—</span>}</span>
+        <span className="ip-value">
+          {view[fieldKey] !== "" && view[fieldKey] != null ? view[fieldKey] : <span className="ip-empty">—</span>}
+        </span>
       )}
     </div>
   );
@@ -22,14 +24,14 @@ function Row({ label, fieldKey, editing, draft, view, onDraftChange }) {
 
 function normalize(u) {
   return {
-    name:         u.name         || "",
-    email:        u.email        || "",
-    phoneNumber:        u.phoneNumber        || u.phoneNumber   || "",
-    street:       u.street       || u.address?.street || "",
-    city:         u.city         || u.address?.city   || "",
-    zipcode:      u.zipcode      || "",
-    house_number: u.house_number || u.houseNumber   || "",
-    username:     u.username     || "",
+    name:         u.name                              ?? "",
+    email:        u.email                             ?? "",
+    phoneNumber:  u.phone        ?? u.phoneNumber     ?? "",
+    street:       u.street       ?? u.address?.street ?? "",
+    city:         u.city         ?? u.address?.city   ?? "",
+    zipcode:      u.zipcode                           ?? "",
+    house_number: u.house_number ?? u.houseNumber     ?? "",
+    username:     u.username                          ?? "",
   };
 }
 
@@ -69,6 +71,7 @@ export default function InfoPopup({ onClose }) {
     setSaving(true);
     setError(null);
     try {
+      console.log("saveProfile - draft being sent:", JSON.stringify(draft));
       const res = await api.put(`/api/users/${effectiveId}/profile`, draft);
       const updated = normalize(res.data);
       setView(updated);
@@ -151,9 +154,10 @@ export default function InfoPopup({ onClose }) {
                 <button className="ip-edit-btn" onClick={startEdit}>Edit</button>
               )}
             </div>
-            <Row label="Full Name"  fieldKey="name"         editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
-            <Row label="Email"      fieldKey="email"        editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
-            <Row label="PhoneNumber"      fieldKey="phoneNumber"        editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
+            <Row label="Full Name"    fieldKey="name"        editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
+            <Row label="Username"     fieldKey="username"    editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
+            <Row label="Email"        fieldKey="email"       editing={false}   draft={draft} view={view} onDraftChange={handleDraftChange} />
+            <Row label="Phone Number" fieldKey="phoneNumber" editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
             <Row label="Street"     fieldKey="street"       editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
             <Row label="City"       fieldKey="city"         editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
             <Row label="Zip Code"   fieldKey="zipcode"      editing={editing} draft={draft} view={view} onDraftChange={handleDraftChange} />
@@ -184,10 +188,6 @@ export default function InfoPopup({ onClose }) {
               )}
             </div>
             <div className="ip-row">
-              <span className="ip-label">Username</span>
-              <span className="ip-value">{view.username || "—"}</span>
-            </div>
-            <div className="ip-row">
               <span className="ip-label">Password</span>
               <span className="ip-value ip-dots">••••••••</span>
             </div>
@@ -199,11 +199,6 @@ export default function InfoPopup({ onClose }) {
                   <label>Current Password *</label>
                   <input type="password" value={cred.currentPassword}
                     onChange={e => setCred(c => ({ ...c, currentPassword: e.target.value }))} />
-                </div>
-                <div className="ip-cred-field">
-                  <label>New Username (optional)</label>
-                  <input type="text" placeholder={view.username} value={cred.newUsername}
-                    onChange={e => setCred(c => ({ ...c, newUsername: e.target.value }))} />
                 </div>
                 <div className="ip-cred-field">
                   <label>New Password (optional)</label>

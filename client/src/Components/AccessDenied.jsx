@@ -1,98 +1,60 @@
 import { useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
+
 export function AccessDenied() {
   const navigate = useNavigate();
   return (
     <>
-      <NavBar></NavBar>
-      <div
-        style={{
-          minHeight: "100vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#e0f7fa",
-          fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
-        }}
-      >
-        <div
-          style={{
-            textAlign: "center",
-            color: "#064635",
-            padding: "3rem",
-            borderRadius: "20px",
-            backgroundColor: "#d0f0e0",
-            border: "2px solid #80cfa9",
-            boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
-            maxWidth: "500px",
-          }}
-        >
-          <div
-            style={{
-              fontSize: "5rem",
-              marginBottom: "1.5rem",
-              animation: "float 3s ease-in-out infinite",
-            }}
-          >
-            🔒
-          </div>
-          <h1
-            style={{
-              fontSize: "2.5rem",
-              margin: "0 0 1rem 0",
-              fontWeight: "bold",
-              color: "#064635",
-            }}
-          >
+      <NavBar />
+      <div style={{
+        minHeight: "calc(100vh - var(--nav-h))",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "2rem",
+      }}>
+        <div style={{
+          background: "var(--surface)",
+          border: "1px solid var(--border)",
+          borderRadius: "var(--radius-xl)",
+          boxShadow: "var(--shadow-md)",
+          padding: "3rem 2.5rem",
+          maxWidth: "440px",
+          width: "100%",
+          textAlign: "center",
+        }}>
+          <div style={{
+            width: "56px",
+            height: "56px",
+            background: "var(--primary-light)",
+            borderRadius: "var(--radius-lg)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            margin: "0 auto 1.5rem",
+            fontSize: "1.6rem",
+          }}>🔒</div>
+
+          <div style={{
+            fontSize: "0.7rem",
+            fontWeight: 700,
+            letterSpacing: "0.1em",
+            color: "var(--primary)",
+            background: "var(--primary-light)",
+            padding: "0.18rem 0.55rem",
+            borderRadius: "var(--radius-sm)",
+            display: "inline-block",
+            marginBottom: "0.85rem",
+          }}>403</div>
+
+          <h1 style={{ margin: "0 0 0.6rem", fontSize: "1.6rem", letterSpacing: "-0.03em" }}>
             Access Denied
           </h1>
-          <p
-            style={{
-              fontSize: "1.1rem",
-              margin: "0 0 2rem 0",
-              color: "#064635",
-              lineHeight: "1.5",
-            }}
-          >
-            Sorry, you don't have permission to access this resource. Please
-            contact an administrator if you believe this is an error.
+          <p style={{ margin: "0 0 2rem", color: "var(--text-2)", fontSize: "0.9rem", lineHeight: "1.75" }}>
+            You don't have permission to view this page. Please check your account or go back home.
           </p>
-          <button
-            style={{
-              backgroundColor: "#a8dadc",
-              color: "#064635",
-              border: "none",
-              borderRadius: "6px",
-              padding: "0.8rem 2rem",
-              fontSize: "1rem",
-              cursor: "pointer",
-              fontWeight: "bold",
-              transition: "0.2s",
-              boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-            }}
-            onMouseOver={(e) => {
-              e.target.style.backgroundColor = "#90c9d0";
-              e.target.style.transform = "translateY(-1px)";
-            }}
-            onMouseOut={(e) => {
-              e.target.style.backgroundColor = "#a8dadc";
-              e.target.style.transform = "translateY(0)";
-            }}
-            onClick={() => navigate("/")}
-          >
-            ← Go Back
-          </button>
+          <button onClick={() => navigate("/")}>← Go Home</button>
         </div>
-        <style>{`
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
-        }
-      `}</style>
       </div>
     </>
   );
