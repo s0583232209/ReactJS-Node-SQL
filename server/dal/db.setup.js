@@ -1,93 +1,168 @@
 import fs from "fs/promises";
 import { getConnection } from "./db.connection.js";
 import log from "../utils/logger.js";
+
+const DATABASE_NAME = process.env.DATABASE;
+
 export async function buildDataBase() {
   const connection = await getConnection();
+
+  let schemaCreated = false;
+
   try {
+    log.info("Starting database build...");
+
+
     const schemaSQL = await fs.readFile(
       "./database/SQL-code/schema.sql",
       "utf8",
     );
-    const usersTableSQL = await fs.readFile(
+
+    await connection.query(schemaSQL);
+
+    schemaCreated = true;
+
+    log.info(`Database '${DATABASE_NAME}' created successfully`);
+
+    await connection.query(`USE \`${DATABASE_NAME}\``);
+
+
+    await createTable(
+      connection,
       "./database/SQL-code/create-database-code/users.sql",
-      "utf8",
+      "users",
     );
-    const passwordTableSQL = await fs.readFile(
+
+    await createTable(
+      connection,
       "./database/SQL-code/create-database-code/passwords.sql",
-      "utf8",
+      "passwords",
     );
-    const postsTableSQL = await fs.readFile(
+
+    await createTable(
+      connection,
       "./database/SQL-code/create-database-code/posts.sql",
-      "utf8",
+      "posts",
     );
-    const tasksTableSQL = await fs.readFile(
+
+    await createTable(
+      connection,
       "./database/SQL-code/create-database-code/tasks.sql",
-      "utf8",
+      "tasks",
     );
-    const commentsTableSQL = await fs.readFile(
+
+    await createTable(
+      connection,
       "./database/SQL-code/create-database-code/comments.sql",
-      "utf8",
+      "comments",
     );
-    const tokensTableSQL = await fs.readFile(
+
+    await createTable(
+      connection,
       "./database/SQL-code/create-database-code/tokens.sql",
-      "utf8",
+      "tokens",
     );
-    const status = await connection.query(schemaSQL);
-    if (!status) throw new Error("could not create the schema");
-    await connection.query(`USE ${process.env.DATABASE}`);
-    await createTable(usersTableSQL);
-    await createTable(passwordTableSQL);
-    await createTable(postsTableSQL);
-    await createTable(tasksTableSQL);
-    await createTable(commentsTableSQL);
-    await createTable(tokensTableSQL);
-    await seeds();
+
+    log.info("All tables created successfully");
+    try {
+      await seeds(connection);
+
+      log.info("Database seeded successfully");
+    } catch (seedError) {
+      log.warn(
+        `Database created successfully, but seeding failed: ${seedError.message}`,
+      );
+
+      console.warn(
+        "WARNING: Database was created, but seed data failed.",
+      );
+
+      console.error(seedError);
+    }
+
+    log.info("Database build completed successfully");
   } catch (err) {
-    connection.execute(`DROP DATABASE IF EXISTS ${process.env.DATABASE};`);
-    log.error(`DB setup failed: ${err.message}`);
-    console.log(err);
+    log.error(`Database build failed: ${err.message}`);
+
+    console.error("\nDATABASE SETUP FAILED");
+    console.error(`Reason: ${err.message}\n`);
+
+
+    if (schemaCreated) {
+      try {
+        log.warn("Removing partially created database...");
+
+        await connection.query(
+          `DROP DATABASE IF EXISTS \`${DATABASE_NAME}\`;`,
+        );
+
+        log.info("Partial database cleanup completed");
+      } catch (cleanupError) {
+        log.error(
+          `Failed to cleanup partial database: ${cleanupError.message}`,
+        );
+
+        console.error(
+          "CRITICAL: Failed to remove partially created database.",
+        );
+
+        console.error(cleanupError);
+      }
+    }
+
+    throw err;
   }
 }
 
-async function createTable(SQL) {
-  const connection = await getConnection(false);
-  const status = await connection.query(SQL);
-  return status;
+async function createTable(connection, filePath, tableName) {
+  try {
+    const sql = await fs.readFile(filePath, "utf8");
+
+    await connection.query(sql);
+
+    log.info(`Table '${tableName}' created`);
+  } catch (err) {
+    throw new Error(
+      `Failed to create table '${tableName}': ${err.message}`,
+    );
+  }
 }
 
-async function seeds() {
-  const connection = await getConnection(false);
-  try {
-    const usersSeedSQL = await fs.readFile(
-      "./database/SQL-code/seeds/seedUsers.sql",
-      "utf8",
-    );
-    const passwordSeedSQL = await fs.readFile(
-      "./database/SQL-code/seeds/seedPassword.sql",
-      "utf8",
-    );
-    const postsSeedSQL = await fs.readFile(
-      "./database/SQL-code/seeds/seedPosts.sql",
-      "utf8",
-    );
-    const tasksSeedSQL = await fs.readFile(
-      "./database/SQL-code/seeds/seedTasks.sql",
-      "utf8",
-    );
-    const commentsSeedSQL = await fs.readFile(
-      "./database/SQL-code/seeds/seedComments.sql",
-      "utf8",
-    );
+async function seeds(connection) {
+  const seedFiles = [
+    {
+      path: "./database/SQL-code/seeds/seedUsers.sql",
+      name: "users",
+    },
+    {
+      path: "./database/SQL-code/seeds/seedPassword.sql",
+      name: "passwords",
+    },
+    {
+      path: "./database/SQL-code/seeds/seedPosts.sql",
+      name: "posts",
+    },
+    {
+      path: "./database/SQL-code/seeds/seedTasks.sql",
+      name: "tasks",
+    },
+    {
+      path: "./database/SQL-code/seeds/seedComments.sql",
+      name: "comments",
+    },
+  ];
 
-    await connection.query(usersSeedSQL);
-    await connection.query(passwordSeedSQL);
-    await connection.query(postsSeedSQL);
-    await connection.query(tasksSeedSQL);
-    await connection.query(commentsSeedSQL);
+  for (const seed of seedFiles) {
+    try {
+      const sql = await fs.readFile(seed.path, "utf8");
 
-    console.log("Database seeded successfully");
-  } catch (err) {
-    console.error("Error seeding database:", err);
-    throw err;
+      await connection.query(sql);
+
+      log.info(`Seeded '${seed.name}'`);
+    } catch (err) {
+      throw new Error(
+        `Failed seeding '${seed.name}': ${err.message}`,
+      );
+    }
   }
 }

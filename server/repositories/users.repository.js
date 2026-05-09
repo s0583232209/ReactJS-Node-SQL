@@ -5,7 +5,10 @@ export async function getById(id) {
   try {
     log.info(`getById users called with id: ${id}`);
     const connection = await getConnection();
-    const [rows] = await connection.execute("SELECT * FROM users WHERE id = ?;", [id]);
+    const [rows] = await connection.execute(
+      "SELECT * FROM users WHERE id = ?;",
+      [id],
+    );
     if (!rows[0]) throw new Error("User not found");
     log.info(`getById users successful for id: ${id}`);
     return rows[0];
@@ -21,7 +24,16 @@ export async function addUser(details) {
     const connection = await getConnection();
     const [result] = await connection.execute(
       "INSERT INTO users (username, email, phone, name, zipcode, street, city, house_number) VALUES (?,?,?,?,?,?,?,?);",
-      [details.username, details.email, details.phoneNumber, details.name, details.zipcode, details.street, details.city, details.houseNumber],
+      [
+        details.username,
+        details.email,
+        details.phoneNumber,
+        details.name,
+        details.zipcode,
+        details.street,
+        details.city,
+        details.houseNumber,
+      ],
     );
     await connection.execute(
       "INSERT INTO passwords (user_id, hashed_password, is_active) VALUES (?, ?, TRUE);",
@@ -37,11 +49,22 @@ export async function addUser(details) {
 
 export async function updateProfile(id, details) {
   try {
-    console.log("updateProfile called, details:", JSON.stringify(details));
+    log.info(
+      `updateProfile called for userId: ${details.userId}, details: ${JSON.stringify(details)}`,
+    );
     const connection = await getConnection();
     const [result] = await connection.execute(
       `UPDATE users SET name=?, username=?, phone=?, street=?, city=?, zipcode=?, house_number=? WHERE id=?`,
-      [details.name, details.username, details.phoneNumber, details.street, details.city, details.zipcode, details.house_number ?? null, id],
+      [
+        details.name,
+        details.username,
+        details.phoneNumber,
+        details.street,
+        details.city,
+        details.zipcode,
+        details.house_number ?? null,
+        id,
+      ],
     );
     log.info(`updateProfile successful for id: ${id}`);
     return result.affectedRows > 0;
@@ -97,7 +120,10 @@ export async function updateUsername(id, username) {
 export async function updatePassword(userId, hashedPassword) {
   try {
     const connection = await getConnection();
-    await connection.execute(`UPDATE passwords SET is_active=FALSE WHERE user_id=?`, [userId]);
+    await connection.execute(
+      `UPDATE passwords SET is_active=FALSE WHERE user_id=?`,
+      [userId],
+    );
     const [result] = await connection.execute(
       `INSERT INTO passwords (user_id, hashed_password, is_active) VALUES (?, ?, TRUE)`,
       [userId, hashedPassword],

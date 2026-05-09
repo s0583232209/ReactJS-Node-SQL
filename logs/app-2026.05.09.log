@@ -1,0 +1,36 @@
+22:06:37.566 INFO  init 
+22:06:37.678 INFO  Connected to MySQL at 127.0.0.1 
+22:06:37.707 INFO  Database connected successfully 
+22:06:37.744 INFO  Server started on http://127.0.0.1:3000 
+22:07:36.877 INFO  init 
+22:07:36.912 INFO  Connected to MySQL at 127.0.0.1 
+22:07:36.920 INFO  Database connected successfully 
+22:07:36.936 INFO  Server started on http://127.0.0.1:3000 
+22:35:19.654 INFO  init 
+22:35:19.738 INFO  Connected to MySQL at 127.0.0.1 
+22:35:19.767 INFO  Database connected successfully 
+22:35:19.798 INFO  Server started on http://127.0.0.1:3000 
+22:35:44.630 INFO  init 
+22:35:44.673 INFO  Connected to MySQL at 127.0.0.1 
+22:35:44.681 INFO  Database connected successfully 
+22:35:44.702 INFO  Server started on http://127.0.0.1:3000 
+22:38:12.267 INFO  init 
+22:38:12.298 INFO  Connected to MySQL at 127.0.0.1 
+22:38:12.301 INFO  Database connected successfully 
+22:38:12.324 INFO  Server started on http://127.0.0.1:3000 
+22:38:23.628 INFO  init 
+22:38:23.662 INFO  Connected to MySQL at 127.0.0.1 
+22:38:23.664 INFO  Database connected successfully 
+22:38:23.684 INFO  Server started on http://127.0.0.1:3000 
+22:47:03.832 INFO  init 
+22:47:03.912 INFO  Connected to MySQL at 127.0.0.1 
+22:47:03.936 INFO  Database connected successfully 
+22:47:03.959 INFO  Server started on http://127.0.0.1:3000 
+22:48:09.973 INFO  init 
+22:48:10.008 INFO  Connected to MySQL at 127.0.0.1 
+22:48:10.013 INFO  Database connected successfully 
+22:48:10.034 INFO  Server started on http://127.0.0.1:3000 
+22:52:13.271 INFO  init 
+22:52:13.307 INFO  Connected to MySQL at 127.0.0.1 
+22:52:13.313 INFO  Database connected successfully 
+22:52:13.340 INFO  Server started on http://127.0.0.1:3000 

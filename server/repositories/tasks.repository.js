@@ -2,16 +2,21 @@ import { getConnection } from "../db/connection.js";
 import { makeGetById, makeDelete, makeUpdate } from "./repository.helpers.js";
 import log from "../utils/logger.js";
 
-export const getById    = makeGetById("tasks", "Task");
-export const deleteTask  = makeDelete("tasks");
-export const updateTask  = makeUpdate("tasks", ["title", "completed"], getById);
+export const getById = makeGetById("tasks", "Task");
+export const deleteTask = makeDelete("tasks");
+export const updateTask = makeUpdate("tasks", ["title", "completed"], getById);
 
 export async function getAll(userId) {
   try {
     log.info(`getAll tasks called for userId: ${userId}`);
     const connection = await getConnection();
-    const [rows] = await connection.execute("SELECT * FROM tasks WHERE user_id=?;", [userId]);
-    log.info(`getAll tasks successful, returned ${rows.length} tasks`);
+    const [rows] = await connection.execute(
+      "SELECT * FROM tasks WHERE user_id=?;",
+      [userId],
+    );
+    log.info(
+      `getAll tasks successful, returned ${rows.length} tasks for userId: ${userId}`,
+    );
     return rows;
   } catch (err) {
     log.error(`getAll tasks error: ${err.message}`);

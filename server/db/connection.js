@@ -1,6 +1,7 @@
 import { configDotenv } from "dotenv";
 import mysql from "mysql2/promise";
 import { buildDataBase } from "./setup.js";
+import log from "../utils/logger.js";
 
 configDotenv();
 
@@ -16,7 +17,7 @@ export async function connect() {
         user: process.env.USER,
         password: process.env.PASSWORD,
       });
-      console.log("Connected to MySQL");
+      log.info(`Connected to MySQL at ${process.env.HOST}`);
       try {
         await connection.query(`USE ${process.env.DATABASE}`);
       } catch {
@@ -25,7 +26,7 @@ export async function connect() {
       }
       return connection;
     } catch (err) {
-      console.error("Connection failed:", err);
+      log.error(`Database connection failed: ${err.message}`);
       connectionPromise = null;
       throw err;
     }

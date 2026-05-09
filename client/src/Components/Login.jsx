@@ -27,7 +27,8 @@ export default function Login() {
     try {
       const response = await api.post("/api/auth/login", data);
       const { userId, email } = response.data;
-      const profileResponse = await api.get(`/api/users/${userId}`);
+      console.log("Login successful:", response.data);
+      const profileResponse = await api.get(`/api/${userId}/users/${userId}`);
       const { name } = profileResponse.data;
       sessionStorage.setItem("current-user", JSON.stringify({ userId, email, name }));
       setUserId(userId);
