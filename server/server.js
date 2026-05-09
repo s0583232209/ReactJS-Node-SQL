@@ -40,7 +40,9 @@ app.use("/api/:userId/posts", postsRouter);
 app.use("/api/:userId/comments", commentsRouter);
 app.use((err, req, res, next) => {
   log.error(`Unhandled error: ${err.message}, stack: ${err.stack}`);
-  res.status(500).json({ error: "Something went wrong" });
+  res
+    .status(500)
+    .json({ error: `Unhandled error: ${err.message}, stack: ${err.stack}` });
 });
 
 await connect();
