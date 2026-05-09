@@ -1,24 +1,36 @@
-23:35:37.335 INFO  init 
-23:35:37.454 INFO  Connected to MySQL at 127.0.0.1 
-23:35:37.488 INFO  Database connected successfully 
-23:35:37.532 INFO  Server started on http://127.0.0.1:3000 
-23:35:46.926 INFO  GET /api/auth/signup - IP: 127.0.0.1 
-23:35:46.927 INFO  verifyToken - path: /auth/signup 
-23:35:46.927 INFO  verifyToken - skipping auth routes 
-23:36:32.414 ERROR Unhandled error: Expected double-quoted property name in JSON at position 78 (line 6 column 1), stack: SyntaxError: Expected double-quoted property name in JSON at position 78 (line 6 column 1)
-    at JSON.parse (<anonymous>)
-    at parse (C:\Users\Sarah_Fink\Desktop\computer sceince\fullstack\פרק ז\project part 7\node_modules\body-parser\lib\types\json.js:72:19)
-    at C:\Users\Sarah_Fink\Desktop\computer sceince\fullstack\פרק ז\project part 7\node_modules\body-parser\lib\read.js:162:18
-    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
-    at invokeCallback (C:\Users\Sarah_Fink\Desktop\computer sceince\fullstack\פרק ז\project part 7\node_modules\raw-body\index.js:238:16)
-    at done (C:\Users\Sarah_Fink\Desktop\computer sceince\fullstack\פרק ז\project part 7\node_modules\raw-body\index.js:227:7)
-    at IncomingMessage.onEnd (C:\Users\Sarah_Fink\Desktop\computer sceince\fullstack\פרק ז\project part 7\node_modules\raw-body\index.js:287:7)
-    at IncomingMessage.emit (node:events:508:28)
-    at endReadableNT (node:internal/streams/readable:1701:12)
-    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) 
-23:36:39.029 INFO  POST /api/auth/signup - IP: 127.0.0.1 
-23:36:39.029 INFO  verifyToken - path: /auth/signup 
-23:36:39.029 INFO  verifyToken - skipping auth routes 
-23:36:40.194 INFO  addUser called for username: try 
-23:36:40.196 ERROR addUser error: Bind parameters must not contain undefined. To pass SQL NULL specify JS null 
-23:36:40.196 WARN  signup error: Bind parameters must not contain undefined. To pass SQL NULL specify JS null 
+22:06:37.566 INFO  init 
+22:06:37.678 INFO  Connected to MySQL at 127.0.0.1 
+22:06:37.707 INFO  Database connected successfully 
+22:06:37.744 INFO  Server started on http://127.0.0.1:3000 
+22:07:36.877 INFO  init 
+22:07:36.912 INFO  Connected to MySQL at 127.0.0.1 
+22:07:36.920 INFO  Database connected successfully 
+22:07:36.936 INFO  Server started on http://127.0.0.1:3000 
+22:35:19.654 INFO  init 
+22:35:19.738 INFO  Connected to MySQL at 127.0.0.1 
+22:35:19.767 INFO  Database connected successfully 
+22:35:19.798 INFO  Server started on http://127.0.0.1:3000 
+22:35:44.630 INFO  init 
+22:35:44.673 INFO  Connected to MySQL at 127.0.0.1 
+22:35:44.681 INFO  Database connected successfully 
+22:35:44.702 INFO  Server started on http://127.0.0.1:3000 
+22:38:12.267 INFO  init 
+22:38:12.298 INFO  Connected to MySQL at 127.0.0.1 
+22:38:12.301 INFO  Database connected successfully 
+22:38:12.324 INFO  Server started on http://127.0.0.1:3000 
+22:38:23.628 INFO  init 
+22:38:23.662 INFO  Connected to MySQL at 127.0.0.1 
+22:38:23.664 INFO  Database connected successfully 
+22:38:23.684 INFO  Server started on http://127.0.0.1:3000 
+22:47:03.832 INFO  init 
+22:47:03.912 INFO  Connected to MySQL at 127.0.0.1 
+22:47:03.936 INFO  Database connected successfully 
+22:47:03.959 INFO  Server started on http://127.0.0.1:3000 
+22:48:09.973 INFO  init 
+22:48:10.008 INFO  Connected to MySQL at 127.0.0.1 
+22:48:10.013 INFO  Database connected successfully 
+22:48:10.034 INFO  Server started on http://127.0.0.1:3000 
+22:52:13.271 INFO  init 
+22:52:13.307 INFO  Connected to MySQL at 127.0.0.1 
+22:52:13.313 INFO  Database connected successfully 
+22:52:13.340 INFO  Server started on http://127.0.0.1:3000 
