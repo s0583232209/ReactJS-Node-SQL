@@ -1,9 +1,6 @@
 import jwt from "jsonwebtoken";
 import * as authService from "../services/auth.service.js";
-import { DAL_refreshToken } from "../dal/auth.dal.js";
-import { tokenHandler, handleResponse } from "./auth.helpers.js";
 import log from "../utils/logger.js";
-import bcrypt from "bcrypt";
 
 export async function signup(req, res) {
   try {
