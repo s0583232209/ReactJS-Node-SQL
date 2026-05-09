@@ -30,6 +30,9 @@ function App() {
           <Route path=":id" element={<Task />} />
         </Route>
         <Route path="/access_denied" element={<AccessDenied />}></Route>
+        <Route path="/access-denied" element={<AccessDenied />}></Route>
+        <Route path="/not-found" element={<ErrorPage />}></Route>
+        <Route path="/404" element={<ErrorPage />}></Route>
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
     </appContext.Provider>

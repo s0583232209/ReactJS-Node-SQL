@@ -8079,3 +8079,1221 @@
 2026-05-08 13:46:09 INFO  getAll tasks called for userId: 11 
 2026-05-08 13:46:09 INFO  getAll tasks successful, returned 2 tasks 
 2026-05-08 13:46:09 INFO  getAllTasks successful, returned 2 tasks 
+2026-05-08 14:21:50 INFO  init 
+2026-05-08 14:21:50 INFO  Connected to MySQL at 127.0.0.1 
+2026-05-08 14:21:50 INFO  Database connected successfully 
+2026-05-08 14:21:50 INFO  Server started on http://127.0.0.1:3000 
+2026-05-08 14:22:03 INFO  POST /api/auth/login - IP: 127.0.0.1 
+2026-05-08 14:22:03 INFO  verifyToken - path: /auth/login 
+2026-05-08 14:22:03 INFO  verifyToken - skipping auth routes 
+2026-05-08 14:22:04 INFO  login successful for email: try@try.com 
+2026-05-08 14:22:04 INFO  GET /api/11/users/11 - IP: 127.0.0.1 
+2026-05-08 14:22:04 INFO  verifyToken - path: /11/users/11 
+2026-05-08 14:22:04 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:04 INFO  checkAccessPermissions - path: /users/11, userId param: 11 
+2026-05-08 14:22:04 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:04 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:04 INFO  getById users called with id: 11 
+2026-05-08 14:22:04 INFO  getById users successful for id: 11 
+2026-05-08 14:22:08 INFO  GET /api/11/posts - IP: 127.0.0.1 
+2026-05-08 14:22:08 INFO  verifyToken - path: /11/posts 
+2026-05-08 14:22:08 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:08 INFO  checkAccessPermissions - path: /posts, userId param: 11 
+2026-05-08 14:22:08 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:08 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:08 INFO  getAllPosts called 
+2026-05-08 14:22:09 INFO  getAll posts called 
+2026-05-08 14:22:09 INFO  getAll posts successful, returned 99 posts 
+2026-05-08 14:22:09 INFO  getAllPosts successful, returned 99 posts 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 1 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 1 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 7 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 7 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 2 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 2 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 3 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 3 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 4 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 4 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 5 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 5 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 6 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 6 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 7 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 7 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 8 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 8 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 9 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 9 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 10 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 10 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 11 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 11 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 12 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 12 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 13 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 13 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 14 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 14 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 15 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 15 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 16 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 16 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 17 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 17 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 18 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 18 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 19 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 19 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 20 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 20 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 21 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 21 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 5 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 22 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 22 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 23 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 23 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 24 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 24 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 25 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 25 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 26 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 26 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 27 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 27 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 28 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 28 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 29 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 29 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 30 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 30 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 31 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 31 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 32 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 32 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 33 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 33 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 34 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 34 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 35 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 35 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 36 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 36 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 37 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 37 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 38 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 38 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 39 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 39 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 40 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 40 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 41 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 41 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 42 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 42 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 43 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 43 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 44 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 44 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 45 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 45 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 46 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 46 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 47 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 47 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 48 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 48 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 49 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 49 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 50 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 50 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 51 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 51 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 52 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 52 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 53 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 53 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 54 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 54 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 55 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 55 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 56 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 56 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 57 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 57 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 58 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 58 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 59 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 59 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 60 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 60 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 61 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 61 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 62 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 62 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 63 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 63 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 64 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 64 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 65 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 65 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 66 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 66 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 67 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 67 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 68 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 68 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 69 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 69 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 70 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 70 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 71 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 71 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 72 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 72 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 73 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 73 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 74 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 74 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 75 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 75 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 76 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 76 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 77 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 77 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 78 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 78 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 79 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 79 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 80 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 80 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 81 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 81 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 82 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 82 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 83 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 83 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 84 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 84 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 85 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 85 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 86 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 86 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 87 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 87 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 88 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 88 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 89 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 89 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 90 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 90 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 91 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 91 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 92 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 92 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 93 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 93 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 94 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 94 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 95 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 95 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 96 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 96 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 97 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 97 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 98 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 98 
+2026-05-08 14:22:09 INFO  GET /api/11/comments - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/comments 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getCommentsByPost called for postId: 99 
+2026-05-08 14:22:09 INFO  getAllByPostId called with postId: 99 
+2026-05-08 14:22:09 INFO  GET /api/11/tasks - IP: 127.0.0.1 
+2026-05-08 14:22:09 INFO  verifyToken - path: /11/tasks 
+2026-05-08 14:22:09 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - path: /tasks, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 14:22:09 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 14:22:09 INFO  getAllTasks called 
+2026-05-08 14:22:09 INFO  getAll tasks called for userId: 11 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 0 comments 
+2026-05-08 14:22:09 INFO  getAllByPostId successful, returned 1 comments 
+2026-05-08 14:22:09 INFO  getCommentsByPost successful, returned 1 comments 
+2026-05-08 14:22:09 INFO  getAll tasks successful, returned 2 tasks for userId: 11 
+2026-05-08 14:22:09 INFO  getAllTasks successful, returned 2 tasks 
+2026-05-08 15:09:18 INFO  init 
+2026-05-08 15:09:18 INFO  Connected to MySQL at 127.0.0.1 
+2026-05-08 15:09:18 INFO  Database connected successfully 
+2026-05-08 15:09:18 INFO  Server started on http://127.0.0.1:3000 
+2026-05-08 15:09:24 INFO  GET /api/users/11 - IP: 127.0.0.1 
+2026-05-08 15:09:24 INFO  verifyToken - path: /users/11 
+2026-05-08 15:09:24 WARN  verifyToken - no token provided for path: /users/11 
+2026-05-08 15:09:31 INFO  POST /api/auth/login - IP: 127.0.0.1 
+2026-05-08 15:09:31 INFO  verifyToken - path: /auth/login 
+2026-05-08 15:09:31 INFO  verifyToken - skipping auth routes 
+2026-05-08 15:09:31 INFO  login successful for email: try@try.com 
+2026-05-08 15:09:31 INFO  GET /api/11/users/11 - IP: 127.0.0.1 
+2026-05-08 15:09:31 INFO  verifyToken - path: /11/users/11 
+2026-05-08 15:09:31 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:09:31 INFO  checkAccessPermissions - path: /users/11, userId param: 11 
+2026-05-08 15:09:31 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:09:31 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:09:31 INFO  getById users called with id: 11 
+2026-05-08 15:09:31 INFO  getById users successful for id: 11 
+2026-05-08 15:09:33 INFO  GET /api/users/11 - IP: 127.0.0.1 
+2026-05-08 15:09:33 INFO  verifyToken - path: /users/11 
+2026-05-08 15:09:33 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:09:33 INFO  checkAccessPermissions - path: /11, userId param: users 
+2026-05-08 15:09:33 INFO  checkAccessPermissions - user ID from token: 11, userId param: users 
+2026-05-08 15:09:33 WARN  checkAccessPermissions - access denied: token userId 11 != param userId users 
+2026-05-08 15:11:05 INFO  GET /api/11/users/11 - IP: 127.0.0.1 
+2026-05-08 15:11:05 INFO  verifyToken - path: /11/users/11 
+2026-05-08 15:11:05 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:11:05 INFO  checkAccessPermissions - path: /users/11, userId param: 11 
+2026-05-08 15:11:05 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:11:05 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:11:05 INFO  getById users called with id: 11 
+2026-05-08 15:11:05 INFO  getById users successful for id: 11 
+2026-05-08 15:11:26 INFO  PUT /api/users/11/credentials - IP: 127.0.0.1 
+2026-05-08 15:11:26 INFO  verifyToken - path: /users/11/credentials 
+2026-05-08 15:11:26 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:11:26 INFO  checkAccessPermissions - path: /11/credentials, userId param: users 
+2026-05-08 15:11:26 INFO  checkAccessPermissions - user ID from token: 11, userId param: users 
+2026-05-08 15:11:26 WARN  checkAccessPermissions - access denied: token userId 11 != param userId users 
+2026-05-08 15:12:18 INFO  GET /api/11/users/11 - IP: 127.0.0.1 
+2026-05-08 15:12:18 INFO  verifyToken - path: /11/users/11 
+2026-05-08 15:12:18 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:12:18 INFO  checkAccessPermissions - path: /users/11, userId param: 11 
+2026-05-08 15:12:18 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:12:18 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:12:18 INFO  getById users called with id: 11 
+2026-05-08 15:12:18 INFO  getById users successful for id: 11 
+2026-05-08 15:12:25 INFO  PUT /api/users/11/credentials - IP: 127.0.0.1 
+2026-05-08 15:12:25 INFO  verifyToken - path: /users/11/credentials 
+2026-05-08 15:12:25 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:12:25 INFO  checkAccessPermissions - path: /11/credentials, userId param: users 
+2026-05-08 15:12:25 INFO  checkAccessPermissions - user ID from token: 11, userId param: users 
+2026-05-08 15:12:25 WARN  checkAccessPermissions - access denied: token userId 11 != param userId users 
+2026-05-08 15:13:07 INFO  GET /api/11/users/11 - IP: 127.0.0.1 
+2026-05-08 15:13:07 INFO  verifyToken - path: /11/users/11 
+2026-05-08 15:13:07 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:13:07 INFO  checkAccessPermissions - path: /users/11, userId param: 11 
+2026-05-08 15:13:07 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:13:07 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:13:07 INFO  getById users called with id: 11 
+2026-05-08 15:13:07 INFO  getById users successful for id: 11 
+2026-05-08 15:13:16 INFO  PUT /api/11/users/11/credentials - IP: 127.0.0.1 
+2026-05-08 15:13:16 INFO  verifyToken - path: /11/users/11/credentials 
+2026-05-08 15:13:16 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:13:16 INFO  checkAccessPermissions - path: /users/11/credentials, userId param: 11 
+2026-05-08 15:13:16 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:13:16 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:13:16 WARN  updateCredentials error: Incorrect current password 
+2026-05-08 15:13:22 INFO  PUT /api/11/users/11/credentials - IP: 127.0.0.1 
+2026-05-08 15:13:22 INFO  verifyToken - path: /11/users/11/credentials 
+2026-05-08 15:13:22 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:13:22 INFO  checkAccessPermissions - path: /users/11/credentials, userId param: 11 
+2026-05-08 15:13:22 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:13:22 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:13:22 WARN  updateCredentials error: Incorrect current password 
+2026-05-08 15:17:24 INFO  init 
+2026-05-08 15:17:24 INFO  Connected to MySQL at 127.0.0.1 
+2026-05-08 15:17:24 INFO  Database connected successfully 
+2026-05-08 15:17:24 INFO  Server started on http://127.0.0.1:3000 
+2026-05-08 15:17:27 INFO  PUT /api/11/users/11/credentials - IP: 127.0.0.1 
+2026-05-08 15:17:27 INFO  verifyToken - path: /11/users/11/credentials 
+2026-05-08 15:17:27 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:17:27 INFO  checkAccessPermissions - path: /users/11/credentials, userId param: 11 
+2026-05-08 15:17:27 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:17:27 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:17:27 WARN  updateCredentials error: Incorrect current password 
+2026-05-08 15:18:17 INFO  init 
+2026-05-08 15:18:17 INFO  Connected to MySQL at 127.0.0.1 
+2026-05-08 15:18:17 INFO  Database connected successfully 
+2026-05-08 15:18:17 INFO  Server started on http://127.0.0.1:3000 
+2026-05-08 15:18:20 INFO  PUT /api/11/users/11/credentials - IP: 127.0.0.1 
+2026-05-08 15:18:20 INFO  verifyToken - path: /11/users/11/credentials 
+2026-05-08 15:18:20 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:18:20 INFO  checkAccessPermissions - path: /users/11/credentials, userId param: 11 
+2026-05-08 15:18:20 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:18:20 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:18:20 WARN  updateCredentials error: Incorrect current password 
+2026-05-08 15:18:37 INFO  init 
+2026-05-08 15:18:37 INFO  Connected to MySQL at 127.0.0.1 
+2026-05-08 15:18:37 INFO  Database connected successfully 
+2026-05-08 15:18:37 INFO  Server started on http://127.0.0.1:3000 
+2026-05-08 15:18:40 INFO  PUT /api/11/users/11/credentials - IP: 127.0.0.1 
+2026-05-08 15:18:40 INFO  verifyToken - path: /11/users/11/credentials 
+2026-05-08 15:18:40 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:18:40 INFO  checkAccessPermissions - path: /users/11/credentials, userId param: 11 
+2026-05-08 15:18:40 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:18:40 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:18:41 WARN  updateCredentials error: Incorrect current password 
+2026-05-08 15:18:57 INFO  init 
+2026-05-08 15:18:57 INFO  Connected to MySQL at 127.0.0.1 
+2026-05-08 15:18:57 INFO  Database connected successfully 
+2026-05-08 15:18:57 INFO  Server started on http://127.0.0.1:3000 
+2026-05-08 15:19:00 INFO  PUT /api/11/users/11/credentials - IP: 127.0.0.1 
+2026-05-08 15:19:00 INFO  verifyToken - path: /11/users/11/credentials 
+2026-05-08 15:19:00 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:19:00 INFO  checkAccessPermissions - path: /users/11/credentials, userId param: 11 
+2026-05-08 15:19:00 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:19:00 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:19:00 WARN  updateCredentials error: Incorrect current password 
+2026-05-08 15:19:25 INFO  init 
+2026-05-08 15:19:25 INFO  Connected to MySQL at 127.0.0.1 
+2026-05-08 15:19:25 INFO  Database connected successfully 
+2026-05-08 15:19:25 INFO  Server started on http://127.0.0.1:3000 
+2026-05-08 15:19:28 INFO  PUT /api/11/users/11/credentials - IP: 127.0.0.1 
+2026-05-08 15:19:28 INFO  verifyToken - path: /11/users/11/credentials 
+2026-05-08 15:19:28 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:19:28 INFO  checkAccessPermissions - path: /users/11/credentials, userId param: 11 
+2026-05-08 15:19:28 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:19:28 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:19:28 WARN  updateCredentials error: Incorrect current password 
+2026-05-08 15:19:52 INFO  init 
+2026-05-08 15:19:52 INFO  Connected to MySQL at 127.0.0.1 
+2026-05-08 15:19:52 INFO  Database connected successfully 
+2026-05-08 15:19:52 INFO  Server started on http://127.0.0.1:3000 
+2026-05-08 15:20:45 INFO  POST /api/auth/signup - IP: 127.0.0.1 
+2026-05-08 15:20:45 INFO  verifyToken - path: /auth/signup 
+2026-05-08 15:20:45 INFO  verifyToken - skipping auth routes 
+2026-05-08 15:20:46 INFO  addUser called for username: try 
+2026-05-08 15:20:46 INFO  addUser successful, user id: 11 
+2026-05-08 15:20:46 INFO  signup successful for email: try@try.com 
+2026-05-08 15:20:50 INFO  GET /api/11/users/11 - IP: 127.0.0.1 
+2026-05-08 15:20:50 INFO  verifyToken - path: /11/users/11 
+2026-05-08 15:20:50 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:20:50 INFO  checkAccessPermissions - path: /users/11, userId param: 11 
+2026-05-08 15:20:50 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:20:50 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:20:50 INFO  getById users called with id: 11 
+2026-05-08 15:20:50 INFO  getById users successful for id: 11 
+2026-05-08 15:21:03 INFO  PUT /api/11/users/11/credentials - IP: 127.0.0.1 
+2026-05-08 15:21:03 INFO  verifyToken - path: /11/users/11/credentials 
+2026-05-08 15:21:03 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:21:03 INFO  checkAccessPermissions - path: /users/11/credentials, userId param: 11 
+2026-05-08 15:21:03 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:21:03 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:21:04 INFO  getById users called with id: 11 
+2026-05-08 15:21:04 INFO  getById users successful for id: 11 
+2026-05-08 15:21:23 INFO  POST /api/auth/login - IP: 127.0.0.1 
+2026-05-08 15:21:23 INFO  verifyToken - path: /auth/login 
+2026-05-08 15:21:23 INFO  verifyToken - skipping auth routes 
+2026-05-08 15:21:24 INFO  login successful for email: try@try.com 
+2026-05-08 15:21:24 INFO  GET /api/11/users/11 - IP: 127.0.0.1 
+2026-05-08 15:21:24 INFO  verifyToken - path: /11/users/11 
+2026-05-08 15:21:24 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:21:24 INFO  checkAccessPermissions - path: /users/11, userId param: 11 
+2026-05-08 15:21:24 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:21:24 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:21:24 INFO  getById users called with id: 11 
+2026-05-08 15:21:24 INFO  getById users successful for id: 11 
+2026-05-08 15:29:54 INFO  init 
+2026-05-08 15:29:54 INFO  Connected to MySQL at 127.0.0.1 
+2026-05-08 15:29:54 INFO  Database connected successfully 
+2026-05-08 15:29:54 INFO  Server started on http://127.0.0.1:3000 
+2026-05-08 15:30:06 INFO  GET /api/11/tasks - IP: 127.0.0.1 
+2026-05-08 15:30:06 INFO  verifyToken - path: /11/tasks 
+2026-05-08 15:30:06 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:30:06 INFO  checkAccessPermissions - path: /tasks, userId param: 11 
+2026-05-08 15:30:06 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:30:06 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:30:06 INFO  getAllTasks called 
+2026-05-08 15:30:06 INFO  getAll tasks called for userId: 11 
+2026-05-08 15:30:06 INFO  getAll tasks successful, returned 0 tasks for userId: 11 
+2026-05-08 15:30:06 INFO  getAllTasks successful, returned 0 tasks 
+2026-05-08 15:30:10 INFO  GET /api/11/tasks - IP: 127.0.0.1 
+2026-05-08 15:30:10 INFO  verifyToken - path: /11/tasks 
+2026-05-08 15:30:10 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+2026-05-08 15:30:10 INFO  checkAccessPermissions - path: /tasks, userId param: 11 
+2026-05-08 15:30:10 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+2026-05-08 15:30:10 INFO  checkAccessPermissions - access granted for user: 11 
+2026-05-08 15:30:10 INFO  getAllTasks called 
+2026-05-08 15:30:10 INFO  getAll tasks called for userId: 11 
+2026-05-08 15:30:10 INFO  getAll tasks successful, returned 0 tasks for userId: 11 
+2026-05-08 15:30:10 INFO  getAllTasks successful, returned 0 tasks 

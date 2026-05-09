@@ -49,7 +49,7 @@ export default function InfoPopup({ onClose }) {
 
   useEffect(() => {
     if (!effectiveId) { setLoading(false); return; }
-    api.get(`/api/users/${effectiveId}`)
+    api.get(`/api/${userId}/users/${effectiveId}`)
       .then(res => setView(normalize(res.data)))
       .catch(() => setError("Could not load profile."))
       .finally(() => setLoading(false));
@@ -72,7 +72,7 @@ export default function InfoPopup({ onClose }) {
     setError(null);
     try {
       console.log("saveProfile - draft being sent:", JSON.stringify(draft));
-      const res = await api.put(`/api/users/${effectiveId}/profile`, draft);
+      const res = await api.put(`/api/${userId}/users/${effectiveId}/profile`, draft);
       const updated = normalize(res.data);
       setView(updated);
       const session = JSON.parse(sessionStorage.getItem("current-user")) || {};
@@ -94,7 +94,7 @@ export default function InfoPopup({ onClose }) {
     setCredSaving(true);
     setCredError(null);
     try {
-      await api.put(`/api/users/${effectiveId}/credentials`, {
+      await api.put(`/api/${userId}/users/${effectiveId}/credentials`, {
         currentPassword: cred.currentPassword,
         newUsername:     cred.newUsername  || undefined,
         newPassword:     cred.newPassword  || undefined,

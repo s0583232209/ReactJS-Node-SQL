@@ -8,8 +8,13 @@ const api = axios.create({
 api.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response?.status === 401) {
+    const status = error.response?.status;
+    if (status === 401) {
       window.location.href = "/login";
+    } else if (status === 403) {
+      window.location.href = "/access_denied";
+    } else if (status === 404) {
+      window.location.href = "/not-found";
     }
     return Promise.reject(error);
   },
