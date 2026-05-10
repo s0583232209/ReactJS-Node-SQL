@@ -1,7 +1,7 @@
 import util from "util";
 import fs from "fs";
 
-// Patch removed util method back in for simple-node-logger compatibility
+
 if (!util.isDate) {
   util.isDate = (obj) => obj instanceof Date;
 }

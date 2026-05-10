@@ -149,8 +149,11 @@ export default function Tasks() {
   async function deleteTask(id) {
     try {
       setLoading(true);
-      await api.delete(`/api/${userId}/tasks/${id}`);
-      setTasksList((prev) => prev.filter((task) => task.id !== id));
+      if (window.comfirm("Are you sure?"));
+      {
+        await api.delete(`/api/${userId}/tasks/${id}`);
+        setTasksList((prev) => prev.filter((task) => task.id !== id));
+      }
     } catch (error) {
       alert(error);
     } finally {
@@ -184,7 +187,10 @@ export default function Tasks() {
     const editedTask = { ...taskToEdit, ...edits };
     try {
       setLoading(true);
-      const response = await api.put(`/api/${userId}/tasks/${taskId}`, editedTask);
+      const response = await api.put(
+        `/api/${userId}/tasks/${taskId}`,
+        editedTask,
+      );
       const updatedTask = response.data;
       setTasksList((prev) =>
         prev.map((task) => (task.id == taskId ? updatedTask : task)),
@@ -312,7 +318,12 @@ export default function Tasks() {
           <form onSubmit={handleSubmit(addNewTask)}>
             <label htmlFor="title">Title</label>
             <input type="text" id="title" name="title" {...register("title")} />
-            <input type="checkbox" id="completed" name="completed" {...register("completed")} />
+            <input
+              type="checkbox"
+              id="completed"
+              name="completed"
+              {...register("completed")}
+            />
             <label htmlFor="completed">Mark as completed</label>
             <button>Add</button>
           </form>
@@ -321,28 +332,34 @@ export default function Tasks() {
       <div className="posts-list">
         {tasksList.length === 0 ? (
           <p>No Tasks</p>
-        ) : (() => {
-          const filtered = tasksList.filter(check);
-          if (filtered.length === 0 && condition) {
-            const msg =
-              condition === "byId"    ? `No task found with ID ${taskID}.` :
-              condition === "byTitle" ? `No task found with title "${title}".` :
-              condition === "completedOnly"   ? "No completed tasks." :
-              condition === "uncompletedOnly" ? "No uncompleted tasks." :
-              "No tasks found.";
-            return <p>{msg}</p>;
-          }
-          return filtered.map((task) => (
-            <Task
-              onDelete={deleteTask}
-              edit={updateTask}
-              id={task.id}
-              key={task.id}
-              title={task.title}
-              completed={task.completed}
-            />
-          ));
-        })()}
+        ) : (
+          (() => {
+            const filtered = tasksList.filter(check);
+            if (filtered.length === 0 && condition) {
+              const msg =
+                condition === "byId"
+                  ? `No task found with ID ${taskID}.`
+                  : condition === "byTitle"
+                    ? `No task found with title "${title}".`
+                    : condition === "completedOnly"
+                      ? "No completed tasks."
+                      : condition === "uncompletedOnly"
+                        ? "No uncompleted tasks."
+                        : "No tasks found.";
+              return <p>{msg}</p>;
+            }
+            return filtered.map((task) => (
+              <Task
+                onDelete={deleteTask}
+                edit={updateTask}
+                id={task.id}
+                key={task.id}
+                title={task.title}
+                completed={task.completed}
+              />
+            ));
+          })()
+        )}
       </div>
 
       <Outlet></Outlet>

@@ -17,14 +17,19 @@ export default function Comments(props) {
 
   useEffect(() => {
     async function getComments() {
-      const response = await api.get(`/api/${userId}/comments?postId=${props.postId}`);
+      const response = await api.get(
+        `/api/${userId}/comments?postId=${props.postId}`,
+      );
       setCommentsList(response.data);
     }
     getComments();
   }, [props.postId]);
   async function deleteComment(id) {
-    await api.delete(`/api/${userId}/comments/${id}`);
-    setCommentsList((prev) => prev.filter((comment) => comment.id !== id));
+    if (window.comfirm("Are you sure?"));
+    {
+      await api.delete(`/api/${userId}/comments/${id}`);
+      setCommentsList((prev) => prev.filter((comment) => comment.id !== id));
+    }
   }
   async function addNewComment(data) {
     if (data.name.trim() === "") {
@@ -47,7 +52,10 @@ export default function Comments(props) {
   async function updateComment(commentId, updates) {
     const commentToEdit = commentsList.find((p) => p.id === commentId);
     const editedComment = { ...commentToEdit, ...updates };
-    const response = await api.put(`/api/${userId}/comments/${commentId}`, editedComment);
+    const response = await api.put(
+      `/api/${userId}/comments/${commentId}`,
+      editedComment,
+    );
     const updatedComment = response.data;
     setCommentsList((prev) =>
       prev.map((comment) =>

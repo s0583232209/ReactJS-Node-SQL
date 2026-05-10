@@ -84,7 +84,9 @@ export default function Posts() {
       if (searchTitle) {
         setLoading(true);
         try {
-          const res = await api.get(`/api/${userId}/posts?title=${searchTitle}`);
+          const res = await api.get(
+            `/api/${userId}/posts?title=${searchTitle}`,
+          );
           setPostsList(res.data);
           setHasMore(false);
         } catch (error) {
@@ -172,9 +174,12 @@ export default function Posts() {
 
   async function deletePost(postId) {
     try {
-      await api.delete(`/api/${userId}/posts/${postId}`);
-      setPostsList((prev) => prev.filter((p) => p.id !== postId));
-      if (openPostId === postId) setOpenPostId(null);
+      if (window.comfirm("Are you sure?"));
+      {
+        await api.delete(`/api/${userId}/posts/${postId}`);
+        setPostsList((prev) => prev.filter((p) => p.id !== postId));
+        if (openPostId === postId) setOpenPostId(null);
+      }
     } catch (error) {
       alert(error);
     }
@@ -201,7 +206,10 @@ export default function Posts() {
     const postToEdit = postsList.find((p) => p.id === postId);
     if (!postToEdit) return;
     try {
-      const res = await api.put(`/api/${userId}/posts/${postId}`, { ...postToEdit, ...updates });
+      const res = await api.put(`/api/${userId}/posts/${postId}`, {
+        ...postToEdit,
+        ...updates,
+      });
       const updatedPost = res.data;
       setPostsList((prev) =>
         prev.map((p) => (p.id === postId ? updatedPost : p)),
@@ -292,7 +300,8 @@ export default function Posts() {
           key={`expanded-${openPostId}`}
           {...postsList.find((p) => p.id === openPostId)}
           currentUser={
-            String(postsList.find((p) => p.id === openPostId)?.user_id) === String(userId)
+            String(postsList.find((p) => p.id === openPostId)?.user_id) ===
+            String(userId)
           }
           edit={updatePost}
           onDelete={deletePost}
