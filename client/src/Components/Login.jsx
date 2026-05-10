@@ -7,13 +7,27 @@ import api from "../api";
 const Logo = () => (
   <svg width="32" height="32" viewBox="0 0 30 30" fill="none">
     <defs>
-      <linearGradient id="ll" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#95d5b2" /><stop offset="1" stopColor="#52b788" />
+      <linearGradient
+        id="ll"
+        x1="0"
+        y1="0"
+        x2="30"
+        y2="30"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#95d5b2" />
+        <stop offset="1" stopColor="#52b788" />
       </linearGradient>
     </defs>
     <rect width="30" height="30" rx="8" fill="url(#ll)" />
-    <path d="M8 8v14l14-14v14" stroke="white" strokeWidth="2.4"
-      strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    <path
+      d="M8 8v14l14-14v14"
+      stroke="white"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
   </svg>
 );
 
@@ -28,9 +42,12 @@ export default function Login() {
       const response = await api.post("/api/auth/login", data);
       const { userId, email } = response.data;
       console.log("Login successful:", response.data);
-      const profileResponse = await api.get(`/api/${userId}/users/${userId}`);
-      const { name } = profileResponse.data;
-      sessionStorage.setItem("current-user", JSON.stringify({ userId, email, name }));
+
+      const { name } = response.data;
+      sessionStorage.setItem(
+        "current-user",
+        JSON.stringify({ userId, email, name }),
+      );
       setUserId(userId);
       navigate("/");
     } catch {
@@ -46,12 +63,21 @@ export default function Login() {
           <Logo />
           <span className="auth-brand-logo-name">Nexus</span>
         </div>
-        <h2 className="auth-brand-headline">Your personal<br />workspace.</h2>
+        <h2 className="auth-brand-headline">
+          Your personal
+          <br />
+          workspace.
+        </h2>
         <p className="auth-brand-sub">
           Posts, tasks, and collaboration — all in one clean, fast place.
         </p>
         <div className="auth-features">
-          {["Create and manage posts", "Track tasks and progress", "Collaborate with comments", "Edit your profile anytime"].map(f => (
+          {[
+            "Create and manage posts",
+            "Track tasks and progress",
+            "Collaborate with comments",
+            "Edit your profile anytime",
+          ].map((f) => (
             <div className="auth-feature" key={f}>
               <span className="auth-feature-dot" />
               {f}
@@ -66,15 +92,27 @@ export default function Login() {
         <p className="auth-form-sub">Sign in to continue to Nexus</p>
         <form onSubmit={handleSubmit(login)}>
           <label htmlFor="email">Email address</label>
-          <input type="email" id="email" autoComplete="email" {...register("email")} />
+          <input
+            type="email"
+            id="email"
+            autoComplete="email"
+            {...register("email")}
+          />
           <label htmlFor="password">Password</label>
-          <input type="password" id="password" autoComplete="current-password" {...register("password")} />
+          <input
+            type="password"
+            id="password"
+            autoComplete="current-password"
+            {...register("password")}
+          />
           <p className="errorLog">{error}</p>
           <button type="submit">Sign In</button>
         </form>
         <p className="auth-alt-link">
           Don't have an account?
-          <button type="button" onClick={() => navigate("/register")}>Create one</button>
+          <button type="button" onClick={() => navigate("/register")}>
+            Create one
+          </button>
         </p>
       </div>
     </div>
