@@ -174,7 +174,7 @@ export default function Posts() {
 
   async function deletePost(postId) {
     try {
-      if (window.comfirm("Are you sure?"));
+      if (window.confirm("Are you sure?"));
       {
         await api.delete(`/api/${userId}/posts/${postId}`);
         setPostsList((prev) => prev.filter((p) => p.id !== postId));
@@ -300,13 +300,14 @@ export default function Posts() {
           key={`expanded-${openPostId}`}
           {...postsList.find((p) => p.id === openPostId)}
           currentUser={
-            String(postsList.find((p) => p.id === openPostId)?.user_id) ===
+            String(postsList.find((p) => p.id === openPostId)?.userId) ===
             String(userId)
           }
           edit={updatePost}
           onDelete={deletePost}
           isExpanded
           onCollapse={() => setOpenPostId(null)}
+          
         />
       )}
       <Outlet />

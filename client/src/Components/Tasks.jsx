@@ -149,7 +149,7 @@ export default function Tasks() {
   async function deleteTask(id) {
     try {
       setLoading(true);
-      if (window.comfirm("Are you sure?"));
+      if (window.confirm("Are you sure?"));
       {
         await api.delete(`/api/${userId}/tasks/${id}`);
         setTasksList((prev) => prev.filter((task) => task.id !== id));

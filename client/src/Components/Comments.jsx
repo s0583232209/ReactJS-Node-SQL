@@ -21,13 +21,15 @@ export default function Comments(props) {
         `/api/${userId}/comments?postId=${props.postId}`,
       );
       setCommentsList(response.data);
+      console.log(commentsList)
     }
     getComments();
   }, [props.postId]);
   async function deleteComment(id) {
-    if (window.comfirm("Are you sure?"));
+    if (window.confirm("Are you sure?"));
     {
       await api.delete(`/api/${userId}/comments/${id}`);
+     
       setCommentsList((prev) => prev.filter((comment) => comment.id !== id));
     }
   }
@@ -57,6 +59,7 @@ export default function Comments(props) {
       editedComment,
     );
     const updatedComment = response.data;
+    console.log(updatedComment);
     setCommentsList((prev) =>
       prev.map((comment) =>
         comment.id === commentId ? updatedComment : comment,
@@ -97,7 +100,7 @@ export default function Comments(props) {
       {props.showComments ? (
         <>
           <h1>Comments</h1>
-          {commentsList.length > 0 ? (
+          {true ? (
             commentsList.map((comment) => (
               <Comment
                 onDelete={deleteComment}
@@ -107,7 +110,7 @@ export default function Comments(props) {
                 name={comment.name}
                 body={comment.body}
                 email={comment.email}
-                currentUser={comment.email == userEmail}
+                currentUser={comment.userId == userId}
               ></Comment>
             ))
           ) : (
