@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { addTokenToDd } from "../dal/auth.dal.js";
+import { addToken } from "../repositories/auth.repository.js";
 import bcrypt from "bcrypt";
 import log from "../utils/logger.js";
 
@@ -10,7 +10,7 @@ export async function tokenHandler(user, access) {
   const token = jwt.sign(user, secretKey, { expiresIn: access ? "15m" : "7d" });
   if (access) return token;
   log.info(`tokenHandler - user: ${user?.email}, userId: ${user?.userId}`);
-  if (await addTokenToDd(await bcrypt.hash(token, 12), user.userId || user.id))
+  if (await addToken(await bcrypt.hash(token, 12), user.userId || user.id))
     return token;
   throw "error adding refresh token to the data base";
 }
