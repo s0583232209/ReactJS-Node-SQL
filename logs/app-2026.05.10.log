@@ -1037,3 +1037,1084 @@
 00:21:35.193 INFO  executeDelete - successful, affectedRows: 1 
 00:21:35.193 INFO  delete tasks successful for id: 201 
 00:21:35.193 INFO  Task delete successful for id: 201, user: 25 
+14:35:50.453 INFO  init 
+14:35:50.544 INFO  Connected to MySQL at 127.0.0.1 
+14:35:50.575 INFO  Database connected successfully 
+14:35:50.589 INFO  Server started on http://127.0.0.1:3000 
+14:35:54.173 INFO  POST /api/auth/login - IP: 127.0.0.1 
+14:35:54.174 INFO  verifyToken - path: /auth/login 
+14:35:54.174 INFO  verifyToken - skipping auth routes 
+14:35:54.521 INFO  login successful for email: try@try.com 
+14:43:57.764 INFO  POST /api/auth/login - IP: 127.0.0.1 
+14:43:57.764 INFO  verifyToken - path: /auth/login 
+14:43:57.764 INFO  verifyToken - skipping auth routes 
+14:43:58.003 INFO  login successful for email: try@try.com 
+14:43:58.008 INFO  GET /api/11/users/11 - IP: 127.0.0.1 
+14:43:58.008 INFO  verifyToken - path: /11/users/11 
+14:43:58.010 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:43:58.010 INFO  checkAccessPermissions - path: /users/11, userId param: 11 
+14:43:58.010 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:43:58.010 INFO  checkAccessPermissions - access granted for user: 11 
+14:43:58.010 INFO  getById users called with id: 11 
+14:43:58.015 INFO  getById users successful for id: 11 
+14:44:30.931 INFO  POST /api/auth/login - IP: 127.0.0.1 
+14:44:30.931 INFO  verifyToken - path: /auth/login 
+14:44:30.931 INFO  verifyToken - skipping auth routes 
+14:44:31.200 INFO  login successful for email: try@try.com 
+14:44:31.205 INFO  GET /api/11/users/11 - IP: 127.0.0.1 
+14:44:31.205 INFO  verifyToken - path: /11/users/11 
+14:44:31.205 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:31.205 INFO  checkAccessPermissions - path: /users/11, userId param: 11 
+14:44:31.205 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:31.205 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:31.205 INFO  getById users called with id: 11 
+14:44:31.206 INFO  getById users successful for id: 11 
+14:44:33.437 INFO  GET /api/11/posts - IP: 127.0.0.1 
+14:44:33.437 INFO  verifyToken - path: /11/posts 
+14:44:33.437 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.437 INFO  checkAccessPermissions - path: /posts, userId param: 11 
+14:44:33.437 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.438 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.438 INFO  getAllPosts called 
+14:44:33.438 INFO  getAll posts called 
+14:44:33.446 INFO  getAll posts successful, returned 98 posts 
+14:44:33.446 INFO  getAllPosts successful, returned 98 posts 
+14:44:33.477 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.477 INFO  verifyToken - path: /11/comments 
+14:44:33.477 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.477 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.477 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.477 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.477 INFO  getCommentsByPost called for postId: 1 
+14:44:33.478 INFO  getAllByPostId called with postId: 1 
+14:44:33.487 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.487 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.490 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.490 INFO  verifyToken - path: /11/comments 
+14:44:33.491 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.491 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.491 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.491 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.491 INFO  getCommentsByPost called for postId: 3 
+14:44:33.491 INFO  getAllByPostId called with postId: 3 
+14:44:33.493 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.493 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.498 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.498 INFO  verifyToken - path: /11/comments 
+14:44:33.498 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.498 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.498 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.498 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.498 INFO  getCommentsByPost called for postId: 4 
+14:44:33.498 INFO  getAllByPostId called with postId: 4 
+14:44:33.499 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.499 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.500 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.500 INFO  verifyToken - path: /11/comments 
+14:44:33.501 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.501 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.501 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.501 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.501 INFO  getCommentsByPost called for postId: 2 
+14:44:33.501 INFO  getAllByPostId called with postId: 2 
+14:44:33.502 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.502 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.503 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.504 INFO  verifyToken - path: /11/comments 
+14:44:33.504 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.504 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.504 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.504 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.504 INFO  getCommentsByPost called for postId: 5 
+14:44:33.504 INFO  getAllByPostId called with postId: 5 
+14:44:33.505 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.505 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.506 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.506 INFO  verifyToken - path: /11/comments 
+14:44:33.506 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.506 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.506 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.506 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.506 INFO  getCommentsByPost called for postId: 6 
+14:44:33.506 INFO  getAllByPostId called with postId: 6 
+14:44:33.508 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.508 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.509 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.509 INFO  verifyToken - path: /11/comments 
+14:44:33.509 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.509 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.509 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.509 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.509 INFO  getCommentsByPost called for postId: 7 
+14:44:33.509 INFO  getAllByPostId called with postId: 7 
+14:44:33.510 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.510 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.512 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.512 INFO  verifyToken - path: /11/comments 
+14:44:33.512 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.512 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.512 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.512 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.512 INFO  getCommentsByPost called for postId: 8 
+14:44:33.512 INFO  getAllByPostId called with postId: 8 
+14:44:33.514 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.514 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.516 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.516 INFO  verifyToken - path: /11/comments 
+14:44:33.517 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.517 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.517 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.517 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.517 INFO  getCommentsByPost called for postId: 9 
+14:44:33.517 INFO  getAllByPostId called with postId: 9 
+14:44:33.518 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.518 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.519 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.519 INFO  verifyToken - path: /11/comments 
+14:44:33.519 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.519 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.519 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.519 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.519 INFO  getCommentsByPost called for postId: 10 
+14:44:33.519 INFO  getAllByPostId called with postId: 10 
+14:44:33.520 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.520 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.521 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.521 INFO  verifyToken - path: /11/comments 
+14:44:33.521 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.521 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.521 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.521 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.522 INFO  getCommentsByPost called for postId: 11 
+14:44:33.522 INFO  getAllByPostId called with postId: 11 
+14:44:33.522 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.522 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.523 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.523 INFO  verifyToken - path: /11/comments 
+14:44:33.524 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.524 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.524 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.524 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.524 INFO  getCommentsByPost called for postId: 12 
+14:44:33.524 INFO  getAllByPostId called with postId: 12 
+14:44:33.524 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.524 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.525 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.525 INFO  verifyToken - path: /11/comments 
+14:44:33.526 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.526 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.526 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.526 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.526 INFO  getCommentsByPost called for postId: 13 
+14:44:33.526 INFO  getAllByPostId called with postId: 13 
+14:44:33.527 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.527 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.528 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.528 INFO  verifyToken - path: /11/comments 
+14:44:33.528 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.528 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.528 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.528 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.528 INFO  getCommentsByPost called for postId: 14 
+14:44:33.528 INFO  getAllByPostId called with postId: 14 
+14:44:33.531 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.531 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.532 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.532 INFO  verifyToken - path: /11/comments 
+14:44:33.533 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.533 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.533 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.533 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.533 INFO  getCommentsByPost called for postId: 15 
+14:44:33.533 INFO  getAllByPostId called with postId: 15 
+14:44:33.534 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.534 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.534 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.534 INFO  verifyToken - path: /11/comments 
+14:44:33.535 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.535 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.535 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.535 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.535 INFO  getCommentsByPost called for postId: 16 
+14:44:33.535 INFO  getAllByPostId called with postId: 16 
+14:44:33.535 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.535 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.536 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.536 INFO  verifyToken - path: /11/comments 
+14:44:33.536 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.536 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.536 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.536 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.537 INFO  getCommentsByPost called for postId: 17 
+14:44:33.537 INFO  getAllByPostId called with postId: 17 
+14:44:33.537 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.537 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.538 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.538 INFO  verifyToken - path: /11/comments 
+14:44:33.538 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.538 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.538 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.538 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.538 INFO  getCommentsByPost called for postId: 18 
+14:44:33.538 INFO  getAllByPostId called with postId: 18 
+14:44:33.539 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.539 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.540 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.541 INFO  verifyToken - path: /11/comments 
+14:44:33.541 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.541 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.541 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.541 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.541 INFO  getCommentsByPost called for postId: 19 
+14:44:33.541 INFO  getAllByPostId called with postId: 19 
+14:44:33.542 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.542 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.544 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.544 INFO  verifyToken - path: /11/comments 
+14:44:33.544 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.544 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.544 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.544 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.544 INFO  getCommentsByPost called for postId: 20 
+14:44:33.544 INFO  getAllByPostId called with postId: 20 
+14:44:33.546 INFO  getAllByPostId successful, returned 5 comments 
+14:44:33.546 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:33.548 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.548 INFO  verifyToken - path: /11/comments 
+14:44:33.548 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.548 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.548 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.548 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.548 INFO  getCommentsByPost called for postId: 21 
+14:44:33.548 INFO  getAllByPostId called with postId: 21 
+14:44:33.549 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.549 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.550 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.550 INFO  verifyToken - path: /11/comments 
+14:44:33.550 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.550 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.550 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.550 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.550 INFO  getCommentsByPost called for postId: 22 
+14:44:33.550 INFO  getAllByPostId called with postId: 22 
+14:44:33.551 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.551 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.552 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.552 INFO  verifyToken - path: /11/comments 
+14:44:33.553 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.553 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.553 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.553 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.553 INFO  getCommentsByPost called for postId: 23 
+14:44:33.553 INFO  getAllByPostId called with postId: 23 
+14:44:33.553 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.553 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.554 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.554 INFO  verifyToken - path: /11/comments 
+14:44:33.555 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.555 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.555 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.555 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.555 INFO  getCommentsByPost called for postId: 24 
+14:44:33.555 INFO  getAllByPostId called with postId: 24 
+14:44:33.556 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.556 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.556 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.556 INFO  verifyToken - path: /11/comments 
+14:44:33.557 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.557 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.557 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.557 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.557 INFO  getCommentsByPost called for postId: 25 
+14:44:33.557 INFO  getAllByPostId called with postId: 25 
+14:44:33.557 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.557 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.558 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.558 INFO  verifyToken - path: /11/comments 
+14:44:33.559 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.559 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.559 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.559 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.559 INFO  getCommentsByPost called for postId: 26 
+14:44:33.559 INFO  getAllByPostId called with postId: 26 
+14:44:33.559 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.559 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.560 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.560 INFO  verifyToken - path: /11/comments 
+14:44:33.561 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.561 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.561 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.561 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.561 INFO  getCommentsByPost called for postId: 27 
+14:44:33.561 INFO  getAllByPostId called with postId: 27 
+14:44:33.562 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.562 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.564 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.564 INFO  verifyToken - path: /11/comments 
+14:44:33.564 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.564 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.564 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.564 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.564 INFO  getCommentsByPost called for postId: 28 
+14:44:33.564 INFO  getAllByPostId called with postId: 28 
+14:44:33.566 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.566 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.567 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.567 INFO  verifyToken - path: /11/comments 
+14:44:33.567 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.567 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.567 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.567 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.568 INFO  getCommentsByPost called for postId: 29 
+14:44:33.568 INFO  getAllByPostId called with postId: 29 
+14:44:33.569 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.569 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.569 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.569 INFO  verifyToken - path: /11/comments 
+14:44:33.570 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.570 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.570 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.570 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.570 INFO  getCommentsByPost called for postId: 30 
+14:44:33.570 INFO  getAllByPostId called with postId: 30 
+14:44:33.570 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.570 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.571 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.571 INFO  verifyToken - path: /11/comments 
+14:44:33.571 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.571 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.571 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.571 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.571 INFO  getCommentsByPost called for postId: 31 
+14:44:33.571 INFO  getAllByPostId called with postId: 31 
+14:44:33.572 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.572 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.573 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.573 INFO  verifyToken - path: /11/comments 
+14:44:33.573 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.573 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.573 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.573 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.574 INFO  getCommentsByPost called for postId: 32 
+14:44:33.574 INFO  getAllByPostId called with postId: 32 
+14:44:33.574 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.574 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.575 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.575 INFO  verifyToken - path: /11/comments 
+14:44:33.575 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.575 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.575 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.575 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.575 INFO  getCommentsByPost called for postId: 33 
+14:44:33.575 INFO  getAllByPostId called with postId: 33 
+14:44:33.576 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.576 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.577 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.577 INFO  verifyToken - path: /11/comments 
+14:44:33.577 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.577 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.577 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.577 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.578 INFO  getCommentsByPost called for postId: 34 
+14:44:33.578 INFO  getAllByPostId called with postId: 34 
+14:44:33.579 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.579 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.580 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.580 INFO  verifyToken - path: /11/comments 
+14:44:33.580 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.580 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.580 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.580 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.580 INFO  getCommentsByPost called for postId: 36 
+14:44:33.580 INFO  getAllByPostId called with postId: 36 
+14:44:33.581 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.581 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.582 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.582 INFO  verifyToken - path: /11/comments 
+14:44:33.583 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.583 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.583 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.583 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.583 INFO  getCommentsByPost called for postId: 35 
+14:44:33.583 INFO  getAllByPostId called with postId: 35 
+14:44:33.584 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.584 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.584 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.584 INFO  verifyToken - path: /11/comments 
+14:44:33.584 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.585 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.585 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.585 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.585 INFO  getCommentsByPost called for postId: 37 
+14:44:33.585 INFO  getAllByPostId called with postId: 37 
+14:44:33.585 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.585 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.586 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.586 INFO  verifyToken - path: /11/comments 
+14:44:33.586 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.586 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.586 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.586 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.586 INFO  getCommentsByPost called for postId: 38 
+14:44:33.586 INFO  getAllByPostId called with postId: 38 
+14:44:33.587 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.587 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.588 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.588 INFO  verifyToken - path: /11/comments 
+14:44:33.588 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.588 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.588 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.588 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.589 INFO  getCommentsByPost called for postId: 39 
+14:44:33.589 INFO  getAllByPostId called with postId: 39 
+14:44:33.589 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.589 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.590 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.590 INFO  verifyToken - path: /11/comments 
+14:44:33.591 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.591 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.591 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.591 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.591 INFO  getCommentsByPost called for postId: 40 
+14:44:33.591 INFO  getAllByPostId called with postId: 40 
+14:44:33.592 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.592 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.593 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.593 INFO  verifyToken - path: /11/comments 
+14:44:33.593 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.593 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.593 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.593 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.593 INFO  getCommentsByPost called for postId: 41 
+14:44:33.593 INFO  getAllByPostId called with postId: 41 
+14:44:33.594 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.594 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.595 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.595 INFO  verifyToken - path: /11/comments 
+14:44:33.595 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.595 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.595 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.595 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.595 INFO  getCommentsByPost called for postId: 42 
+14:44:33.595 INFO  getAllByPostId called with postId: 42 
+14:44:33.596 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.596 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.597 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.597 INFO  verifyToken - path: /11/comments 
+14:44:33.597 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.597 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.597 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.597 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.597 INFO  getCommentsByPost called for postId: 44 
+14:44:33.597 INFO  getAllByPostId called with postId: 44 
+14:44:33.598 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.598 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.599 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.599 INFO  verifyToken - path: /11/comments 
+14:44:33.599 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.599 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.599 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.599 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.599 INFO  getCommentsByPost called for postId: 43 
+14:44:33.599 INFO  getAllByPostId called with postId: 43 
+14:44:33.600 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.600 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.601 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.601 INFO  verifyToken - path: /11/comments 
+14:44:33.601 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.601 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.601 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.601 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.601 INFO  getCommentsByPost called for postId: 45 
+14:44:33.601 INFO  getAllByPostId called with postId: 45 
+14:44:33.602 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.602 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.603 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.603 INFO  verifyToken - path: /11/comments 
+14:44:33.603 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.603 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.603 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.603 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.603 INFO  getCommentsByPost called for postId: 46 
+14:44:33.603 INFO  getAllByPostId called with postId: 46 
+14:44:33.604 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.604 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.604 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.604 INFO  verifyToken - path: /11/comments 
+14:44:33.605 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.605 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.605 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.605 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.605 INFO  getCommentsByPost called for postId: 47 
+14:44:33.605 INFO  getAllByPostId called with postId: 47 
+14:44:33.607 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.607 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.608 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.608 INFO  verifyToken - path: /11/comments 
+14:44:33.609 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.609 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.609 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.609 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.609 INFO  getCommentsByPost called for postId: 48 
+14:44:33.609 INFO  getAllByPostId called with postId: 48 
+14:44:33.610 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.610 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.611 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.611 INFO  verifyToken - path: /11/comments 
+14:44:33.611 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.611 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.611 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.611 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.611 INFO  getCommentsByPost called for postId: 49 
+14:44:33.611 INFO  getAllByPostId called with postId: 49 
+14:44:33.612 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.612 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.613 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.613 INFO  verifyToken - path: /11/comments 
+14:44:33.613 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.613 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.613 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.613 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.613 INFO  getCommentsByPost called for postId: 50 
+14:44:33.613 INFO  getAllByPostId called with postId: 50 
+14:44:33.614 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.614 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.615 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.615 INFO  verifyToken - path: /11/comments 
+14:44:33.615 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.615 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.615 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.615 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.615 INFO  getCommentsByPost called for postId: 51 
+14:44:33.615 INFO  getAllByPostId called with postId: 51 
+14:44:33.616 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.616 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.616 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.617 INFO  verifyToken - path: /11/comments 
+14:44:33.617 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.617 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.617 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.617 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.617 INFO  getCommentsByPost called for postId: 52 
+14:44:33.617 INFO  getAllByPostId called with postId: 52 
+14:44:33.617 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.617 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.618 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.618 INFO  verifyToken - path: /11/comments 
+14:44:33.618 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.619 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.619 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.619 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.619 INFO  getCommentsByPost called for postId: 53 
+14:44:33.619 INFO  getAllByPostId called with postId: 53 
+14:44:33.619 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.619 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.620 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.620 INFO  verifyToken - path: /11/comments 
+14:44:33.620 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.620 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.620 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.620 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.620 INFO  getCommentsByPost called for postId: 54 
+14:44:33.620 INFO  getAllByPostId called with postId: 54 
+14:44:33.621 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.621 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.622 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.622 INFO  verifyToken - path: /11/comments 
+14:44:33.622 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.622 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.622 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.622 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.622 INFO  getCommentsByPost called for postId: 55 
+14:44:33.622 INFO  getAllByPostId called with postId: 55 
+14:44:33.623 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.623 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.623 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.623 INFO  verifyToken - path: /11/comments 
+14:44:33.624 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.624 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.624 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.624 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.624 INFO  getCommentsByPost called for postId: 56 
+14:44:33.624 INFO  getAllByPostId called with postId: 56 
+14:44:33.624 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.624 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.625 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.625 INFO  verifyToken - path: /11/comments 
+14:44:33.626 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.626 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.626 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.626 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.626 INFO  getCommentsByPost called for postId: 57 
+14:44:33.626 INFO  getAllByPostId called with postId: 57 
+14:44:33.626 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.626 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.627 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.627 INFO  verifyToken - path: /11/comments 
+14:44:33.628 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.628 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.628 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.628 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.628 INFO  getCommentsByPost called for postId: 58 
+14:44:33.628 INFO  getAllByPostId called with postId: 58 
+14:44:33.629 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.629 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.630 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.630 INFO  verifyToken - path: /11/comments 
+14:44:33.630 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.630 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.630 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.630 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.630 INFO  getCommentsByPost called for postId: 60 
+14:44:33.630 INFO  getAllByPostId called with postId: 60 
+14:44:33.631 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.631 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.631 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.631 INFO  verifyToken - path: /11/comments 
+14:44:33.632 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.632 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.632 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.632 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.632 INFO  getCommentsByPost called for postId: 59 
+14:44:33.632 INFO  getAllByPostId called with postId: 59 
+14:44:33.633 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.633 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.633 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.633 INFO  verifyToken - path: /11/comments 
+14:44:33.634 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.634 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.634 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.634 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.634 INFO  getCommentsByPost called for postId: 61 
+14:44:33.634 INFO  getAllByPostId called with postId: 61 
+14:44:33.635 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.635 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.636 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.636 INFO  verifyToken - path: /11/comments 
+14:44:33.636 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.636 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.636 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.636 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.636 INFO  getCommentsByPost called for postId: 62 
+14:44:33.636 INFO  getAllByPostId called with postId: 62 
+14:44:33.637 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.637 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.638 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.638 INFO  verifyToken - path: /11/comments 
+14:44:33.638 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.638 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.638 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.638 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.638 INFO  getCommentsByPost called for postId: 63 
+14:44:33.638 INFO  getAllByPostId called with postId: 63 
+14:44:33.639 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.639 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.640 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.640 INFO  verifyToken - path: /11/comments 
+14:44:33.640 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.640 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.640 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.640 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.640 INFO  getCommentsByPost called for postId: 64 
+14:44:33.640 INFO  getAllByPostId called with postId: 64 
+14:44:33.641 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.641 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.642 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.642 INFO  verifyToken - path: /11/comments 
+14:44:33.642 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.642 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.642 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.642 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.642 INFO  getCommentsByPost called for postId: 65 
+14:44:33.642 INFO  getAllByPostId called with postId: 65 
+14:44:33.643 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.643 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.643 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.643 INFO  verifyToken - path: /11/comments 
+14:44:33.644 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.644 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.644 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.644 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.644 INFO  getCommentsByPost called for postId: 66 
+14:44:33.644 INFO  getAllByPostId called with postId: 66 
+14:44:33.644 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.645 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.646 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.646 INFO  verifyToken - path: /11/comments 
+14:44:33.646 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.646 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.646 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.646 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.646 INFO  getCommentsByPost called for postId: 67 
+14:44:33.646 INFO  getAllByPostId called with postId: 67 
+14:44:33.647 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.647 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.648 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.648 INFO  verifyToken - path: /11/comments 
+14:44:33.648 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.648 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.648 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.648 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.648 INFO  getCommentsByPost called for postId: 68 
+14:44:33.648 INFO  getAllByPostId called with postId: 68 
+14:44:33.649 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.649 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.650 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.650 INFO  verifyToken - path: /11/comments 
+14:44:33.650 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.650 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.650 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.650 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.650 INFO  getCommentsByPost called for postId: 69 
+14:44:33.650 INFO  getAllByPostId called with postId: 69 
+14:44:33.651 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.651 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.652 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.652 INFO  verifyToken - path: /11/comments 
+14:44:33.652 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.652 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.652 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.652 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.652 INFO  getCommentsByPost called for postId: 70 
+14:44:33.652 INFO  getAllByPostId called with postId: 70 
+14:44:33.653 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.653 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.654 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.654 INFO  verifyToken - path: /11/comments 
+14:44:33.654 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.654 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.654 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.654 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.654 INFO  getCommentsByPost called for postId: 71 
+14:44:33.654 INFO  getAllByPostId called with postId: 71 
+14:44:33.654 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.654 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.655 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.655 INFO  verifyToken - path: /11/comments 
+14:44:33.655 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.656 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.656 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.656 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.656 INFO  getCommentsByPost called for postId: 72 
+14:44:33.656 INFO  getAllByPostId called with postId: 72 
+14:44:33.656 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.656 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.657 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.657 INFO  verifyToken - path: /11/comments 
+14:44:33.657 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.657 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.657 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.657 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.657 INFO  getCommentsByPost called for postId: 73 
+14:44:33.657 INFO  getAllByPostId called with postId: 73 
+14:44:33.658 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.658 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.659 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.659 INFO  verifyToken - path: /11/comments 
+14:44:33.659 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.659 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.659 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.659 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.659 INFO  getCommentsByPost called for postId: 74 
+14:44:33.659 INFO  getAllByPostId called with postId: 74 
+14:44:33.660 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.660 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.660 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.660 INFO  verifyToken - path: /11/comments 
+14:44:33.661 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.661 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.661 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.661 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.661 INFO  getCommentsByPost called for postId: 75 
+14:44:33.661 INFO  getAllByPostId called with postId: 75 
+14:44:33.661 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.661 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.662 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.662 INFO  verifyToken - path: /11/comments 
+14:44:33.663 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.663 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.663 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.663 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.663 INFO  getCommentsByPost called for postId: 76 
+14:44:33.663 INFO  getAllByPostId called with postId: 76 
+14:44:33.663 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.663 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.664 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.664 INFO  verifyToken - path: /11/comments 
+14:44:33.664 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.665 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.665 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.665 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.665 INFO  getCommentsByPost called for postId: 77 
+14:44:33.665 INFO  getAllByPostId called with postId: 77 
+14:44:33.665 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.665 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.666 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.666 INFO  verifyToken - path: /11/comments 
+14:44:33.666 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.666 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.666 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.666 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.666 INFO  getCommentsByPost called for postId: 78 
+14:44:33.666 INFO  getAllByPostId called with postId: 78 
+14:44:33.667 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.667 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.668 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.668 INFO  verifyToken - path: /11/comments 
+14:44:33.668 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.668 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.668 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.668 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.668 INFO  getCommentsByPost called for postId: 79 
+14:44:33.668 INFO  getAllByPostId called with postId: 79 
+14:44:33.669 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.669 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.669 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.669 INFO  verifyToken - path: /11/comments 
+14:44:33.669 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.669 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.670 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.670 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.670 INFO  getCommentsByPost called for postId: 80 
+14:44:33.670 INFO  getAllByPostId called with postId: 80 
+14:44:33.670 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.670 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.671 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.671 INFO  verifyToken - path: /11/comments 
+14:44:33.671 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.671 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.671 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.671 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.671 INFO  getCommentsByPost called for postId: 81 
+14:44:33.671 INFO  getAllByPostId called with postId: 81 
+14:44:33.672 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.672 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.673 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.673 INFO  verifyToken - path: /11/comments 
+14:44:33.673 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.673 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.673 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.673 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.673 INFO  getCommentsByPost called for postId: 82 
+14:44:33.673 INFO  getAllByPostId called with postId: 82 
+14:44:33.674 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.674 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.674 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.674 INFO  verifyToken - path: /11/comments 
+14:44:33.675 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.675 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.675 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.675 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.675 INFO  getCommentsByPost called for postId: 83 
+14:44:33.675 INFO  getAllByPostId called with postId: 83 
+14:44:33.676 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.676 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.676 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.676 INFO  verifyToken - path: /11/comments 
+14:44:33.677 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.677 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.677 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.677 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.677 INFO  getCommentsByPost called for postId: 86 
+14:44:33.677 INFO  getAllByPostId called with postId: 86 
+14:44:33.678 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.678 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.678 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.678 INFO  verifyToken - path: /11/comments 
+14:44:33.679 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.679 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.679 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.679 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.679 INFO  getCommentsByPost called for postId: 87 
+14:44:33.679 INFO  getAllByPostId called with postId: 87 
+14:44:33.680 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.680 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.680 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.680 INFO  verifyToken - path: /11/comments 
+14:44:33.681 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.681 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.681 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.681 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.681 INFO  getCommentsByPost called for postId: 88 
+14:44:33.681 INFO  getAllByPostId called with postId: 88 
+14:44:33.681 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.681 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.682 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.682 INFO  verifyToken - path: /11/comments 
+14:44:33.682 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.682 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.682 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.682 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.682 INFO  getCommentsByPost called for postId: 89 
+14:44:33.682 INFO  getAllByPostId called with postId: 89 
+14:44:33.683 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.683 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.684 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.684 INFO  verifyToken - path: /11/comments 
+14:44:33.684 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.684 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.684 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.684 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.684 INFO  getCommentsByPost called for postId: 84 
+14:44:33.684 INFO  getAllByPostId called with postId: 84 
+14:44:33.685 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.685 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.685 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.685 INFO  verifyToken - path: /11/comments 
+14:44:33.686 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.686 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.686 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.686 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.686 INFO  getCommentsByPost called for postId: 85 
+14:44:33.686 INFO  getAllByPostId called with postId: 85 
+14:44:33.686 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.686 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.687 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.687 INFO  verifyToken - path: /11/comments 
+14:44:33.687 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.687 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.687 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.687 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.687 INFO  getCommentsByPost called for postId: 90 
+14:44:33.687 INFO  getAllByPostId called with postId: 90 
+14:44:33.688 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.688 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.689 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.689 INFO  verifyToken - path: /11/comments 
+14:44:33.689 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.689 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.689 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.689 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.689 INFO  getCommentsByPost called for postId: 91 
+14:44:33.689 INFO  getAllByPostId called with postId: 91 
+14:44:33.690 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.690 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.690 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.690 INFO  verifyToken - path: /11/comments 
+14:44:33.691 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.691 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.691 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.691 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.691 INFO  getCommentsByPost called for postId: 92 
+14:44:33.691 INFO  getAllByPostId called with postId: 92 
+14:44:33.691 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.691 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.692 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.692 INFO  verifyToken - path: /11/comments 
+14:44:33.692 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.693 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.693 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.693 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.693 INFO  getCommentsByPost called for postId: 93 
+14:44:33.693 INFO  getAllByPostId called with postId: 93 
+14:44:33.693 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.693 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.694 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.694 INFO  verifyToken - path: /11/comments 
+14:44:33.695 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.695 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.695 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.695 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.695 INFO  getCommentsByPost called for postId: 94 
+14:44:33.695 INFO  getAllByPostId called with postId: 94 
+14:44:33.696 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.696 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.696 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.696 INFO  verifyToken - path: /11/comments 
+14:44:33.697 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.697 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.697 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.697 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.697 INFO  getCommentsByPost called for postId: 95 
+14:44:33.697 INFO  getAllByPostId called with postId: 95 
+14:44:33.697 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.697 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.698 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.698 INFO  verifyToken - path: /11/comments 
+14:44:33.698 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.698 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.698 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.698 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.698 INFO  getCommentsByPost called for postId: 96 
+14:44:33.698 INFO  getAllByPostId called with postId: 96 
+14:44:33.699 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.699 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.700 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.700 INFO  verifyToken - path: /11/comments 
+14:44:33.700 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.700 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.700 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.700 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.700 INFO  getCommentsByPost called for postId: 97 
+14:44:33.700 INFO  getAllByPostId called with postId: 97 
+14:44:33.701 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.701 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:33.701 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:33.701 INFO  verifyToken - path: /11/comments 
+14:44:33.702 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:33.702 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:33.702 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:33.702 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:33.702 INFO  getCommentsByPost called for postId: 98 
+14:44:33.702 INFO  getAllByPostId called with postId: 98 
+14:44:33.703 INFO  getAllByPostId successful, returned 0 comments 
+14:44:33.703 INFO  getCommentsByPost successful, returned 0 comments 
+14:44:35.824 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:35.824 INFO  verifyToken - path: /11/comments 
+14:44:35.824 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:35.824 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:35.824 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:35.824 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:35.824 INFO  getCommentsByPost called for postId: 1 
+14:44:35.824 INFO  getAllByPostId called with postId: 1 
+14:44:35.825 INFO  getAllByPostId successful, returned 5 comments 
+14:44:35.825 INFO  getCommentsByPost successful, returned 5 comments 
+14:44:43.222 INFO  GET /api/11/comments - IP: 127.0.0.1 
+14:44:43.222 INFO  verifyToken - path: /11/comments 
+14:44:43.222 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:44:43.222 INFO  checkAccessPermissions - path: /comments, userId param: 11 
+14:44:43.222 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:44:43.222 INFO  checkAccessPermissions - access granted for user: 11 
+14:44:43.222 INFO  getCommentsByPost called for postId: 1 
+14:44:43.222 INFO  getAllByPostId called with postId: 1 
+14:44:43.223 INFO  getAllByPostId successful, returned 5 comments 
+14:44:43.223 INFO  getCommentsByPost successful, returned 5 comments 
+14:47:42.925 INFO  GET /api/11/tasks - IP: 127.0.0.1 
+14:47:42.925 INFO  verifyToken - path: /11/tasks 
+14:47:42.926 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+14:47:42.926 INFO  checkAccessPermissions - path: /tasks, userId param: 11 
+14:47:42.926 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+14:47:42.926 INFO  checkAccessPermissions - access granted for user: 11 
+14:47:42.927 INFO  getAllTasks called 
+14:47:42.927 INFO  getAll tasks called for userId: 11 
+14:47:42.941 INFO  getAll tasks successful, returned 0 tasks for userId: 11 
+14:47:42.941 INFO  getAllTasks successful, returned 0 tasks 
+15:01:47.368 INFO  GET /api/11/posts - IP: 127.0.0.1 
+15:01:47.369 INFO  verifyToken - path: /11/posts 
+15:01:47.369 WARN  verifyToken - no token provided for path: /11/posts 
+15:15:46.257 INFO  POST /auth/signup - IP: 127.0.0.1 
+15:16:07.061 INFO  init 
+15:16:07.158 INFO  Connected to MySQL at 127.0.0.1 
+15:16:07.191 INFO  Database connected successfully 
+15:16:07.222 INFO  Server started on http://127.0.0.1:3000 
+15:16:10.623 INFO  POST /auth/signup - IP: 127.0.0.1 
+15:16:22.883 INFO  POST /api/auth/signup - IP: 127.0.0.1 
+15:16:22.885 INFO  verifyToken - path: /auth/signup 
+15:16:22.885 INFO  verifyToken - skipping auth routes 
+15:16:23.650 INFO  addUser called for username: yossi_cohen 
+15:16:23.741 INFO  addUser successful, user id: 12 
+15:16:23.777 INFO  signup successful for email: yossi.cohen@gmail.com 
+15:24:53.296 INFO  POST /api/auth/signup - IP: 127.0.0.1 
+15:24:53.296 INFO  verifyToken - path: /auth/signup 
+15:24:53.296 INFO  verifyToken - skipping auth routes 
+15:24:53.615 INFO  addUser called for username: yossi_cohen 
+15:24:53.630 ERROR addUser error: Duplicate entry 'yossi.cohen@gmail.com' for key 'users.email' 
+15:24:53.630 WARN  signup error: Duplicate entry 'yossi.cohen@gmail.com' for key 'users.email' 
+15:26:04.345 INFO  init 
+15:26:04.384 INFO  Connected to MySQL at 127.0.0.1 
+15:26:04.389 INFO  Database connected successfully 
+15:26:04.403 INFO  Server started on http://127.0.0.1:3000 
+15:26:44.320 INFO  init 
+15:26:44.343 INFO  Connected to MySQL at 127.0.0.1 
+15:26:44.348 INFO  Database connected successfully 
+15:26:44.357 INFO  Server started on http://127.0.0.1:3000 
