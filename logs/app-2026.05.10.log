@@ -1,0 +1,1039 @@
+00:21:12.909 INFO  POST /api/auth/login - IP: 127.0.0.1 
+00:21:12.909 INFO  verifyToken - path: /auth/login 
+00:21:12.909 INFO  verifyToken - skipping auth routes 
+00:21:13.726 WARN  login error: Incorrect password 
+00:21:24.398 INFO  POST /api/auth/login - IP: 127.0.0.1 
+00:21:24.398 INFO  verifyToken - path: /auth/login 
+00:21:24.398 INFO  verifyToken - skipping auth routes 
+00:21:25.109 INFO  login successful for email: naama@gmail.com 
+00:21:25.118 INFO  GET /api/25/users/25 - IP: 127.0.0.1 
+00:21:25.118 INFO  verifyToken - path: /25/users/25 
+00:21:25.121 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:25.121 INFO  checkAccessPermissions - path: /users/25, userId param: 25 
+00:21:25.121 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:25.121 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:25.122 INFO  getById users called with id: 25 
+00:21:25.125 INFO  getById users successful for id: 25 
+00:21:29.664 INFO  GET /api/25/posts - IP: 127.0.0.1 
+00:21:29.664 INFO  verifyToken - path: /25/posts 
+00:21:29.666 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:29.666 INFO  checkAccessPermissions - path: /posts, userId param: 25 
+00:21:29.666 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:29.666 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:29.667 INFO  getAllPosts called 
+00:21:29.667 INFO  getAll posts called 
+00:21:29.677 INFO  getAll posts successful, returned 99 posts 
+00:21:29.677 INFO  getAllPosts successful, returned 99 posts 
+00:21:29.827 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:29.828 INFO  verifyToken - path: /25/comments 
+00:21:29.832 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:29.833 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:29.833 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:29.833 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:29.843 INFO  getCommentsByPost called for postId: 2 
+00:21:29.843 INFO  getAllByPostId called with postId: 2 
+00:21:29.869 INFO  getAllByPostId successful, returned 7 comments 
+00:21:29.869 INFO  getCommentsByPost successful, returned 7 comments 
+00:21:29.877 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:29.877 INFO  verifyToken - path: /25/comments 
+00:21:29.886 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:29.886 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:29.886 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:29.886 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:29.889 INFO  getCommentsByPost called for postId: 3 
+00:21:29.889 INFO  getAllByPostId called with postId: 3 
+00:21:29.892 INFO  getAllByPostId successful, returned 5 comments 
+00:21:29.892 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:29.900 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:29.900 INFO  verifyToken - path: /25/comments 
+00:21:29.904 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:29.904 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:29.905 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:29.905 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:29.905 INFO  getCommentsByPost called for postId: 4 
+00:21:29.905 INFO  getAllByPostId called with postId: 4 
+00:21:29.910 INFO  getAllByPostId successful, returned 5 comments 
+00:21:29.910 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:29.913 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:29.913 INFO  verifyToken - path: /25/comments 
+00:21:29.916 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:29.916 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:29.916 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:29.916 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:29.916 INFO  getCommentsByPost called for postId: 5 
+00:21:29.916 INFO  getAllByPostId called with postId: 5 
+00:21:29.920 INFO  getAllByPostId successful, returned 5 comments 
+00:21:29.920 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:29.923 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:29.923 INFO  verifyToken - path: /25/comments 
+00:21:29.926 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:29.926 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:29.926 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:29.926 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:29.926 INFO  getCommentsByPost called for postId: 6 
+00:21:29.926 INFO  getAllByPostId called with postId: 6 
+00:21:29.929 INFO  getAllByPostId successful, returned 5 comments 
+00:21:29.929 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:29.931 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:29.931 INFO  verifyToken - path: /25/comments 
+00:21:29.934 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:29.934 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:29.934 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:29.934 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:29.934 INFO  getCommentsByPost called for postId: 7 
+00:21:29.934 INFO  getAllByPostId called with postId: 7 
+00:21:29.938 INFO  getAllByPostId successful, returned 5 comments 
+00:21:29.938 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:29.949 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:29.949 INFO  verifyToken - path: /25/comments 
+00:21:29.953 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:29.953 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:29.953 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:29.953 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:29.954 INFO  getCommentsByPost called for postId: 8 
+00:21:29.954 INFO  getAllByPostId called with postId: 8 
+00:21:29.961 INFO  getAllByPostId successful, returned 5 comments 
+00:21:29.963 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:29.970 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:29.970 INFO  verifyToken - path: /25/comments 
+00:21:29.972 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:29.972 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:29.973 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:29.973 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:29.973 INFO  getCommentsByPost called for postId: 1 
+00:21:29.973 INFO  getAllByPostId called with postId: 1 
+00:21:29.975 INFO  getAllByPostId successful, returned 10 comments 
+00:21:29.975 INFO  getCommentsByPost successful, returned 10 comments 
+00:21:29.978 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:29.978 INFO  verifyToken - path: /25/comments 
+00:21:29.980 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:29.980 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:29.980 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:29.980 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:29.981 INFO  getCommentsByPost called for postId: 10 
+00:21:29.981 INFO  getAllByPostId called with postId: 10 
+00:21:29.983 INFO  getAllByPostId successful, returned 5 comments 
+00:21:29.983 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:29.986 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:29.986 INFO  verifyToken - path: /25/comments 
+00:21:29.988 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:29.988 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:29.988 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:29.988 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:29.988 INFO  getCommentsByPost called for postId: 9 
+00:21:29.988 INFO  getAllByPostId called with postId: 9 
+00:21:29.991 INFO  getAllByPostId successful, returned 5 comments 
+00:21:29.991 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:29.994 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:29.994 INFO  verifyToken - path: /25/comments 
+00:21:29.997 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:29.997 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:29.997 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:29.998 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:29.998 INFO  getCommentsByPost called for postId: 11 
+00:21:29.998 INFO  getAllByPostId called with postId: 11 
+00:21:30.000 INFO  getAllByPostId successful, returned 5 comments 
+00:21:30.000 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:30.002 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.002 INFO  verifyToken - path: /25/comments 
+00:21:30.005 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.006 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.006 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.006 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.006 INFO  getCommentsByPost called for postId: 12 
+00:21:30.006 INFO  getAllByPostId called with postId: 12 
+00:21:30.008 INFO  getAllByPostId successful, returned 5 comments 
+00:21:30.008 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:30.012 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.012 INFO  verifyToken - path: /25/comments 
+00:21:30.016 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.016 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.016 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.016 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.017 INFO  getCommentsByPost called for postId: 14 
+00:21:30.017 INFO  getAllByPostId called with postId: 14 
+00:21:30.019 INFO  getAllByPostId successful, returned 5 comments 
+00:21:30.019 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:30.022 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.022 INFO  verifyToken - path: /25/comments 
+00:21:30.025 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.025 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.025 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.025 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.026 INFO  getCommentsByPost called for postId: 15 
+00:21:30.026 INFO  getAllByPostId called with postId: 15 
+00:21:30.028 INFO  getAllByPostId successful, returned 5 comments 
+00:21:30.028 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:30.034 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.034 INFO  verifyToken - path: /25/comments 
+00:21:30.036 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.036 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.036 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.036 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.037 INFO  getCommentsByPost called for postId: 13 
+00:21:30.037 INFO  getAllByPostId called with postId: 13 
+00:21:30.040 INFO  getAllByPostId successful, returned 5 comments 
+00:21:30.040 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:30.043 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.043 INFO  verifyToken - path: /25/comments 
+00:21:30.046 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.046 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.046 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.046 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.046 INFO  getCommentsByPost called for postId: 16 
+00:21:30.046 INFO  getAllByPostId called with postId: 16 
+00:21:30.049 INFO  getAllByPostId successful, returned 5 comments 
+00:21:30.049 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:30.052 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.052 INFO  verifyToken - path: /25/comments 
+00:21:30.055 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.055 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.055 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.055 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.055 INFO  getCommentsByPost called for postId: 17 
+00:21:30.055 INFO  getAllByPostId called with postId: 17 
+00:21:30.057 INFO  getAllByPostId successful, returned 5 comments 
+00:21:30.057 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:30.059 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.059 INFO  verifyToken - path: /25/comments 
+00:21:30.062 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.062 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.062 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.062 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.062 INFO  getCommentsByPost called for postId: 19 
+00:21:30.062 INFO  getAllByPostId called with postId: 19 
+00:21:30.064 INFO  getAllByPostId successful, returned 5 comments 
+00:21:30.064 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:30.067 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.067 INFO  verifyToken - path: /25/comments 
+00:21:30.069 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.069 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.069 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.069 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.069 INFO  getCommentsByPost called for postId: 18 
+00:21:30.069 INFO  getAllByPostId called with postId: 18 
+00:21:30.072 INFO  getAllByPostId successful, returned 5 comments 
+00:21:30.072 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:30.074 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.074 INFO  verifyToken - path: /25/comments 
+00:21:30.076 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.077 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.077 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.077 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.077 INFO  getCommentsByPost called for postId: 20 
+00:21:30.077 INFO  getAllByPostId called with postId: 20 
+00:21:30.080 INFO  getAllByPostId successful, returned 5 comments 
+00:21:30.080 INFO  getCommentsByPost successful, returned 5 comments 
+00:21:30.083 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.083 INFO  verifyToken - path: /25/comments 
+00:21:30.086 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.086 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.086 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.086 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.086 INFO  getCommentsByPost called for postId: 21 
+00:21:30.086 INFO  getAllByPostId called with postId: 21 
+00:21:30.089 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.089 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.092 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.092 INFO  verifyToken - path: /25/comments 
+00:21:30.094 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.095 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.095 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.095 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.095 INFO  getCommentsByPost called for postId: 22 
+00:21:30.095 INFO  getAllByPostId called with postId: 22 
+00:21:30.097 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.097 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.099 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.100 INFO  verifyToken - path: /25/comments 
+00:21:30.102 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.102 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.102 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.102 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.102 INFO  getCommentsByPost called for postId: 23 
+00:21:30.102 INFO  getAllByPostId called with postId: 23 
+00:21:30.105 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.105 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.110 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.111 INFO  verifyToken - path: /25/comments 
+00:21:30.114 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.114 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.114 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.114 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.114 INFO  getCommentsByPost called for postId: 24 
+00:21:30.114 INFO  getAllByPostId called with postId: 24 
+00:21:30.116 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.116 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.121 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.121 INFO  verifyToken - path: /25/comments 
+00:21:30.123 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.123 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.123 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.123 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.123 INFO  getCommentsByPost called for postId: 25 
+00:21:30.123 INFO  getAllByPostId called with postId: 25 
+00:21:30.125 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.125 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.127 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.127 INFO  verifyToken - path: /25/comments 
+00:21:30.129 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.129 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.129 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.129 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.129 INFO  getCommentsByPost called for postId: 26 
+00:21:30.129 INFO  getAllByPostId called with postId: 26 
+00:21:30.132 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.132 INFO  verifyToken - path: /25/comments 
+00:21:30.135 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.135 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.135 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.135 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.135 INFO  getCommentsByPost called for postId: 28 
+00:21:30.135 INFO  getAllByPostId called with postId: 28 
+00:21:30.136 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.136 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.139 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.139 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.141 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.141 INFO  verifyToken - path: /25/comments 
+00:21:30.143 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.143 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.143 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.143 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.143 INFO  getCommentsByPost called for postId: 27 
+00:21:30.144 INFO  getAllByPostId called with postId: 27 
+00:21:30.145 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.145 INFO  verifyToken - path: /25/comments 
+00:21:30.147 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.147 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.147 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.147 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.147 INFO  getCommentsByPost called for postId: 29 
+00:21:30.147 INFO  getAllByPostId called with postId: 29 
+00:21:30.149 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.149 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.151 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.151 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.157 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.157 INFO  verifyToken - path: /25/comments 
+00:21:30.159 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.159 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.159 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.159 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.159 INFO  getCommentsByPost called for postId: 34 
+00:21:30.159 INFO  getAllByPostId called with postId: 34 
+00:21:30.161 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.161 INFO  verifyToken - path: /25/comments 
+00:21:30.163 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.163 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.163 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.163 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.164 INFO  getCommentsByPost called for postId: 30 
+00:21:30.164 INFO  getAllByPostId called with postId: 30 
+00:21:30.165 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.165 INFO  verifyToken - path: /25/comments 
+00:21:30.167 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.167 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.167 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.167 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.167 INFO  getCommentsByPost called for postId: 31 
+00:21:30.167 INFO  getAllByPostId called with postId: 31 
+00:21:30.168 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.168 INFO  verifyToken - path: /25/comments 
+00:21:30.171 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.171 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.171 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.171 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.171 INFO  getCommentsByPost called for postId: 32 
+00:21:30.171 INFO  getAllByPostId called with postId: 32 
+00:21:30.172 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.172 INFO  verifyToken - path: /25/comments 
+00:21:30.175 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.175 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.175 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.175 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.175 INFO  getCommentsByPost called for postId: 33 
+00:21:30.175 INFO  getAllByPostId called with postId: 33 
+00:21:30.176 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.176 INFO  verifyToken - path: /25/comments 
+00:21:30.178 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.178 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.178 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.178 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.178 INFO  getCommentsByPost called for postId: 35 
+00:21:30.178 INFO  getAllByPostId called with postId: 35 
+00:21:30.181 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.181 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.184 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.184 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.186 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.186 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.189 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.189 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.192 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.192 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.195 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.195 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.197 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.197 INFO  verifyToken - path: /25/comments 
+00:21:30.199 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.199 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.199 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.200 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.200 INFO  getCommentsByPost called for postId: 36 
+00:21:30.200 INFO  getAllByPostId called with postId: 36 
+00:21:30.202 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.202 INFO  verifyToken - path: /25/comments 
+00:21:30.204 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.205 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.205 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.205 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.205 INFO  getCommentsByPost called for postId: 37 
+00:21:30.205 INFO  getAllByPostId called with postId: 37 
+00:21:30.206 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.206 INFO  verifyToken - path: /25/comments 
+00:21:30.208 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.208 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.208 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.208 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.209 INFO  getCommentsByPost called for postId: 38 
+00:21:30.209 INFO  getAllByPostId called with postId: 38 
+00:21:30.210 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.210 INFO  verifyToken - path: /25/comments 
+00:21:30.213 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.213 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.213 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.213 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.213 INFO  getCommentsByPost called for postId: 39 
+00:21:30.213 INFO  getAllByPostId called with postId: 39 
+00:21:30.215 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.215 INFO  verifyToken - path: /25/comments 
+00:21:30.217 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.217 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.217 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.217 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.217 INFO  getCommentsByPost called for postId: 40 
+00:21:30.217 INFO  getAllByPostId called with postId: 40 
+00:21:30.218 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.219 INFO  verifyToken - path: /25/comments 
+00:21:30.221 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.221 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.221 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.221 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.221 INFO  getCommentsByPost called for postId: 41 
+00:21:30.221 INFO  getAllByPostId called with postId: 41 
+00:21:30.223 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.223 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.226 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.226 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.230 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.230 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.234 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.234 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.237 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.237 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.239 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.239 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.241 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.242 INFO  verifyToken - path: /25/comments 
+00:21:30.245 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.245 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.245 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.245 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.245 INFO  getCommentsByPost called for postId: 42 
+00:21:30.245 INFO  getAllByPostId called with postId: 42 
+00:21:30.249 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.249 INFO  verifyToken - path: /25/comments 
+00:21:30.250 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.251 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.251 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.251 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.251 INFO  getCommentsByPost called for postId: 43 
+00:21:30.251 INFO  getAllByPostId called with postId: 43 
+00:21:30.252 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.252 INFO  verifyToken - path: /25/comments 
+00:21:30.255 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.255 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.255 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.255 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.255 INFO  getCommentsByPost called for postId: 44 
+00:21:30.255 INFO  getAllByPostId called with postId: 44 
+00:21:30.256 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.256 INFO  verifyToken - path: /25/comments 
+00:21:30.257 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.258 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.258 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.258 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.258 INFO  getCommentsByPost called for postId: 45 
+00:21:30.258 INFO  getAllByPostId called with postId: 45 
+00:21:30.259 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.259 INFO  verifyToken - path: /25/comments 
+00:21:30.261 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.261 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.261 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.261 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.261 INFO  getCommentsByPost called for postId: 46 
+00:21:30.262 INFO  getAllByPostId called with postId: 46 
+00:21:30.263 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.263 INFO  verifyToken - path: /25/comments 
+00:21:30.266 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.266 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.266 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.266 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.267 INFO  getCommentsByPost called for postId: 47 
+00:21:30.267 INFO  getAllByPostId called with postId: 47 
+00:21:30.268 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.268 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.272 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.272 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.275 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.275 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.277 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.277 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.279 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.279 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.280 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.280 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.283 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.284 INFO  verifyToken - path: /25/comments 
+00:21:30.288 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.290 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.290 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.290 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.291 INFO  getCommentsByPost called for postId: 48 
+00:21:30.291 INFO  getAllByPostId called with postId: 48 
+00:21:30.294 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.294 INFO  verifyToken - path: /25/comments 
+00:21:30.296 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.296 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.296 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.296 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.297 INFO  getCommentsByPost called for postId: 49 
+00:21:30.297 INFO  getAllByPostId called with postId: 49 
+00:21:30.297 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.298 INFO  verifyToken - path: /25/comments 
+00:21:30.300 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.300 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.300 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.300 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.300 INFO  getCommentsByPost called for postId: 50 
+00:21:30.300 INFO  getAllByPostId called with postId: 50 
+00:21:30.301 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.301 INFO  verifyToken - path: /25/comments 
+00:21:30.304 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.304 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.304 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.304 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.306 INFO  getCommentsByPost called for postId: 51 
+00:21:30.307 INFO  getAllByPostId called with postId: 51 
+00:21:30.309 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.309 INFO  verifyToken - path: /25/comments 
+00:21:30.311 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.311 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.311 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.311 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.311 INFO  getCommentsByPost called for postId: 52 
+00:21:30.312 INFO  getAllByPostId called with postId: 52 
+00:21:30.312 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.313 INFO  verifyToken - path: /25/comments 
+00:21:30.314 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.314 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.314 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.314 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.314 INFO  getCommentsByPost called for postId: 53 
+00:21:30.314 INFO  getAllByPostId called with postId: 53 
+00:21:30.316 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.316 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.317 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.317 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.320 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.320 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.325 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.325 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.329 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.330 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.332 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.332 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.334 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.334 INFO  verifyToken - path: /25/comments 
+00:21:30.336 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.337 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.337 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.337 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.337 INFO  getCommentsByPost called for postId: 54 
+00:21:30.337 INFO  getAllByPostId called with postId: 54 
+00:21:30.339 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.339 INFO  verifyToken - path: /25/comments 
+00:21:30.342 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.342 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.342 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.342 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.342 INFO  getCommentsByPost called for postId: 55 
+00:21:30.342 INFO  getAllByPostId called with postId: 55 
+00:21:30.344 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.344 INFO  verifyToken - path: /25/comments 
+00:21:30.347 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.347 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.347 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.347 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.347 INFO  getCommentsByPost called for postId: 56 
+00:21:30.347 INFO  getAllByPostId called with postId: 56 
+00:21:30.348 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.348 INFO  verifyToken - path: /25/comments 
+00:21:30.350 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.350 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.350 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.350 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.351 INFO  getCommentsByPost called for postId: 57 
+00:21:30.351 INFO  getAllByPostId called with postId: 57 
+00:21:30.352 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.352 INFO  verifyToken - path: /25/comments 
+00:21:30.354 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.354 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.354 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.354 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.354 INFO  getCommentsByPost called for postId: 58 
+00:21:30.354 INFO  getAllByPostId called with postId: 58 
+00:21:30.357 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.357 INFO  verifyToken - path: /25/comments 
+00:21:30.360 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.360 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.360 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.360 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.360 INFO  getCommentsByPost called for postId: 59 
+00:21:30.360 INFO  getAllByPostId called with postId: 59 
+00:21:30.362 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.362 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.364 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.364 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.367 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.367 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.369 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.369 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.373 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.373 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.376 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.376 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.380 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.380 INFO  verifyToken - path: /25/comments 
+00:21:30.383 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.383 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.383 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.383 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.383 INFO  getCommentsByPost called for postId: 60 
+00:21:30.383 INFO  getAllByPostId called with postId: 60 
+00:21:30.385 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.385 INFO  verifyToken - path: /25/comments 
+00:21:30.388 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.388 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.388 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.388 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.388 INFO  getCommentsByPost called for postId: 61 
+00:21:30.389 INFO  getAllByPostId called with postId: 61 
+00:21:30.390 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.390 INFO  verifyToken - path: /25/comments 
+00:21:30.392 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.392 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.392 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.392 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.392 INFO  getCommentsByPost called for postId: 63 
+00:21:30.392 INFO  getAllByPostId called with postId: 63 
+00:21:30.394 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.394 INFO  verifyToken - path: /25/comments 
+00:21:30.395 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.396 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.396 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.396 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.396 INFO  getCommentsByPost called for postId: 64 
+00:21:30.396 INFO  getAllByPostId called with postId: 64 
+00:21:30.397 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.397 INFO  verifyToken - path: /25/comments 
+00:21:30.399 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.399 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.399 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.399 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.399 INFO  getCommentsByPost called for postId: 62 
+00:21:30.399 INFO  getAllByPostId called with postId: 62 
+00:21:30.401 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.401 INFO  verifyToken - path: /25/comments 
+00:21:30.403 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.403 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.403 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.403 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.403 INFO  getCommentsByPost called for postId: 65 
+00:21:30.403 INFO  getAllByPostId called with postId: 65 
+00:21:30.405 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.405 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.408 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.408 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.411 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.411 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.414 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.414 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.416 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.416 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.418 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.418 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.422 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.422 INFO  verifyToken - path: /25/comments 
+00:21:30.424 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.425 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.425 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.425 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.425 INFO  getCommentsByPost called for postId: 66 
+00:21:30.425 INFO  getAllByPostId called with postId: 66 
+00:21:30.426 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.426 INFO  verifyToken - path: /25/comments 
+00:21:30.429 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.429 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.429 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.429 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.429 INFO  getCommentsByPost called for postId: 67 
+00:21:30.429 INFO  getAllByPostId called with postId: 67 
+00:21:30.430 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.430 INFO  verifyToken - path: /25/comments 
+00:21:30.431 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.431 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.431 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.431 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.431 INFO  getCommentsByPost called for postId: 68 
+00:21:30.431 INFO  getAllByPostId called with postId: 68 
+00:21:30.433 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.433 INFO  verifyToken - path: /25/comments 
+00:21:30.435 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.435 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.435 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.435 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.435 INFO  getCommentsByPost called for postId: 69 
+00:21:30.435 INFO  getAllByPostId called with postId: 69 
+00:21:30.436 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.436 INFO  verifyToken - path: /25/comments 
+00:21:30.439 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.439 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.439 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.439 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.439 INFO  getCommentsByPost called for postId: 70 
+00:21:30.439 INFO  getAllByPostId called with postId: 70 
+00:21:30.440 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.440 INFO  verifyToken - path: /25/comments 
+00:21:30.443 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.443 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.443 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.443 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.443 INFO  getCommentsByPost called for postId: 71 
+00:21:30.443 INFO  getAllByPostId called with postId: 71 
+00:21:30.446 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.446 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.448 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.448 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.451 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.451 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.453 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.453 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.456 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.456 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.458 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.458 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.461 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.461 INFO  verifyToken - path: /25/comments 
+00:21:30.463 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.463 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.463 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.463 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.464 INFO  getCommentsByPost called for postId: 72 
+00:21:30.464 INFO  getAllByPostId called with postId: 72 
+00:21:30.465 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.465 INFO  verifyToken - path: /25/comments 
+00:21:30.467 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.467 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.467 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.467 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.468 INFO  getCommentsByPost called for postId: 73 
+00:21:30.468 INFO  getAllByPostId called with postId: 73 
+00:21:30.469 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.469 INFO  verifyToken - path: /25/comments 
+00:21:30.471 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.471 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.471 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.471 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.471 INFO  getCommentsByPost called for postId: 74 
+00:21:30.471 INFO  getAllByPostId called with postId: 74 
+00:21:30.472 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.472 INFO  verifyToken - path: /25/comments 
+00:21:30.475 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.475 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.475 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.475 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.475 INFO  getCommentsByPost called for postId: 75 
+00:21:30.475 INFO  getAllByPostId called with postId: 75 
+00:21:30.476 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.476 INFO  verifyToken - path: /25/comments 
+00:21:30.478 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.478 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.478 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.478 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.479 INFO  getCommentsByPost called for postId: 76 
+00:21:30.479 INFO  getAllByPostId called with postId: 76 
+00:21:30.480 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.480 INFO  verifyToken - path: /25/comments 
+00:21:30.482 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.482 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.482 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.482 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.482 INFO  getCommentsByPost called for postId: 78 
+00:21:30.482 INFO  getAllByPostId called with postId: 78 
+00:21:30.483 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.483 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.488 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.488 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.490 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.490 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.493 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.493 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.495 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.495 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.497 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.497 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.500 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.500 INFO  verifyToken - path: /25/comments 
+00:21:30.502 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.503 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.503 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.503 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.503 INFO  getCommentsByPost called for postId: 79 
+00:21:30.503 INFO  getAllByPostId called with postId: 79 
+00:21:30.504 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.504 INFO  verifyToken - path: /25/comments 
+00:21:30.506 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.506 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.506 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.506 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.507 INFO  getCommentsByPost called for postId: 80 
+00:21:30.507 INFO  getAllByPostId called with postId: 80 
+00:21:30.507 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.507 INFO  verifyToken - path: /25/comments 
+00:21:30.509 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.509 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.509 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.509 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.509 INFO  getCommentsByPost called for postId: 81 
+00:21:30.509 INFO  getAllByPostId called with postId: 81 
+00:21:30.510 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.510 INFO  verifyToken - path: /25/comments 
+00:21:30.512 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.512 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.512 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.512 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.512 INFO  getCommentsByPost called for postId: 82 
+00:21:30.512 INFO  getAllByPostId called with postId: 82 
+00:21:30.513 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.513 INFO  verifyToken - path: /25/comments 
+00:21:30.515 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.515 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.515 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.515 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.516 INFO  getCommentsByPost called for postId: 83 
+00:21:30.516 INFO  getAllByPostId called with postId: 83 
+00:21:30.517 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.517 INFO  verifyToken - path: /25/comments 
+00:21:30.519 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.519 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.519 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.519 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.519 INFO  getCommentsByPost called for postId: 84 
+00:21:30.519 INFO  getAllByPostId called with postId: 84 
+00:21:30.521 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.521 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.523 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.523 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.525 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.526 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.528 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.528 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.531 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.531 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.534 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.534 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.538 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.538 INFO  verifyToken - path: /25/comments 
+00:21:30.540 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.540 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.541 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.541 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.541 INFO  getCommentsByPost called for postId: 85 
+00:21:30.541 INFO  getAllByPostId called with postId: 85 
+00:21:30.543 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.543 INFO  verifyToken - path: /25/comments 
+00:21:30.545 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.545 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.545 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.545 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.545 INFO  getCommentsByPost called for postId: 86 
+00:21:30.545 INFO  getAllByPostId called with postId: 86 
+00:21:30.546 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.547 INFO  verifyToken - path: /25/comments 
+00:21:30.549 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.549 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.549 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.549 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.549 INFO  getCommentsByPost called for postId: 87 
+00:21:30.549 INFO  getAllByPostId called with postId: 87 
+00:21:30.550 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.550 INFO  verifyToken - path: /25/comments 
+00:21:30.553 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.553 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.553 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.553 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.553 INFO  getCommentsByPost called for postId: 88 
+00:21:30.553 INFO  getAllByPostId called with postId: 88 
+00:21:30.554 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.554 INFO  verifyToken - path: /25/comments 
+00:21:30.557 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.557 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.557 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.557 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.557 INFO  getCommentsByPost called for postId: 89 
+00:21:30.557 INFO  getAllByPostId called with postId: 89 
+00:21:30.558 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.558 INFO  verifyToken - path: /25/comments 
+00:21:30.560 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.560 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.560 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.560 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.560 INFO  getCommentsByPost called for postId: 90 
+00:21:30.560 INFO  getAllByPostId called with postId: 90 
+00:21:30.562 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.562 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.564 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.564 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.568 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.568 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.570 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.570 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.572 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.572 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.574 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.574 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.577 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.577 INFO  verifyToken - path: /25/comments 
+00:21:30.580 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.580 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.580 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.580 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.580 INFO  getCommentsByPost called for postId: 91 
+00:21:30.580 INFO  getAllByPostId called with postId: 91 
+00:21:30.583 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.583 INFO  verifyToken - path: /25/comments 
+00:21:30.585 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.585 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.585 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.585 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.586 INFO  getCommentsByPost called for postId: 92 
+00:21:30.586 INFO  getAllByPostId called with postId: 92 
+00:21:30.587 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.587 INFO  verifyToken - path: /25/comments 
+00:21:30.589 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.589 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.589 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.589 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.589 INFO  getCommentsByPost called for postId: 77 
+00:21:30.589 INFO  getAllByPostId called with postId: 77 
+00:21:30.590 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.591 INFO  verifyToken - path: /25/comments 
+00:21:30.593 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.593 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.593 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.593 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.593 INFO  getCommentsByPost called for postId: 93 
+00:21:30.593 INFO  getAllByPostId called with postId: 93 
+00:21:30.594 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.594 INFO  verifyToken - path: /25/comments 
+00:21:30.596 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.596 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.596 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.596 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.596 INFO  getCommentsByPost called for postId: 94 
+00:21:30.596 INFO  getAllByPostId called with postId: 94 
+00:21:30.597 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.597 INFO  verifyToken - path: /25/comments 
+00:21:30.599 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.599 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.599 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.599 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.599 INFO  getCommentsByPost called for postId: 95 
+00:21:30.599 INFO  getAllByPostId called with postId: 95 
+00:21:30.601 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.601 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.603 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.603 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.606 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.606 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.608 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.608 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.611 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.611 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.612 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.612 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.615 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.615 INFO  verifyToken - path: /25/comments 
+00:21:30.617 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.617 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.617 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.617 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.617 INFO  getCommentsByPost called for postId: 96 
+00:21:30.617 INFO  getAllByPostId called with postId: 96 
+00:21:30.619 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.619 INFO  verifyToken - path: /25/comments 
+00:21:30.620 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.621 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.621 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.621 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.621 INFO  getCommentsByPost called for postId: 97 
+00:21:30.621 INFO  getAllByPostId called with postId: 97 
+00:21:30.622 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.622 INFO  verifyToken - path: /25/comments 
+00:21:30.625 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.625 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.625 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.625 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.625 INFO  getCommentsByPost called for postId: 98 
+00:21:30.625 INFO  getAllByPostId called with postId: 98 
+00:21:30.626 INFO  GET /api/25/comments - IP: 127.0.0.1 
+00:21:30.626 INFO  verifyToken - path: /25/comments 
+00:21:30.628 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:30.628 INFO  checkAccessPermissions - path: /comments, userId param: 25 
+00:21:30.628 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:30.628 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:30.628 INFO  getCommentsByPost called for postId: 99 
+00:21:30.628 INFO  getAllByPostId called with postId: 99 
+00:21:30.630 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.630 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.633 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.633 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.636 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.636 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:30.638 INFO  getAllByPostId successful, returned 0 comments 
+00:21:30.638 INFO  getCommentsByPost successful, returned 0 comments 
+00:21:32.989 INFO  GET /api/25/tasks - IP: 127.0.0.1 
+00:21:32.989 INFO  verifyToken - path: /25/tasks 
+00:21:32.992 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:32.992 INFO  checkAccessPermissions - path: /tasks, userId param: 25 
+00:21:32.992 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:32.992 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:32.992 INFO  getAllTasks called 
+00:21:32.992 INFO  getAll tasks called for userId: 25 
+00:21:33.000 INFO  getAll tasks successful, returned 2 tasks for userId: 25 
+00:21:33.000 INFO  getAllTasks successful, returned 2 tasks 
+00:21:35.175 INFO  DELETE /api/25/tasks/201 - IP: 127.0.0.1 
+00:21:35.175 INFO  verifyToken - path: /25/tasks/201 
+00:21:35.178 INFO  verifyToken - successful for user: naama@gmail.com (userId: 25) 
+00:21:35.178 INFO  checkAccessPermissions - path: /tasks/201, userId param: 25 
+00:21:35.178 INFO  checkAccessPermissions - user ID from token: 25, userId param: 25 
+00:21:35.178 INFO  checkAccessPermissions - access granted for user: 25 
+00:21:35.178 INFO  Task delete called for id: 201, user: 25 
+00:21:35.179 INFO  tasksService.deleteTask - id: 201, userId: 25 
+00:21:35.179 INFO  delete tasks called for id: 201 
+00:21:35.181 INFO  executeDelete - table: tasks, id: 201, userId: 25 
+00:21:35.193 INFO  executeDelete - successful, affectedRows: 1 
+00:21:35.193 INFO  delete tasks successful for id: 201 
+00:21:35.193 INFO  Task delete successful for id: 201, user: 25 
