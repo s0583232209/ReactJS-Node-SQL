@@ -14,6 +14,4 @@ CREATE TABLE users (
     street VARCHAR(30),
     city VARCHAR(30),
     house_number INT
-
- 
 );

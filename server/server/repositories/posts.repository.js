@@ -3,7 +3,7 @@ import { makeGetById, makeDelete, makeUpdate } from "./repository.helpers.js";
 import log from "../utils/logger.js";
 
 export const getById = makeGetById("posts", "Post");
-export const deletePost =  makeDelete("posts");
+export const deletePost = makeDelete("posts");
 export const updatePost = makeUpdate("posts", ["title", "body"], getById);
 
 export async function getAll() {
