@@ -19,9 +19,10 @@ export async function getById(id) {
 }
 
 export async function addUser(details) {
+  const connection = await getConnection();
+  await connection.beginTransaction();
   try {
     log.info(`addUser called for username: ${details.username}`);
-    const connection = await getConnection();
     const [result] = await connection.execute(
       "INSERT INTO users (username, email, phone, name, zipcode, street, city, house_number) VALUES (?,?,?,?,?,?,?,?);",
       [
@@ -39,9 +40,11 @@ export async function addUser(details) {
       "INSERT INTO passwords (user_id, hashed_password, is_active) VALUES (?, ?, TRUE);",
       [result.insertId, details.password],
     );
+    await connection.commit();
     log.info(`addUser successful, user id: ${result.insertId}`);
     return { id: result.insertId, ...details };
   } catch (err) {
+    await connection.rollback();
     log.error(`addUser error: ${err.message}`);
     throw err;
   }
@@ -138,9 +141,9 @@ export async function updatePassword(userId, hashedPassword) {
 export async function getLoginDetails(email) {
   const connection = await getConnection();
   const [rows] = await connection.execute(
-    `SELECT passwords.hashed_password AS hashedPassword, passwords.user_id AS userId
+    `SELECT users.username, users.name, passwords.hashed_password AS hashedPassword, passwords.user_id AS userId
      FROM users JOIN passwords ON users.id = passwords.user_id
-     WHERE email=? AND passwords.is_active=TRUE`,
+     WHERE users.email=? AND passwords.is_active=TRUE`,
     [email],
   );
   return rows[0];

@@ -39,7 +39,7 @@ export default function Register() {
       const user = response.data;
       if (!user) throw new Error("This user name isn't valid, please try another one");
       const userId = user.userId || user.id;
-      sessionStorage.setItem("current-user", JSON.stringify({ userId, email: user.email, name: user.name }));
+      sessionStorage.setItem("current-user", JSON.stringify({ userId, email: user.email, username: user.username, name: user.name }));
       setUserId(userId);
       navigate("/");
     } catch (err) {

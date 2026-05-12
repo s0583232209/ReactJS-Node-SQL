@@ -40,13 +40,10 @@ export default function Login() {
   async function login(data) {
     try {
       const response = await api.post("/api/auth/login", data);
-      const { userId, email } = response.data;
-      console.log("Login successful:", response.data);
-
-      const { name } = response.data;
+      const { userId, email, username, name } = response.data;
       sessionStorage.setItem(
         "current-user",
-        JSON.stringify({ userId, email, name }),
+        JSON.stringify({ userId, email, username, name }),
       );
       setUserId(userId);
       navigate("/");
