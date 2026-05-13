@@ -1,0 +1,36 @@
+19:29:56.662 INFO  init 
+19:29:56.865 INFO  Connected to MySQL at 127.0.0.1 
+19:29:56.939 INFO  Database connected successfully 
+19:29:56.961 INFO  Server started on http://127.0.0.1:3000 
+19:30:27.778 INFO  POST /api/auth/login - IP: 127.0.0.1 
+19:30:27.778 INFO  verifyToken - path: /auth/login 
+19:30:27.778 INFO  verifyToken - skipping auth routes 
+19:30:28.171 WARN  login error: Incorrect password 
+19:30:42.023 INFO  POST /api/auth/login - IP: 127.0.0.1 
+19:30:42.023 INFO  verifyToken - path: /auth/login 
+19:30:42.023 INFO  verifyToken - skipping auth routes 
+19:30:42.348 INFO  login successful for email: check@check.com 
+19:30:42.355 INFO  GET /api/12/users/12 - IP: 127.0.0.1 
+19:30:42.355 INFO  verifyToken - path: /12/users/12 
+19:30:42.356 INFO  verifyToken - successful for user: check@check.com (userId: 12) 
+19:30:42.356 INFO  checkAccessPermissions - path: /users/12, userId param: 12 
+19:30:42.356 INFO  checkAccessPermissions - user ID from token: 12, userId param: 12 
+19:30:42.356 INFO  checkAccessPermissions - access granted for user: 12 
+19:30:42.356 INFO  getById users called with id: 12 
+19:30:42.359 INFO  getById users successful for id: 12 
+19:31:44.126 INFO  POST /api/auth/login - IP: 127.0.0.1 
+19:31:44.126 INFO  verifyToken - path: /auth/login 
+19:31:44.126 INFO  verifyToken - skipping auth routes 
+19:31:44.418 WARN  login error: Incorrect password 
+19:31:53.039 INFO  POST /api/auth/login - IP: 127.0.0.1 
+19:31:53.039 INFO  verifyToken - path: /auth/login 
+19:31:53.039 INFO  verifyToken - skipping auth routes 
+19:31:53.340 INFO  login successful for email: try@try.com 
+19:31:53.344 INFO  GET /api/11/users/11 - IP: 127.0.0.1 
+19:31:53.344 INFO  verifyToken - path: /11/users/11 
+19:31:53.344 INFO  verifyToken - successful for user: try@try.com (userId: 11) 
+19:31:53.344 INFO  checkAccessPermissions - path: /users/11, userId param: 11 
+19:31:53.344 INFO  checkAccessPermissions - user ID from token: 11, userId param: 11 
+19:31:53.344 INFO  checkAccessPermissions - access granted for user: 11 
+19:31:53.344 INFO  getById users called with id: 11 
+19:31:53.345 INFO  getById users successful for id: 11 
