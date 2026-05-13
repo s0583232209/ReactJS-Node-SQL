@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState, useContext } from "react";
 import { appContext } from "../App";
+import axios from "axios";
 import api from "../api";
 
 const Logo = () => (
@@ -39,8 +40,13 @@ export default function Login() {
 
   async function login(data) {
     try {
-      const response = await api.post("/api/auth/login", data);
-      const { userId, email, username, name } = response.data;
+      const response = await axios.post("http://localhost:3000/api/auth/login", data, {
+        withCredentials: true,
+      });
+      const { userId, email } = response.data;
+      console.log("Login successful:", response.data);
+
+      const { name } = response.data;
       sessionStorage.setItem(
         "current-user",
         JSON.stringify({ userId, email, username, name }),
