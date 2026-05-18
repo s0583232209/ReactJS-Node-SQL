@@ -1,0 +1,50 @@
+19:09:52.380 INFO  init 
+19:09:52.479 INFO  Connected to MySQL at 127.0.0.1 
+19:09:52.487 INFO  Database connected successfully 
+19:09:52.527 INFO  Server started on http://127.0.0.1:3000 
+19:19:18.408 INFO  init 
+19:19:18.488 INFO  Connected to MySQL at 127.0.0.1 
+19:19:18.495 INFO  Database connected successfully 
+19:19:18.529 INFO  Server started on http://127.0.0.1:3000 
+19:20:07.151 INFO  init 
+19:20:07.228 INFO  Connected to MySQL at 127.0.0.1 
+19:20:07.232 INFO  Database connected successfully 
+19:20:07.262 INFO  Server started on http://127.0.0.1:3000 
+19:21:00.925 INFO  POST /api/auth/signup - IP: 127.0.0.1 
+19:21:00.926 INFO  verifyToken - path: /auth/signup 
+19:21:00.926 INFO  verifyToken - skipping auth routes 
+19:21:01.741 INFO  addUser called for username: nn 
+19:21:01.763 INFO  addUser successful, user id: 11 
+19:21:01.780 INFO  signup successful for email: naama4212@gmail.com 
+19:21:24.169 INFO  POST /api/auth/login - IP: 127.0.0.1 
+19:21:24.169 INFO  verifyToken - path: /auth/login 
+19:21:24.169 INFO  verifyToken - skipping auth routes 
+19:21:25.007 INFO  login successful for email: naama4212@gmail.com 
+19:21:26.093 INFO  POST /api/auth/login - IP: 127.0.0.1 
+19:21:26.093 INFO  verifyToken - path: /auth/login 
+19:21:26.093 INFO  verifyToken - skipping auth routes 
+19:21:26.873 INFO  login successful for email: naama4212@gmail.com 
+19:21:30.690 INFO  POST /api/auth/login - IP: 127.0.0.1 
+19:21:30.690 INFO  verifyToken - path: /auth/login 
+19:21:30.690 INFO  verifyToken - skipping auth routes 
+19:21:31.485 INFO  login successful for email: naama4212@gmail.com 
+19:22:07.170 INFO  POST /api/auth/signup - IP: 127.0.0.1 
+19:22:07.170 INFO  verifyToken - path: /auth/signup 
+19:22:07.170 INFO  verifyToken - skipping auth routes 
+19:22:07.997 INFO  addUser called for username: g 
+19:22:08.009 INFO  addUser successful, user id: 12 
+19:22:08.020 INFO  signup successful for email: chava.laufer@gmail.com 
+19:22:16.258 INFO  POST /api/auth/login - IP: 127.0.0.1 
+19:22:16.258 INFO  verifyToken - path: /auth/login 
+19:22:16.258 INFO  verifyToken - skipping auth routes 
+19:22:17.041 INFO  login successful for email: chava.laufer@gmail.com 
+19:25:55.186 INFO  POST /api/auth/signup - IP: 127.0.0.1 
+19:25:55.186 INFO  verifyToken - path: /auth/signup 
+19:25:55.186 INFO  verifyToken - skipping auth routes 
+19:25:58.677 INFO  addUser called for username: b 
+19:25:58.701 INFO  addUser successful, user id: 13 
+19:25:58.709 INFO  signup successful for email: naa4212@gmail.com 
+19:26:11.025 INFO  POST /api/auth/login - IP: 127.0.0.1 
+19:26:11.025 INFO  verifyToken - path: /auth/login 
+19:26:11.025 INFO  verifyToken - skipping auth routes 
+19:26:13.803 INFO  login successful for email: naa4212@gmail.com 

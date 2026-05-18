@@ -1,0 +1,25 @@
+22:30:31.362 INFO  init 
+22:30:31.637 INFO  Connected to MySQL at 127.0.0.1 
+22:30:31.665 INFO  Database connected successfully 
+22:30:31.708 INFO  Server started on http://127.0.0.1:3000 
+22:31:15.860 INFO  POST /api/auth/signup - IP: 127.0.0.1 
+22:31:15.861 INFO  verifyToken - path: /auth/signup 
+22:31:15.861 INFO  verifyToken - skipping auth routes 
+22:31:16.643 INFO  addUser called for username: g 
+22:31:16.703 ERROR addUser error: Data too long for column 'phone' at row 1 
+22:31:16.703 WARN  signup error: Data too long for column 'phone' at row 1 
+22:36:55.837 INFO  init 
+22:36:55.917 INFO  Connected to MySQL at 127.0.0.1 
+22:36:55.923 INFO  Database connected successfully 
+22:36:55.957 INFO  Server started on http://127.0.0.1:3000 
+22:37:25.252 INFO  POST /api/auth/login - IP: 127.0.0.1 
+22:37:25.253 INFO  verifyToken - path: /auth/login 
+22:37:25.253 INFO  verifyToken - skipping auth routes 
+22:37:26.122 INFO  login successful for email: naama@gmail.com 
+22:37:49.900 INFO  POST /api/auth/signup - IP: 127.0.0.1 
+22:37:49.901 INFO  verifyToken - path: /auth/signup 
+22:37:49.901 INFO  verifyToken - skipping auth routes 
+22:37:50.648 INFO  addUser called for username: יי 
+22:37:50.666 ERROR addUser error: Data too long for column 'phone' at row 1 
+22:37:50.666 WARN  signup error: Data too long for column 'phone' at row 1 
+

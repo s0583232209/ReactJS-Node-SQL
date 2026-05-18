@@ -1048,3 +1048,30 @@
 21:47:39.177 INFO  addUser called for username: nn 
 21:47:39.190 ERROR addUser error: Data too long for column 'phone' at row 1 
 21:47:39.190 WARN  signup error: Data too long for column 'phone' at row 1 
+22:04:21.205 INFO  init 
+22:04:21.293 INFO  Connected to MySQL at 127.0.0.1 
+22:04:21.309 INFO  Database connected successfully 
+22:04:21.342 INFO  Server started on http://127.0.0.1:3000 
+22:04:49.691 INFO  POST /api/auth/signup - IP: 127.0.0.1 
+22:04:49.692 INFO  verifyToken - path: /auth/signup 
+22:04:49.692 INFO  verifyToken - skipping auth routes 
+22:04:50.376 INFO  addUser called for username: כ 
+22:04:50.407 ERROR addUser error: Data too long for column 'phone' at row 1 
+22:04:50.407 WARN  signup error: Data too long for column 'phone' at row 1 
+22:05:34.079 INFO  POST /api/auth/signup - IP: 127.0.0.1 
+22:05:34.079 INFO  verifyToken - path: /auth/signup 
+22:05:34.079 INFO  verifyToken - skipping auth routes 
+22:05:34.770 INFO  addUser called for username: עע 
+22:05:34.773 ERROR addUser error: Data too long for column 'phone' at row 1 
+22:05:34.773 WARN  signup error: Data too long for column 'phone' at row 1 
+22:10:44.368 INFO  init 
+22:10:44.474 INFO  Connected to MySQL at 127.0.0.1 
+22:10:44.480 INFO  Database connected successfully 
+22:10:44.528 INFO  Server started on http://127.0.0.1:3000 
+22:11:24.279 INFO  POST /api/auth/signup - IP: 127.0.0.1 
+22:11:24.281 INFO  verifyToken - path: /auth/signup 
+22:11:24.281 INFO  verifyToken - skipping auth routes 
+22:11:24.962 INFO  addUser called for username: טט 
+22:11:24.971 ERROR addUser error: Data too long for column 'phone' at row 1 
+22:11:24.972 WARN  signup error: Data too long for column 'phone' at row 1 
+

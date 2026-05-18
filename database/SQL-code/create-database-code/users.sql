@@ -5,7 +5,7 @@ CREATE TABLE users (
     username VARCHAR(50) NOT NULL,
     -- Email for recovery/contact
     email VARCHAR(100) NOT NULL UNIQUE,
-    phone VARCHAR(10),
+    phone VARCHAR(20),
     name VARCHAR(50),
     -- Track when the account was created
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
