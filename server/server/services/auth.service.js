@@ -35,7 +35,7 @@ export async function login(email, password) {
   if (!isMatch) throw new Error("Incorrect password");
   const payload = { email, userId: row.userId };
   return {
-    user: { email, userId: row.userId, msg: "success" },
+    user: { email, userId: row.userId, username: row.username, name: row.name, msg: "success" },
     accessToken:  createAccessToken(payload),
     refreshToken: createRefreshToken(payload),
   };
