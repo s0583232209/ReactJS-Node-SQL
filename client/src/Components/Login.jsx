@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState, useContext } from "react";
 import { appContext } from "../App";
+import axios from "axios";
 import api from "../api";
 
 const Logo = () => (
